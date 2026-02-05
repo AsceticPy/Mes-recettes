@@ -1,0 +1,69 @@
+{
+  "id": "omelette-francaise",
+  "nom": "Omelette française",
+  "type": "plat",
+  "origines": [
+    "France"
+  ],
+  "tempsPreparation": 31,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/yvpuuy1511797244.jpg",
+  "ingredients": [
+    {
+      "nom": "Oeufs",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Parmesan",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Feuilles d'estragon",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Poêles",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Gruyère",
+      "quantite": 4.0,
+      "unite": "c. à soupe"
+    }
+  ],
+  "etapes": [
+    "Préparez tout.",
+    "Chauffer une poêle antiadhésive de 20cm (mesurée sur le dessus) à feu moyen.",
+    "Casser les œufs dans un bol et les battre avec une fourchette afin qu'ils se séparent et mélangent, mais pas aussi complètement que vous le feriez pour l'oeuf brouillé.",
+    "À feu moyen-chaud, déposer un bouton de beurre dans la poêle.",
+    "Il devrait buller et étourdir, mais pas brun.",
+    "Assaisonner les œufs avec le parmesan et un peu de sel et de poivre, et verser dans la poêle.",
+    "Laissez les œufs buller légèrement pendant quelques secondes, puis prenez une fourchette en bois ou une spatule et puis retirez doucement le mélange des côtés de la casserole quelques fois, de sorte qu'il se rassemble en plis au centre.",
+    "Laisser quelques secondes, puis remuer à nouveau pour combiner légèrement l'œuf non cuit et cuit.",
+    "Repartez brièvement, et lorsque partiellement cuit, remuez un peu plus vite, s'arrêtant alors qu'il reste quelques œufs à peine cuits.",
+    "Avec la poêle à plat sur la chaleur, secouez-la quelques fois pour régler le mélange.",
+    "Il devrait glisser facilement dans la poêle et être doux et humide sur le dessus.",
+    "Une explosion rapide de chaleur fera brunir le dessous.",
+    "Prenez la poignée en dessous.",
+    "Allongez la poêle loin de vous et laissez tomber l'omelette.",
+    "Plier le côté le plus proche de vous par un tiers avec votre fourchette, et le faire rouler, de sorte que l'omelette se pointe sur une plaque – ou le plier en deux, si c'est plus facile.",
+    "Pour une finition soignée, couvrez l'omelette d'un morceau de papier de cuisine et collez-le un peu avec vos doigts.",
+    "Frotter l'autre bouton de beurre pour glacer.",
+    "Servir immédiatement."
+  ]
+}

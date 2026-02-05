@@ -1,0 +1,82 @@
+{
+  "id": "pommes-de-terre-norvegiennes",
+  "nom": "Pommes de terre norvégiennes",
+  "type": "accompagnement",
+  "origines": [
+    "Norvège"
+  ],
+  "tempsPreparation": 40,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/hxcuj01762772827.jpg",
+  "ingredients": [
+    {
+      "nom": "Pommes de terre",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Beurre fondu",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Crème lourde",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Farine à usage général",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Farine",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 14.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sucre granulé",
+      "quantite": 0.75,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Crème lourde",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    }
+  ],
+  "etapes": [
+    "Faites bouillir les pommes de terre.",
+    "Peler les pommes de terre pendant qu'elles sont encore chaudes et les faire passer deux fois dans un rizier.",
+    "Laisser refroidir les pommes de terre dans un bol découvert au réfrigérateur.",
+    "Incorporer le sel, le sucre, le beurre fondu et la crème dans les pommes de terre riées.",
+    "Ajouter lentement la farine et pétrir à la main jusqu'à obtenir une bonne consistance.",
+    "N'ajoute pas plus de farine que nécessaire ! Faites rouler la pâte dans une longue saucisse et divisez en environ 7 ou 8 morceaux si vous utilisez une grille de 18 pouces.",
+    "Si vous utilisez une petite grille ou une poêle, divisez la pâte en 10 à 12 morceaux.",
+    "Roulez chaque pièce dans une boule, puis appuyez dans un cercle plat, en utilisant les bords de vos mains pour former la pâte en une belle forme de cercle sans aucune fissure.",
+    "C'est important, sinon vous n'aurez pas de lefser rond.",
+    "Chauffer votre grille à feu moyen/élevé.",
+    "Flourez votre surface de laminage et roulez la pâte de lefse dans un grand cercle légèrement plus petit que votre grille ou poêle.",
+    "Commencer à rouler avec une goupille lisse, puis passer à une goupille ondulée lorsque le lefse devient plus mince.",
+    "N'utilisez pas trop de farine, car les bords peuvent devenir durs.",
+    "Faites rouler le lefse sur votre bâton de lefse, puis déroulez doucement sur votre grille.",
+    "Après une minute ou deux, vérifiez le dessous de la lefse pour trouver des taches brunes, puis utilisez le bâton de la lefse pour retourner la lefse et cuire de l'autre côté.",
+    "Utilisez le bâton de lefse pour enlever le lefse de la grille et le placer dans une feuille humide ou une nappe pliée."
+  ]
+}

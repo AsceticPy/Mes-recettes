@@ -1,0 +1,85 @@
+{
+  "id": "dindon-de-viande",
+  "nom": "Dindon de viande",
+  "type": "plat",
+  "origines": [
+    "Royaume-Uni"
+  ],
+  "tempsPreparation": 43,
+  "tempsCuisson": 45,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/ypuxtw1511297463.jpg",
+  "ingredients": [
+    {
+      "nom": "Huile d'olive",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "gros"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 1.0,
+      "unite": "gousse"
+    },
+    {
+      "nom": "Sauce worcestershire",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Pure de tomates",
+      "quantite": 3.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Turquie mince",
+      "quantite": 500.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Oeufs",
+      "quantite": 1.0,
+      "unite": "gros"
+    },
+    {
+      "nom": "Fil d'ariane",
+      "quantite": 85.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sauce barbeque",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Haricots cannellini",
+      "quantite": 800.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 2.0,
+      "unite": "pièces"
+    }
+  ],
+  "etapes": [
+    "Chauffer le four à 180C/160C ventilateur/gaz 4.",
+    "Chauffer l'huile dans une grande poêle et cuire l'oignon pendant 8-10 minutes jusqu'à ramollir.",
+    "Ajouter l'ail, la sauce Worcestershire et 2 c.",
+    "à thé purée de tomate, et remuer jusqu'à combinaison.",
+    "Réserver pour refroidir.",
+    "Mettre la menthe de dinde, l'oeuf, la chapelure et le mélange d'oignon refroidi dans un grand bol et bien assaisonner.",
+    "Mélangez tout pour combiner, puis formez un pain rectangulaire et placez-le dans une grande torréfaction.",
+    "Répartir 2 c.",
+    "à soupe de sauce barbecue sur le pain de viande et cuire 30 minutes.",
+    "Pendant ce temps, égoutter 1 boîte de haricots seulement, puis verser les deux boîtes dans un grand bol.",
+    "Ajouter le reste de la sauce barbecue et la purée de tomate.",
+    "Assaisonner et réserver.",
+    "Lorsque le pain de viande a eu son temps de cuisson initial, dispersez les haricots autour de l'extérieur et faites cuire pendant 15 minutes de plus jusqu'à ce que le pain de viande soit cuit à travers et les haricots sont en train de passer chaud.",
+    "Dispersez le persil et servez le pain de viande en tranches."
+  ]
+}

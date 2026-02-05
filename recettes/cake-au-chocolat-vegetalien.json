@@ -1,0 +1,59 @@
+{
+  "id": "cake-au-chocolat-vegetalien",
+  "nom": "Cake au chocolat végétalien",
+  "type": "plat",
+  "origines": [
+    "États-Unis"
+  ],
+  "tempsPreparation": 34,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/qxutws1486978099.jpg",
+  "ingredients": [
+    {
+      "nom": "Farine autodidacte",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Sucre de coco",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Cacao",
+      "quantite": 0.3333333333333333,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Poudre à pâte",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Oeufs de lin",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Lait d'amande",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Vanille",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 0.5,
+      "unite": "tasse"
+    }
+  ],
+  "etapes": [
+    "Il suffit de mélanger tous les ingrédients secs avec des ingrédients humides et de mélanger complètement.",
+    "Cuire 45 min sur 180 degrés.",
+    "Décorer avec un peu de chocolat végétalien fondu."
+  ]
+}

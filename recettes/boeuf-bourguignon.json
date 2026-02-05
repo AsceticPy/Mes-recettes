@@ -1,0 +1,117 @@
+{
+  "id": "boeuf-bourguignon",
+  "nom": "Boeuf Bourguignon",
+  "type": "plat",
+  "origines": [
+    "France"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/vtqxtu1511784197.jpg",
+  "ingredients": [
+    {
+      "nom": "Foie",
+      "quantite": 3.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Boeuf",
+      "quantite": 600.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Bacon",
+      "quantite": 100.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Challots",
+      "quantite": 350.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Champignons",
+      "quantite": 250.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Couvercle d'ail",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Bouquet garni",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Pure de tomates",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Vin rouge",
+      "quantite": 750.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Céleriac",
+      "quantite": 600.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Thym",
+      "quantite": 0,
+      "unite": "brins"
+    },
+    {
+      "nom": "Rosaire",
+      "quantite": 0,
+      "unite": "brins"
+    },
+    {
+      "nom": "Feuille de la baie",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Cardamome",
+      "quantite": 4.0,
+      "unite": "pièces"
+    }
+  ],
+  "etapes": [
+    "Chauffer une grande casserole et ajouter 1 c.",
+    "à soupe de graisse d'oie.",
+    "Assaisonner le boeuf et faire frire jusqu'à ce qu'il soit doré, environ 3-5 minutes, puis retourner et faire frire l'autre côté jusqu'à ce que la viande soit dorée, en ajoutant plus de gras si nécessaire.",
+    "Faites cela en 2-3 lots, en transférant la viande dans une calandre posée sur un bol lorsqu'elle est dorée.",
+    "Dans la même casserole, faire frire le bacon, les échalotes ou les oignons perlés, les champignons, l'ail et le bouquet garni jusqu'à ce qu'ils soient légèrement dorés.",
+    "Mélanger la purée de tomates et cuire quelques minutes, en remuant dans le mélange.",
+    "Cela enrichit le bourguignon et fait une bonne base pour le ragoût.",
+    "Retournez ensuite le boeuf et les jus drainés dans la poêle et remuez.",
+    "Verser sur le vin et environ 100ml d'eau pour que la viande bobe vers le haut du liquide, mais n'est pas complètement couvert.",
+    "Porter à ébullition et utiliser une cuillère pour racler les jus de cuisson caramélisés du fond de la poêle – cela donnera plus de saveur au ragoût.",
+    "Chauffer le four à 150C/fan 130C/gaz 2.",
+    "Faire une cartouche : arracher un carré de feuille légèrement plus grand que la casserole, l'organiser dans la casserole de sorte qu'il recouvre le dessus du ragoût et éliminer tout excès de feuille.",
+    "Puis cuire 3 heures.",
+    "Si la sauce a l'air aqueuse, retirer le boeuf et la veg avec une cuillère à fentes, et réserver.",
+    "Faire cuire la sauce à feu vif pendant quelques minutes jusqu'à ce que la sauce s'épaississe un peu, puis retourner le boeuf et les légumes dans la poêle.",
+    "Pour faire le céleriac mash, peler le céleriac et couper en cubes.",
+    "Chauffer l'huile d'olive dans une grande poêle.",
+    "Astuce dans le céleri et faire frire pendant 5 minutes jusqu'à ce qu'il devienne doré.",
+    "Assaisonner bien avec du sel et du poivre.",
+    "Incorporer le romarin, le thym, la baie et la cardamome, puis verser plus de 200 ml d'eau, assez pour couvrir presque le céleri.",
+    "Tourner le feu vers le bas, couvrir partiellement la poêle et laisser mijoter 25-30 minutes.",
+    "Après 25-30 minutes, le céleriac devrait être doux et la plupart de l'eau se sera évaporée.",
+    "Égoutter toute eau restante, puis enlever les brins d'herbe, la baie et les gousses de cardamome.",
+    "Légèrement écraser avec une purée de pommes de terre, puis terminer avec une gorgée d'huile d'olive et assaisonner au goût.",
+    "Mettre le burgutignon de boeuf dans des bols de service et mettre une grande cuillère de la mash céleriac sur le dessus.",
+    "Garnir d'une des feuilles de la baie, si vous voulez."
+  ]
+}

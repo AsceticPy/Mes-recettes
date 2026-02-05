@@ -1,0 +1,50 @@
+# Dépendances
+node_modules/
+package-lock.json
+
+# Variables d'environnement
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Système
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# Docker volumes (données locales)
+postgres_data/
+pgadmin_data/
+
+# Dossiers spécifiques au projet
+ScrapperRecipes/
+translate/
+LibreTranslate/
+
+# Cache et builds
+.cache/
+dist/
+build/
+*.tmp
+*.temp
+
+# Photos uploadées (optionnel - décommenter si besoin)
+# photos/

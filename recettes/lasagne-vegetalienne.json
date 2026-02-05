@@ -1,0 +1,86 @@
+{
+  "id": "lasagne-vegetalienne",
+  "nom": "Lasagne végétalienne",
+  "type": "plat",
+  "origines": [
+    "Italie"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 52,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/rvxxuy1468312893.jpg",
+  "ingredients": [
+    {
+      "nom": "Lentilles rouges vertes",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Carottes",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Courgettes",
+      "quantite": 1.0,
+      "unite": "petit"
+    },
+    {
+      "nom": "Coriandre",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Épinards",
+      "quantite": 150.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Feuilles de lasagne",
+      "quantite": 10.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Beurre végétal",
+      "quantite": 35.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Farine",
+      "quantite": 4.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Lait de soja",
+      "quantite": 300.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Moutarde",
+      "quantite": 1.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Vinaigre",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    }
+  ],
+  "etapes": [
+    "1) Préchauffer le four à 180 degrés celcius.",
+    "2) Faire bouillir les légumes pendant 5-7 minutes, jusqu'à ce qu'ils soient doux.",
+    "Ajouter les lentilles et laisser mijoter en douceur, en ajoutant un cube si désiré.",
+    "Continuer la cuisson et remuer jusqu'à ce que les lentilles soient douces, ce qui devrait prendre environ 20 minutes.",
+    "3) Blanchir les épinards pendant quelques minutes dans une poêle, avant de les retirer et de les réserver.",
+    "4) Garnir d'eau la poêle et cuire les draps de lasagne.",
+    "Lorsque cuit, égoutter et réserver.",
+    "5) Pour faire la sauce, faire fondre le beurre et ajouter la farine, puis ajouter progressivement le lait de soja avec la moutarde et le vinaigre.",
+    "Cuire et remuer jusqu'à ce que la lasagne soit lisse, puis assembler la lasagne comme désiré dans un plat de cuisson.",
+    "6) Cuire au four préchauffé pendant environ 25 minutes."
+  ]
+}

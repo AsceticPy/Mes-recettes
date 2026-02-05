@@ -1,0 +1,293 @@
+[
+  {
+    "date": "2026-02-04T10:40:36.038Z",
+    "personnes": 4,
+    "recettes": [
+      "Drunken noodles (pad kee mao)",
+      "Pâtes Carbonara",
+      "Poulet Tikka Masala",
+      "Quick gazpacho",
+      "Chicken Handi"
+    ],
+    "liste": {
+      "Autres": [
+        {
+          "nom": "Basilic feuilles",
+          "quantite": 0,
+          "unite": "Handful"
+        },
+        {
+          "nom": "Birds-eye chillies",
+          "quantite": 3,
+          "unite": "chopped"
+        },
+        {
+          "nom": "Blancs de poulet",
+          "quantite": 600,
+          "unite": "g"
+        },
+        {
+          "nom": "Broccoli",
+          "quantite": 100,
+          "unite": "g"
+        },
+        {
+          "nom": "Chilli powder",
+          "quantite": 1,
+          "unite": "tsp"
+        },
+        {
+          "nom": "Coriander seeds",
+          "quantite": 3,
+          "unite": "tsp"
+        },
+        {
+          "nom": "Coriandre fraîche",
+          "quantite": 1,
+          "unite": "bouquet"
+        },
+        {
+          "nom": "Cream",
+          "quantite": 0,
+          "unite": "¾ tasse"
+        },
+        {
+          "nom": "Cumin seeds",
+          "quantite": 2,
+          "unite": "tsp"
+        },
+        {
+          "nom": "Fenugreek",
+          "quantite": 3,
+          "unite": "tsp Dried"
+        },
+        {
+          "nom": "Fish sauce",
+          "quantite": 1,
+          "unite": "cuillère à café"
+        },
+        {
+          "nom": "Flat rice noodles",
+          "quantite": 200,
+          "unite": "g"
+        },
+        {
+          "nom": "Gingembre frais",
+          "quantite": 2,
+          "unite": "cm"
+        },
+        {
+          "nom": "Ginger paste",
+          "quantite": 1,
+          "unite": "tbsp"
+        },
+        {
+          "nom": "Green chilli",
+          "quantite": 2,
+          "unite": ""
+        },
+        {
+          "nom": "Lardons fumés",
+          "quantite": 200,
+          "unite": "g"
+        },
+        {
+          "nom": "Lime",
+          "quantite": 1,
+          "unite": "Juice of"
+        },
+        {
+          "nom": "Oyster sauce",
+          "quantite": 4,
+          "unite": "tbsp"
+        },
+        {
+          "nom": "Parmesan râpé",
+          "quantite": 100,
+          "unite": "g"
+        },
+        {
+          "nom": "Passata",
+          "quantite": 250,
+          "unite": "g"
+        },
+        {
+          "nom": "Poivre noir",
+          "quantite": 1,
+          "unite": "pincée"
+        },
+        {
+          "nom": "Red chilli",
+          "quantite": 1,
+          "unite": "chopped"
+        },
+        {
+          "nom": "Red poivre",
+          "quantite": 1,
+          "unite": "chopped"
+        },
+        {
+          "nom": "Sherry vinegar",
+          "quantite": 1,
+          "unite": "cuillère à café"
+        },
+        {
+          "nom": "Sirloin steak",
+          "quantite": 225,
+          "unite": "g"
+        },
+        {
+          "nom": "Soy sauce",
+          "quantite": 4,
+          "unite": "tbsp"
+        },
+        {
+          "nom": "Spaghetti",
+          "quantite": 400,
+          "unite": "g"
+        },
+        {
+          "nom": "Tomates",
+          "quantite": 2,
+          "unite": "finely chopped"
+        },
+        {
+          "nom": "Turmeric powder",
+          "quantite": 1,
+          "unite": "tsp"
+        },
+        {
+          "nom": "Vegetable oil",
+          "quantite": 2,
+          "unite": "tblsp"
+        },
+        {
+          "nom": "Vegetable oil",
+          "quantite": 0,
+          "unite": "¼ tasse"
+        },
+        {
+          "nom": "Yaourt nature",
+          "quantite": 200,
+          "unite": "g"
+        },
+        {
+          "nom": "Yogurt",
+          "quantite": 1,
+          "unite": "tasse"
+        }
+      ],
+      "Légumes": [
+        {
+          "nom": "Ail",
+          "quantite": 3,
+          "unite": "gousses Chopped"
+        },
+        {
+          "nom": "Ail",
+          "quantite": 3,
+          "unite": "gousses"
+        },
+        {
+          "nom": "Ail",
+          "quantite": 1,
+          "unite": "gousse peeled crushed"
+        },
+        {
+          "nom": "Ail",
+          "quantite": 8,
+          "unite": "gousses chopped"
+        },
+        {
+          "nom": "Oignon",
+          "quantite": 2,
+          "unite": ""
+        },
+        {
+          "nom": "Oignon",
+          "quantite": 5,
+          "unite": "thinly sliced"
+        }
+      ],
+      "Sucré & Pâtisserie": [
+        {
+          "nom": "Sucre",
+          "quantite": 1,
+          "unite": "tblsp"
+        }
+      ],
+      "Oeufs & Féculents": [
+        {
+          "nom": "Oeufs",
+          "quantite": 4,
+          "unite": ""
+        }
+      ],
+      "Produits laitiers": [
+        {
+          "nom": "Crème fraîche",
+          "quantite": 30,
+          "unite": "cl"
+        }
+      ],
+      "Épices": [
+        {
+          "nom": "Cumin",
+          "quantite": 1,
+          "unite": "c. à café"
+        },
+        {
+          "nom": "Curcuma",
+          "quantite": 1,
+          "unite": "c. à café"
+        },
+        {
+          "nom": "Garam masala",
+          "quantite": 2,
+          "unite": "c. à soupe"
+        },
+        {
+          "nom": "Garam masala",
+          "quantite": 1,
+          "unite": "tsp"
+        },
+        {
+          "nom": "Paprika",
+          "quantite": 1,
+          "unite": "c. à soupe"
+        },
+        {
+          "nom": "Sel",
+          "quantite": 2,
+          "unite": "pincée"
+        },
+        {
+          "nom": "Sel",
+          "quantite": 0,
+          "unite": "To taste"
+        }
+      ],
+      "Conserves & Autres": [
+        {
+          "nom": "Tomates concassées",
+          "quantite": 400,
+          "unite": "g"
+        }
+      ],
+      "Condiments & Sauces": [
+        {
+          "nom": "Huile d'olive",
+          "quantite": 3,
+          "unite": "c. à soupe"
+        }
+      ],
+      "Viandes & Poissons": [
+        {
+          "nom": "Poulet",
+          "quantite": 2,
+          "unite": "kg"
+        }
+      ]
+    }
+  }
+]

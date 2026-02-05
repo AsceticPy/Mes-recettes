@@ -1,0 +1,22 @@
+# Dossiers de données (montés en volumes)
+recettes/
+data/
+photos/
+
+# Fichiers Git
+.git
+.gitignore
+
+# Fichiers de configuration locale
+.claude/
+.vscode/
+*.log
+
+# Fichiers Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+README.md
+*.md

@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Application de gestion de recettes de cuisine">
+  <meta name="theme-color" content="#e74c3c">
+  <title>Mes Recettes de Cuisine</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Menu latéral gauche -->
+    <nav id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h2>Menu</h2>
+        <button id="btn-close-sidebar" class="btn-close-sidebar" aria-label="Fermer le menu">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#" data-page="recettes" class="sidebar-link active">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
+            </svg>
+            <span>Mes Recettes</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="courses" class="sidebar-link">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <span>Liste de courses</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="planning" class="sidebar-link">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>
+            </svg>
+            <span>Planning semaine</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="historique-recettes" class="sidebar-link">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+            </svg>
+            <span>Historique</span>
+          </a>
+        </li>
+        <li id="menu-reprendre-container" class="menu-reprendre-container hidden">
+          <a href="#" id="btn-reprendre-recette" class="sidebar-link sidebar-link-reprendre">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M8 5v14l11-7z"/>
+            </svg>
+            <span>Reprendre</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-section-title">Administration</div>
+      <ul class="sidebar-menu sidebar-menu-admin">
+        <li>
+          <a href="#" data-page="admin-recettes" class="sidebar-link">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+            </svg>
+            <span>Gestion Recettes</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="admin-ingredients" class="sidebar-link">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05l-5 2V1h-1.97v6.05l-4.03-2L10 9.31V1H8.03v8.31L4 5.05l1.66 16.48c.1.82.79 1.46 1.63 1.46h1.66l.1-2.23c.02-.66.58-1.22 1.28-1.22h6.34c.7 0 1.26.56 1.28 1.22l.11 2.23z"/>
+            </svg>
+            <span>Gestion Ingrédients</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="admin-unites" class="sidebar-link">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm3-6c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/>
+            </svg>
+            <span>Gestion Unités</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay pour fermer le menu sur mobile -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Contenu principal -->
+    <div id="main-content" class="main-content">
+      <!-- Header fixe -->
+      <header class="main-header">
+        <button id="btn-menu" class="btn-menu" aria-label="Ouvrir le menu">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </button>
+        <h1 id="page-title">Mes Recettes</h1>
+      </header>
+
+      <!-- Pages -->
+      <main id="pages-container">
+        <!-- Page liste des recettes -->
+        <div id="page-recettes" class="page active">
+          <div class="filtres-container">
+            <div class="search-box">
+              <input type="text" id="recherche" placeholder="Rechercher une recette..." aria-label="Rechercher une recette">
+              <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </div>
+
+            <div class="filtres">
+              <select id="filtre-type" aria-label="Filtrer par type">
+                <option value="">Tous les types</option>
+                <option value="entree">Entrées</option>
+                <option value="plat">Plats</option>
+                <option value="dessert">Desserts</option>
+              </select>
+
+              <select id="filtre-temps" aria-label="Filtrer par temps">
+                <option value="">Tous les temps</option>
+                <option value="30">Moins de 30 min</option>
+                <option value="60">Moins de 1h</option>
+                <option value="61">Plus de 1h</option>
+              </select>
+
+              <select id="filtre-origine" aria-label="Filtrer par origine">
+                <option value="">Toutes les origines</option>
+              </select>
+
+              <select id="tri-recettes" aria-label="Trier par">
+                <option value="">Trier par...</option>
+                <option value="nom">Nom (A-Z)</option>
+                <option value="type">Type de recette</option>
+                <option value="origine">Origine / Pays</option>
+                <option value="realisations">Nombre de réalisations</option>
+                <option value="temps">Temps total</option>
+              </select>
+
+              <button type="button" id="filtre-favoris" class="btn-filtre-favoris" aria-label="Afficher les favoris">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+                <span>Favoris</span>
+              </button>
+
+              <button type="button" id="btn-recette-aleatoire" class="btn-recette-aleatoire" aria-label="Recette aléatoire">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+                </svg>
+                <span>Aléatoire</span>
+              </button>
+            </div>
+
+            <div class="filtre-ingredients-section">
+              <button id="btn-toggle-ingredients" class="btn-toggle-ingredients">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05l-5 2V1h-1.97v6.05l-4.03-2L10 9.31V1H8.03v8.31L4 5.05l1.66 16.48c.1.82.79 1.46 1.63 1.46h1.66l.1-2.23c.02-.66.58-1.22 1.28-1.22h6.34c.7 0 1.26.56 1.28 1.22l.11 2.23z"/>
+                </svg>
+                <span>Filtrer par ingrédients disponibles</span>
+                <svg class="chevron" viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+              </button>
+
+              <div id="ingredients-filter-panel" class="ingredients-filter-panel hidden">
+                <p class="ingredients-filter-info">Sélectionnez les ingrédients que vous avez :</p>
+                <div class="ingredients-search-box">
+                  <input type="text" id="ingredients-search" placeholder="Rechercher un ingrédient..." aria-label="Rechercher un ingrédient">
+                </div>
+                <div id="ingredients-tags" class="ingredients-tags"></div>
+                <div class="ingredients-filter-actions">
+                  <span id="ingredients-count">0 ingrédient(s) sélectionné(s)</span>
+                  <button id="btn-clear-ingredients" class="btn-clear">Effacer tout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recettes-grid" id="recettes-grid"></div>
+        </div>
+
+        <!-- Page détail recette -->
+        <div id="page-detail" class="page">
+          <div class="detail-actions-top">
+            <button id="btn-retour" class="btn-retour-page">
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+              </svg>
+              Retour aux recettes
+            </button>
+            <div class="detail-actions-right">
+              <!-- Bouton Démarrer (mode consultation) -->
+              <button id="btn-demarrer-recette" class="btn-action-detail btn-demarrer" title="Démarrer la recette">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M8 5v14l11-7z"/>
+                </svg>
+                Démarrer
+              </button>
+              <!-- Bouton Reprendre (si session en cours pour cette recette) -->
+              <button id="btn-reprendre-detail" class="btn-action-detail btn-reprendre hidden" title="Reprendre la recette">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M8 5v14l11-7z"/>
+                </svg>
+                Reprendre
+              </button>
+              <!-- Bouton Terminer la recette (mode réalisation) -->
+              <button id="btn-arreter-realisation" class="btn-action-detail btn-terminer-recette hidden" title="Terminer la recette">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                </svg>
+                Terminer la recette
+              </button>
+              <button id="btn-courses-recette" class="btn-action-detail" title="Générer la liste de courses">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                </svg>
+                Liste de courses
+              </button>
+              <button id="btn-modifier-recette" class="btn-action-detail btn-modifier" title="Modifier la recette">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                </svg>
+                Modifier
+              </button>
+              <button id="btn-export-pdf" class="btn-action-detail">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                PDF
+              </button>
+            </div>
+          </div>
+
+          <div class="recette-detail" id="recette-detail">
+            <div class="recette-header">
+              <img id="detail-image" src="" alt="" class="recette-image">
+              <div class="recette-info-header">
+                <h2 id="detail-nom"></h2>
+                <div class="recette-temps">
+                  <span class="temps-item">
+                    <svg viewBox="0 0 24 24" width="18" height="18">
+                      <path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                    </svg>
+                    <span>Préparation : <strong id="detail-prep"></strong></span>
+                  </span>
+                  <span class="temps-item">
+                    <svg viewBox="0 0 24 24" width="18" height="18">
+                      <path fill="currentColor" d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
+                    </svg>
+                    <span>Cuisson : <strong id="detail-cuisson"></strong></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <section class="ingredients-section">
+              <div class="ingredients-header">
+                <h3>Ingrédients</h3>
+                <div class="personnes-selector">
+                  <button id="btn-moins" class="btn-personnes" aria-label="Moins de personnes">-</button>
+                  <span id="nb-personnes">4</span>
+                  <span>personnes</span>
+                  <button id="btn-plus" class="btn-personnes" aria-label="Plus de personnes">+</button>
+                </div>
+              </div>
+              <ul id="ingredients-liste" class="ingredients-liste"></ul>
+            </section>
+
+            <!-- Section étapes - masquée en mode consultation, visible en mode réalisation -->
+            <section id="etapes-section" class="etapes-section hidden">
+              <div class="etapes-header">
+                <h3>Préparation</h3>
+                <button id="btn-toggle-etapes" class="btn-toggle-etapes">Voir toutes les étapes</button>
+              </div>
+
+              <div id="etape-navigation" class="etape-navigation">
+                <div class="etape-progression">
+                  <span id="etape-numero">Étape 1/7</span>
+                  <div class="progression-bar">
+                    <div id="progression-fill" class="progression-fill"></div>
+                  </div>
+                </div>
+                <div id="etape-contenu" class="etape-contenu"></div>
+                <div class="etape-buttons">
+                  <button id="btn-precedent" class="btn-nav" aria-label="Étape précédente">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                    Précédent
+                  </button>
+                  <button id="btn-suivant" class="btn-nav btn-primary" aria-label="Étape suivante">
+                    Suivant
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <ol id="etapes-liste" class="etapes-liste hidden"></ol>
+            </section>
+          </div>
+        </div>
+
+        <!-- Page gestion des ingrédients -->
+        <div id="page-ingredients" class="page">
+          <div class="page-header-actions">
+            <button id="btn-add-categorie" class="btn-action">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+              Nouvelle catégorie
+            </button>
+          </div>
+
+          <div id="ingredients-manager" class="ingredients-manager"></div>
+        </div>
+
+        <!-- Page liste de courses -->
+        <div id="page-courses" class="page">
+          <div class="courses-tabs">
+            <button type="button" class="courses-tab active" data-tab="nouvelle">Nouvelle liste</button>
+            <button type="button" class="courses-tab" data-tab="historique">Historique</button>
+          </div>
+
+          <div id="tab-nouvelle" class="courses-tab-content active">
+            <div class="courses-container">
+              <div class="courses-selection">
+                <h3>Sélectionnez vos recettes</h3>
+                <p class="form-hint">Cochez les recettes pour générer votre liste de courses</p>
+
+                <div class="courses-filtres">
+                  <div class="search-box">
+                    <input type="text" id="courses-recherche" placeholder="Rechercher une recette..." aria-label="Rechercher une recette">
+                    <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+                      <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                  </div>
+                  <select id="courses-filtre-type" aria-label="Filtrer par type">
+                    <option value="">Tous les types</option>
+                    <option value="entree">Entrées</option>
+                    <option value="plat">Plats</option>
+                    <option value="dessert">Desserts</option>
+                  </select>
+                  <select id="courses-filtre-origine" aria-label="Filtrer par origine">
+                    <option value="">Toutes les origines</option>
+                  </select>
+                  <button type="button" id="courses-filtre-favoris" class="btn-filtre-favoris" aria-label="Afficher les favoris">
+                    <svg viewBox="0 0 24 24" width="18" height="18">
+                      <path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                    <span>Favoris</span>
+                  </button>
+                </div>
+
+                <div class="courses-personnes">
+                  <label for="courses-nb-personnes">Nombre de personnes :</label>
+                  <div class="personnes-selector">
+                    <button type="button" id="courses-moins" class="btn-personnes">-</button>
+                    <span id="courses-nb-personnes">4</span>
+                    <button type="button" id="courses-plus" class="btn-personnes">+</button>
+                  </div>
+                </div>
+
+                <div id="courses-recettes-liste" class="courses-recettes-liste"></div>
+
+                <button type="button" id="btn-generer-liste" class="btn-primary-form">
+                  <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                  </svg>
+                  Générer la liste
+                </button>
+              </div>
+
+              <div id="courses-resultat" class="courses-resultat hidden">
+                <div class="courses-resultat-header">
+                  <h3>Votre liste de courses</h3>
+                  <div class="courses-resultat-actions">
+                    <button type="button" id="btn-sauvegarder-liste" class="btn-action btn-secondary-action">
+                      <svg viewBox="0 0 24 24" width="18" height="18">
+                        <path fill="currentColor" d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/>
+                      </svg>
+                      Sauvegarder
+                    </button>
+                    <button type="button" id="btn-copier-liste" class="btn-action">
+                      <svg viewBox="0 0 24 24" width="18" height="18">
+                        <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                      </svg>
+                      Copier
+                    </button>
+                  </div>
+                </div>
+                <div id="liste-courses" class="liste-courses"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-historique" class="courses-tab-content">
+            <div class="historique-container">
+              <h3>Historique des listes de courses</h3>
+              <div id="historique-liste" class="historique-liste"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page ajout de recette -->
+        <div id="page-ajout" class="page">
+          <form id="form-recette" class="form-recette">
+            <section class="form-section">
+              <h3>Informations générales</h3>
+
+              <div class="form-group">
+                <label for="input-nom">Nom de la recette *</label>
+                <input type="text" id="input-nom" required placeholder="Ex: Poulet rôti aux herbes">
+              </div>
+
+              <div class="form-group">
+                <label for="input-photo">Photo de la recette</label>
+                <div class="photo-upload-container">
+                  <input type="file" id="input-photo" accept="image/*" class="photo-input">
+                  <label for="input-photo" class="photo-upload-btn">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="currentColor" d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/>
+                    </svg>
+                    <span>Choisir une photo</span>
+                  </label>
+                  <div id="photo-preview" class="photo-preview hidden">
+                    <img id="photo-preview-img" src="" alt="Aperçu">
+                    <button type="button" id="btn-remove-photo" class="btn-remove-photo" aria-label="Supprimer la photo">
+                      <svg viewBox="0 0 24 24" width="18" height="18">
+                        <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <small>La photo sera nommée automatiquement avec le nom de la recette</small>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="input-type">Type de plat *</label>
+                  <select id="input-type" required>
+                    <option value="">Sélectionner...</option>
+                    <option value="entree">Entrée</option>
+                    <option value="plat">Plat</option>
+                    <option value="dessert">Dessert</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="input-personnes">Nombre de personnes *</label>
+                  <input type="number" id="input-personnes" required min="1" max="50" value="4">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="input-prep">Temps de préparation (min) *</label>
+                  <input type="number" id="input-prep" required min="0" value="15">
+                </div>
+
+                <div class="form-group">
+                  <label for="input-cuisson">Temps de cuisson (min) *</label>
+                  <input type="number" id="input-cuisson" required min="0" value="30">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="input-origines">Origine(s) / Cuisine(s)</label>
+                <p class="form-hint" style="margin-bottom: 0.5rem;">Sélectionnez une ou plusieurs origines culinaires</p>
+                <div id="origines-tags" class="origines-tags-select"></div>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h3>Ingrédients</h3>
+              <p class="form-hint">Sélectionnez d'abord une catégorie, puis l'ingrédient</p>
+
+              <div class="ingredient-selector">
+                <select id="select-categorie" class="select-categorie">
+                  <option value="">Choisir une catégorie...</option>
+                </select>
+                <select id="select-ingredient" class="select-ingredient" disabled>
+                  <option value="">Choisir un ingrédient...</option>
+                </select>
+              </div>
+              <div class="ingredient-selector-row2">
+                <input type="number" id="input-quantite" placeholder="Quantité" min="0" step="any" class="input-quantite">
+                <select id="select-categorie-unite" class="select-categorie-unite">
+                  <option value="">Catégorie...</option>
+                </select>
+                <select id="select-unite" class="select-unite" disabled>
+                  <option value="">Unité...</option>
+                </select>
+                <button type="button" id="btn-add-ingredient-select" class="btn-add-ingredient-select">
+                  <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                  </svg>
+                  Ajouter
+                </button>
+              </div>
+
+              <div id="ingredients-recette-liste" class="ingredients-recette-liste"></div>
+            </section>
+
+            <section class="form-section">
+              <h3>Étapes de préparation</h3>
+
+              <div id="etapes-inputs" class="etapes-inputs"></div>
+
+              <button type="button" id="btn-add-etape" class="btn-add-item">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                </svg>
+                Ajouter une étape
+              </button>
+            </section>
+
+            <div class="form-actions">
+              <button type="button" id="btn-cancel-form" class="btn-secondary">Annuler</button>
+              <button type="submit" class="btn-primary-form">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                Enregistrer la recette
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Page Planning de la semaine -->
+        <div id="page-planning" class="page">
+          <div class="planning-header">
+            <div class="planning-navigation">
+              <button type="button" id="btn-semaine-precedente" class="btn-nav-semaine" aria-label="Semaine précédente">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+              </button>
+              <span id="planning-periode" class="planning-periode">Semaine du 1 au 7 janvier 2024</span>
+              <button type="button" id="btn-semaine-suivante" class="btn-nav-semaine" aria-label="Semaine suivante">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+              </button>
+            </div>
+            <button type="button" id="btn-generer-courses-semaine" class="btn-action">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+              </svg>
+              Générer liste de courses
+            </button>
+          </div>
+
+          <div id="planning-calendrier" class="planning-calendrier">
+            <!-- Calendrier généré par JS -->
+          </div>
+        </div>
+
+        <!-- Page Administration Recettes -->
+        <div id="page-admin-recettes" class="page">
+          <div class="admin-header">
+            <h2>Gestion des Recettes</h2>
+            <button type="button" id="btn-admin-ajout-recette" class="btn-action">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+              Ajouter une recette
+            </button>
+            <div class="admin-search-box">
+              <input type="text" id="admin-recettes-recherche" placeholder="Rechercher une recette..." aria-label="Rechercher">
+              <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </div>
+          </div>
+          <div id="admin-recettes-liste" class="admin-liste"></div>
+        </div>
+
+        <!-- Page Administration Ingrédients -->
+        <div id="page-admin-ingredients" class="page">
+          <div class="admin-header">
+            <h2>Gestion des Ingrédients</h2>
+            <button type="button" id="btn-admin-add-categorie-ing" class="btn-action">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+              Nouvelle catégorie
+            </button>
+          </div>
+          <div id="admin-ingredients-manager" class="admin-ingredients-manager"></div>
+        </div>
+
+        <!-- Page Administration Unités -->
+        <div id="page-admin-unites" class="page">
+          <div class="admin-header">
+            <h2>Gestion des Unités de Mesure</h2>
+            <button type="button" id="btn-admin-add-categorie-unite" class="btn-action">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+              Nouvelle catégorie
+            </button>
+          </div>
+          <div id="admin-unites-manager" class="admin-unites-manager"></div>
+        </div>
+
+        <!-- Page Historique des Recettes -->
+        <div id="page-historique-recettes" class="page">
+          <div class="historique-header">
+            <h2>Historique des recettes</h2>
+            <div class="historique-stats" id="historique-stats">
+              <!-- Stats chargées dynamiquement -->
+            </div>
+          </div>
+
+          <div class="historique-filtres">
+            <div class="filtres-row">
+              <select id="historique-filtre-statut" aria-label="Filtrer par statut">
+                <option value="">Tous les statuts</option>
+                <option value="en_cours">En cours</option>
+                <option value="terminee">Terminées</option>
+              </select>
+              <input type="date" id="historique-date-debut" aria-label="Date de début">
+              <input type="date" id="historique-date-fin" aria-label="Date de fin">
+              <button type="button" id="btn-historique-filtrer" class="btn-action btn-small">
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="currentColor" d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+                </svg>
+                Filtrer
+              </button>
+            </div>
+          </div>
+
+          <div id="historique-recettes-liste" class="historique-liste">
+            <!-- Liste chargée dynamiquement -->
+          </div>
+
+          <div id="historique-recettes-empty" class="historique-empty hidden">
+            <svg viewBox="0 0 24 24" width="64" height="64">
+              <path fill="currentColor" d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+            </svg>
+            <p>Aucune recette dans l'historique</p>
+            <p class="hint">Démarrez une recette pour commencer à suivre votre progression</p>
+          </div>
+        </div>
+
+        <!-- Page Recette En Cours (Suivi de progression) -->
+        <div id="page-recette-en-cours" class="page">
+          <div class="recette-en-cours-header">
+            <button id="btn-retour-recette-en-cours" class="btn-retour" aria-label="Retour">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+              </svg>
+              Retour
+            </button>
+            <div class="en-cours-actions">
+              <button id="btn-terminer-recette" class="btn-action btn-terminer">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                </svg>
+                Marquer comme terminée
+              </button>
+            </div>
+          </div>
+
+          <div class="recette-en-cours-info">
+            <div class="en-cours-image-container">
+              <img id="en-cours-image" src="" alt="" class="en-cours-image">
+            </div>
+            <div class="en-cours-details">
+              <h2 id="en-cours-nom"></h2>
+              <div class="en-cours-meta">
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="currentColor" d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+                  </svg>
+                  Démarrée <span id="en-cours-date-debut"></span>
+                </span>
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                  </svg>
+                  <span id="en-cours-personnes"></span> personnes
+                </span>
+              </div>
+              <div class="en-cours-progression-globale">
+                <span id="en-cours-progression-text">0 / 0 étapes complétées</span>
+                <div class="progression-bar-large">
+                  <div id="en-cours-progression-fill" class="progression-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="en-cours-sections">
+            <!-- Section Ingrédients -->
+            <section class="en-cours-ingredients">
+              <h3>
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05l-5 2V1h-1.97v6.05l-4.03-2L10 9.31V1H8.03v8.31L4 5.05l1.66 16.48c.1.82.79 1.46 1.63 1.46h1.66l.1-2.23c.02-.66.58-1.22 1.28-1.22h6.34c.7 0 1.26.56 1.28 1.22l.11 2.23z"/>
+                </svg>
+                Ingrédients
+              </h3>
+              <ul id="en-cours-ingredients" class="en-cours-ingredients-liste">
+                <!-- Ingrédients chargés dynamiquement -->
+              </ul>
+            </section>
+
+            <!-- Section Étapes avec checkboxes -->
+            <section class="en-cours-etapes">
+              <h3>
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+                </svg>
+                Étapes de préparation
+              </h3>
+              <ol id="en-cours-etapes" class="en-cours-etapes-liste">
+                <!-- Étapes avec checkboxes chargées dynamiquement -->
+              </ol>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal Sélection Recette pour Planning -->
+  <div id="modal-select-recette" class="modal-overlay">
+    <div class="modal modal-select-recette">
+      <div class="modal-header">
+        <h3>Choisir une recette</h3>
+        <button type="button" id="btn-close-modal-select" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-filtres">
+          <div class="search-box">
+            <input type="text" id="modal-recherche" placeholder="Rechercher une recette..." aria-label="Rechercher">
+            <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+          </div>
+          <div class="modal-filtres-row">
+            <select id="modal-filtre-type" aria-label="Filtrer par type">
+              <option value="">Tous les types</option>
+              <option value="entree">Entrées</option>
+              <option value="plat">Plats</option>
+              <option value="dessert">Desserts</option>
+            </select>
+            <select id="modal-filtre-origine" aria-label="Filtrer par origine">
+              <option value="">Toutes origines</option>
+            </select>
+            <button type="button" id="modal-filtre-favoris" class="btn-filtre-favoris-small">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="modal-recettes-liste" class="modal-recettes-liste">
+          <!-- Liste des recettes -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Recette Aléatoire -->
+  <div id="modal-aleatoire" class="modal-overlay">
+    <div class="modal modal-aleatoire">
+      <div class="modal-header">
+        <h3>🎲 Recette aléatoire</h3>
+        <button type="button" id="btn-close-modal-aleatoire" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-hint">Choisissez un type de recette :</p>
+        <div class="aleatoire-options">
+          <button type="button" class="btn-aleatoire-type" data-type="">
+            <span class="aleatoire-icon">🍽️</span>
+            <span>Toutes</span>
+          </button>
+          <button type="button" class="btn-aleatoire-type" data-type="entree">
+            <span class="aleatoire-icon">🥗</span>
+            <span>Entrée</span>
+          </button>
+          <button type="button" class="btn-aleatoire-type" data-type="plat">
+            <span class="aleatoire-icon">🍝</span>
+            <span>Plat</span>
+          </button>
+          <button type="button" class="btn-aleatoire-type" data-type="dessert">
+            <span class="aleatoire-icon">🍰</span>
+            <span>Dessert</span>
+          </button>
+        </div>
+        <div class="aleatoire-divider">
+          <span>ou</span>
+        </div>
+        <button type="button" id="btn-menu-aleatoire-complet" class="btn-menu-complet">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+          </svg>
+          Menu aléatoire complet
+          <span class="menu-complet-hint">Entrée + Plat + Dessert</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Menu Aléatoire Complet -->
+  <div id="modal-menu-complet" class="modal-overlay">
+    <div class="modal modal-menu-complet">
+      <div class="modal-header">
+        <h3>🎲 Menu aléatoire complet</h3>
+        <button type="button" id="btn-close-modal-menu" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="menu-complet-resultat" class="menu-complet-resultat">
+          <!-- Résultat du menu généré -->
+        </div>
+        <div class="menu-complet-actions">
+          <button type="button" id="btn-regenerer-menu" class="btn-secondary">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+            </svg>
+            Régénérer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Édition Recette -->
+  <div id="modal-edit-recette" class="modal-overlay">
+    <div class="modal modal-edit-recette">
+      <div class="modal-header">
+        <h3>Modifier la recette</h3>
+        <button type="button" id="btn-close-modal-edit" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body modal-edit-body">
+        <form id="form-edit-recette" class="form-recette form-edit">
+          <input type="hidden" id="edit-recette-id">
+
+          <section class="form-section">
+            <h4>Informations générales</h4>
+
+            <div class="form-group">
+              <label for="edit-nom">Nom de la recette *</label>
+              <input type="text" id="edit-nom" required placeholder="Ex: Poulet rôti aux herbes">
+            </div>
+
+            <div class="form-group">
+              <label for="edit-photo">Photo de la recette</label>
+              <div class="photo-upload-container">
+                <input type="file" id="edit-photo" accept="image/*" class="photo-input">
+                <label for="edit-photo" class="photo-upload-btn">
+                  <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/>
+                  </svg>
+                  <span>Changer la photo</span>
+                </label>
+                <div id="edit-photo-preview" class="photo-preview">
+                  <img id="edit-photo-preview-img" src="" alt="Aperçu">
+                  <button type="button" id="btn-edit-remove-photo" class="btn-remove-photo" aria-label="Supprimer la photo">
+                    <svg viewBox="0 0 24 24" width="18" height="18">
+                      <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="edit-type">Type de plat *</label>
+                <select id="edit-type" required>
+                  <option value="">Sélectionner...</option>
+                  <option value="entree">Entrée</option>
+                  <option value="plat">Plat</option>
+                  <option value="dessert">Dessert</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-personnes">Nombre de personnes *</label>
+                <input type="number" id="edit-personnes" required min="1" max="50" value="4">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="edit-prep">Temps de préparation (min) *</label>
+                <input type="number" id="edit-prep" required min="0" value="15">
+              </div>
+
+              <div class="form-group">
+                <label for="edit-cuisson">Temps de cuisson (min) *</label>
+                <input type="number" id="edit-cuisson" required min="0" value="30">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Origine(s) / Cuisine(s)</label>
+              <div id="edit-origines-tags" class="origines-tags-select"></div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h4>Ingrédients</h4>
+
+            <div class="ingredient-selector">
+              <select id="edit-select-categorie" class="select-categorie">
+                <option value="">Choisir une catégorie...</option>
+              </select>
+              <select id="edit-select-ingredient" class="select-ingredient" disabled>
+                <option value="">Choisir un ingrédient...</option>
+              </select>
+            </div>
+            <div class="ingredient-selector-row2">
+              <input type="number" id="edit-input-quantite" placeholder="Quantité" min="0" step="any" class="input-quantite">
+              <select id="edit-select-categorie-unite" class="select-categorie-unite">
+                <option value="">Catégorie...</option>
+              </select>
+              <select id="edit-select-unite" class="select-unite" disabled>
+                <option value="">Unité...</option>
+              </select>
+              <button type="button" id="btn-edit-add-ingredient" class="btn-add-ingredient-select">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+
+            <div id="edit-ingredients-liste" class="ingredients-recette-liste"></div>
+          </section>
+
+          <section class="form-section">
+            <h4>Étapes de préparation</h4>
+
+            <div id="edit-etapes-inputs" class="etapes-inputs"></div>
+
+            <button type="button" id="btn-edit-add-etape" class="btn-add-item">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+              Ajouter une étape
+            </button>
+          </section>
+
+          <div class="form-actions">
+            <button type="button" id="btn-cancel-edit" class="btn-secondary">Annuler</button>
+            <button type="submit" class="btn-primary-form">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+              </svg>
+              Enregistrer les modifications
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Confirmation Suppression -->
+  <div id="modal-confirm-delete" class="modal-overlay">
+    <div class="modal modal-confirm">
+      <div class="modal-header">
+        <h3>Confirmer la suppression</h3>
+        <button type="button" id="btn-close-modal-delete" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-delete-message">Êtes-vous sûr de vouloir supprimer cet élément ?</p>
+        <div class="modal-actions">
+          <button type="button" id="btn-cancel-delete" class="btn-secondary">Annuler</button>
+          <button type="button" id="btn-confirm-delete" class="btn-danger">Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ajout/Édition Ingrédient -->
+  <div id="modal-edit-ingredient" class="modal-overlay">
+    <div class="modal modal-small">
+      <div class="modal-header">
+        <h3 id="modal-ingredient-title">Ajouter un ingrédient</h3>
+        <button type="button" id="btn-close-modal-ingredient" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form-edit-ingredient">
+          <input type="hidden" id="ingredient-edit-categorie">
+          <input type="hidden" id="ingredient-edit-index">
+          <div class="form-group">
+            <label for="ingredient-edit-nom">Nom de l'ingrédient *</label>
+            <input type="text" id="ingredient-edit-nom" required placeholder="Ex: Tomate">
+          </div>
+          <div class="form-actions">
+            <button type="button" id="btn-cancel-ingredient" class="btn-secondary">Annuler</button>
+            <button type="submit" class="btn-primary-form">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ajout/Édition Catégorie Ingrédient -->
+  <div id="modal-edit-categorie-ing" class="modal-overlay">
+    <div class="modal modal-small">
+      <div class="modal-header">
+        <h3 id="modal-categorie-ing-title">Nouvelle catégorie</h3>
+        <button type="button" id="btn-close-modal-categorie-ing" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form-edit-categorie-ing">
+          <input type="hidden" id="categorie-ing-edit-index">
+          <div class="form-group">
+            <label for="categorie-ing-edit-nom">Nom de la catégorie *</label>
+            <input type="text" id="categorie-ing-edit-nom" required placeholder="Ex: Légumes">
+          </div>
+          <div class="form-actions">
+            <button type="button" id="btn-cancel-categorie-ing" class="btn-secondary">Annuler</button>
+            <button type="submit" class="btn-primary-form">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ajout/Édition Unité -->
+  <div id="modal-edit-unite" class="modal-overlay">
+    <div class="modal modal-small">
+      <div class="modal-header">
+        <h3 id="modal-unite-title">Ajouter une unité</h3>
+        <button type="button" id="btn-close-modal-unite" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form-edit-unite">
+          <input type="hidden" id="unite-edit-categorie">
+          <input type="hidden" id="unite-edit-index">
+          <div class="form-group">
+            <label for="unite-edit-nom">Nom de l'unité *</label>
+            <input type="text" id="unite-edit-nom" required placeholder="Ex: kg">
+          </div>
+          <div class="form-actions">
+            <button type="button" id="btn-cancel-unite" class="btn-secondary">Annuler</button>
+            <button type="submit" class="btn-primary-form">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ajout/Édition Catégorie Unité -->
+  <div id="modal-edit-categorie-unite" class="modal-overlay">
+    <div class="modal modal-small">
+      <div class="modal-header">
+        <h3 id="modal-categorie-unite-title">Nouvelle catégorie</h3>
+        <button type="button" id="btn-close-modal-categorie-unite" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form-edit-categorie-unite">
+          <input type="hidden" id="categorie-unite-edit-index">
+          <div class="form-group">
+            <label for="categorie-unite-edit-nom">Nom de la catégorie *</label>
+            <input type="text" id="categorie-unite-edit-nom" required placeholder="Ex: Volume">
+          </div>
+          <div class="form-actions">
+            <button type="button" id="btn-cancel-categorie-unite" class="btn-secondary">Annuler</button>
+            <button type="submit" class="btn-primary-form">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Liste de courses pour une recette -->
+  <div id="modal-courses-recette" class="modal-overlay">
+    <div class="modal modal-courses-recette">
+      <div class="modal-header">
+        <h3>Liste de courses</h3>
+        <button type="button" id="btn-close-modal-courses-recette" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="courses-recette-personnes">
+          <label>Nombre de personnes :</label>
+          <div class="personnes-selector">
+            <button type="button" id="modal-courses-moins" class="btn-personnes">-</button>
+            <span id="modal-courses-nb-personnes">4</span>
+            <button type="button" id="modal-courses-plus" class="btn-personnes">+</button>
+          </div>
+        </div>
+        <div id="modal-courses-liste" class="liste-courses"></div>
+        <div class="modal-courses-actions">
+          <button type="button" id="btn-copier-courses-recette" class="btn-action">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+            </svg>
+            Copier la liste
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Widget des timers actifs -->
+  <div id="timers-actifs" class="timers-actifs" style="display: none;">
+    <div class="timers-actifs-header">
+      <span>⏱️ Timers actifs</span>
+      <button type="button" id="btn-toggle-timers" class="btn-toggle-timers">−</button>
+    </div>
+    <div id="timers-actifs-liste" class="timers-actifs-liste"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+{
+  "id": "boires-a-la-cannelle",
+  "nom": "Boires à la cannelle",
+  "type": "dessert",
+  "origines": [
+    "Norvège"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 65,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/as88dq1762772486.jpg",
+  "ingredients": [
+    {
+      "nom": "Beurre non salé",
+      "quantite": 100.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 200.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Farine",
+      "quantite": 250.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Farine blanche forte",
+      "quantite": 250.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Levure à action rapide",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Cardamome",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre de ricin",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 0,
+      "unite": "trait"
+    },
+    {
+      "nom": "Beurre non salé",
+      "quantite": 75.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sucre de ricin",
+      "quantite": 100.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Cannelle",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 1.0,
+      "unite": "pièce"
+    }
+  ],
+  "etapes": [
+    "Dans une petite casserole, chauffer le beurre, le lait et le sel jusqu'à ce que le beurre soit fondu.",
+    "Laisser refroidir le mélange jusqu'à ce qu'il soit tiède.",
+    "Dans un grand bol, mélanger les farines, la levure, la cardamome et le sucre jusqu'à combinaison.",
+    "Faites un puits au centre et craquez dans les œufs.",
+    "Verser dans le mélange de lait tiède et remuer tout ensemble pour former une pâte collante.",
+    "Vous devrez peut-être utiliser vos mains lorsque la pâte deviendra plus rigide.",
+    "Huiler la surface de travail avec une cuillère à café d'huile d'olive.",
+    "Tourner la pâte sur la surface huilée et pétrir vigoureusement pendant 5 à 8 minutes, en utilisant un racleur en plastique au besoin pour prendre la pâte de la surface de travail.",
+    "Ne soyez pas tenté d'ajouter de la farine, car cela rendra les pains secs et durs.",
+    "Continuez à pétrir jusqu'à ce que la pâte soit considérablement moins collante, plus lisse et plus élastique.",
+    "Formez une boule et mettez-la dans un grand bol gras.",
+    "Couvrir le bol d'une serviette à thé propre et réserver dans un endroit chaud pour prouver pendant une heure, ou jusqu'à ce que la taille doublée.",
+    "Pendant ce temps, pour le remplissage et la garniture, mélanger le beurre ramolli dans un bol avec la moitié du sucre et 1 cuillère à soupe de cannelle.",
+    "Utilisez une fourchette pour mélanger le sucre et l'épice dans le beurre jusqu'à ce qu'il soit complètement combiné.",
+    "Mélanger le reste du sucre et de la cannelle dans un bol séparé et réserver.",
+    "Lorsque la pâte s'est levée, tourner sur une surface de travail fardée et rouler doucement dans un rectangle 36x24cm/14x91⁄2in.",
+    "Étendre la cannelle-sucre-beurre uniformément sur la pâte avec un couteau de table ou de palette.",
+    "Avec le bord le plus long le plus proche de vous, rouler la pâte dans un cylindre.",
+    "Couper en 12 tranches égales.",
+    "Placer chaque tranche sur un étui à cupcake en papier aplati sur un plateau de cuisson, ou dans une boîte de muffin graissée.",
+    "(Faire cuire dans une boîte de muffin fera vos pains de cannelle plus grands et endossés.).",
+    "Couvrir d'une serviette à thé propre et mettre de côté pour prouver à nouveau pendant 30–45 minutes, ou jusqu'à ce qu'il se lève.",
+    "Préchauffer le four à 200C/180C Ventilateur/Gaz 6.",
+    "Badigeonner le dessus des pains d'œuf battu et de poussière généreusement avec le sucre de cannelle.",
+    "Cuire au four pendant 12 minutes jusqu'à ce que les petits soient brun-or foncé.",
+    "Profitez au chaud avec une tasse de café."
+  ]
+}

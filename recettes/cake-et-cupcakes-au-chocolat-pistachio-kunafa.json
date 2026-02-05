@@ -1,0 +1,111 @@
+{
+  "id": "cake-et-cupcakes-au-chocolat-pistachio-kunafa",
+  "nom": "Cake et cupcakes au chocolat Pistachio Kunafa",
+  "type": "dessert",
+  "origines": [
+    "Arabie saoudite"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 188,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/yh3sg71763741307.jpg",
+  "ingredients": [
+    {
+      "nom": "Chocolat blanc",
+      "quantite": 6.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Pistaches non salées",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Lait condensé",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 5.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Biscuits de crème oreo",
+      "quantite": 25.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Poudre de cuisson",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Vinaigre",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 1.0,
+      "unite": "pincée"
+    },
+    {
+      "nom": "Sevaiiya",
+      "quantite": 150.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Ghee",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Chocolat noir",
+      "quantite": 120.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Malais",
+      "quantite": 4.0,
+      "unite": "c. à soupe"
+    }
+  ],
+  "etapes": [
+    "Pour le gâteau au chocolat: Préparez tous les ingrédients.",
+    "Poudre les biscuits oreo, pincer le sel et mélanger le lait chaud au besoin et faire une pâte à gâteau.",
+    "Ajouter la poudre à pâte et le vinaigre et mélanger.",
+    "Graisser une boîte à fond lâche.",
+    "Verser une couche de 1cm d'épaisseur de la pâte.",
+    "Cuire au four préchauffé à 160°C pendant 7-8 minutes ou jusqu'à ce que le couteau soit propre.",
+    "Refroidir sur le grillage.",
+    "Pour Pistachio Pistache maison:Ready tous les ingrédients de pâte de pistachio.",
+    "Légèrement fondre le chocolat blanc sur une double chaudière.",
+    "(autrement dit, la lame du mélangeur peut casser) Poudre grossièrement la pistache dans le mélangeur.",
+    "Ajouter dans le lait condensé.",
+    "Ajouter le chocolat blanc légèrement chaud et légèrement fondu et le lait au besoin et écraser à une pâte lisse.",
+    "(Une couleur verte peut être ajoutée.",
+    "Pas du tout.).",
+    "Pour Kunafa: Dans un kadhaai, prendre le ghee et rôtir le sevaiiya au gaz lent.",
+    "Continuer à remuer jusqu'à ce qu'un agréable arôme rôti libère.",
+    "Ajouter dans la pâte de pistaches maison.",
+    "Bien mélanger.",
+    "Kunafa est prêt.",
+    "Étendre une couche de 2 cm sur le gâteau au chocolat refroidi.",
+    "Faire fondre le chocolat noir et le malai tendu et préparer la ganache au chocolat.",
+    "Laisser refroidir et verser sur la couche Kunafa.",
+    "Garnissez le gâteau au chocolat Pistachio Kunafa avec du pistachio haché et des boules d'argent.",
+    "Conserver au réfrigérateur pendant 2-3 heures.",
+    "Puis démoudre le gâteau Kunafa.",
+    "J'ai aussi préparé des cupcakes Kunafa.",
+    "Couper et profiter.",
+    "Le gâteau avait l'air si joli qu'on pouvait le sauver ou l'avoir !!.",
+    "Vue transversale du gâteau au chocolat Pistachio Kunafa.",
+    "Profitez d'une nouvelle douceur cette saison festive en famille et entre amis."
+  ]
+}

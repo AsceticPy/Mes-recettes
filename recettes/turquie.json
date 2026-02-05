@@ -1,0 +1,85 @@
+{
+  "id": "turquie",
+  "nom": "Turquie",
+  "type": "plat",
+  "origines": [
+    "Vietnam"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 20,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/1wj8w31763781990.jpg",
+  "ingredients": [
+    {
+      "nom": "Baguette",
+      "quantite": 2.0,
+      "unite": "petit"
+    },
+    {
+      "nom": "Foie de poulet",
+      "quantite": 50.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Concombre",
+      "quantite": 0.25,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Turquie",
+      "quantite": 140.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Mayonnaise",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Chilli rouge",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Menthe",
+      "quantite": 0,
+      "unite": "poignée"
+    },
+    {
+      "nom": "Carottes",
+      "quantite": 2.0,
+      "unite": "petit"
+    },
+    {
+      "nom": "Chou rouge",
+      "quantite": 75.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Gingembre au sol",
+      "quantite": 0.25,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Vinaigre de riz",
+      "quantite": 0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sucre de castre doré",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    }
+  ],
+  "etapes": [
+    "Pour faire la griffe marinée, mettre les carottes et le chou dans un grand bol.",
+    "Dans un petit bol, mélanger le gingembre, le vinaigre de riz, le sucre et quelques pincées de sel.",
+    "Verser les légumes et mélanger.",
+    "Réserver pendant au moins 15 minutes.",
+    "Couper les baguettes de longueur et répartir le pâté sur la moitié inférieure.",
+    "Garnir de la griffe marinée, du concombre et de la dinde.",
+    "Mélanger la mayonnaise avec le chili haché et la poupée au-dessus.",
+    "Dispersez les feuilles de menthe et le piment tranché.",
+    "Sandwich ensemble et creuser dans."
+  ]
+}

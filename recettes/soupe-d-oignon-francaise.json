@@ -1,0 +1,79 @@
+{
+  "id": "soupe-d-oignon-francaise",
+  "nom": "Soupe d'oignon française",
+  "type": "accompagnement",
+  "origines": [
+    "France"
+  ],
+  "tempsPreparation": 40,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/xvrrux1511783685.jpg",
+  "ingredients": [
+    {
+      "nom": "Beurre",
+      "quantite": 50.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "kg"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Couvercle d'ail",
+      "quantite": 4.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Farine plate",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Vin blanc sec",
+      "quantite": 250.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Viande bovine",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Pain",
+      "quantite": 4.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Gruyère",
+      "quantite": 140.0,
+      "unite": "g"
+    }
+  ],
+  "etapes": [
+    "Faire fondre le beurre avec l'huile dans une grande casserole à base lourde.",
+    "Ajouter les oignons et faire frire avec le couvercle pendant 10 minutes jusqu'à tendreté.",
+    "Saupoudrer le sucre et cuire encore 20 minutes, en remuant fréquemment, jusqu'à ce qu'il soit caramélisé.",
+    "Les oignons doivent être vraiment dorés, pleins de saveur et doux lorsqu'ils sont pincées entre les doigts.",
+    "Prenez soin vers la fin pour s'assurer qu'ils ne brûlent pas.",
+    "Ajouter l'ail pour les dernières minutes de cuisson des oignons, puis saupoudrer de farine et bien remuer.",
+    "Augmentez la chaleur et continuez à remuer au fur et à mesure que vous ajoutez le vin, puis le bouillon chaud.",
+    "Couvrir et laisser mijoter pendant 15-20 minutes.",
+    "Pour servir, allumez le gril et toastez le pain.",
+    "Déposer la soupe dans des bols thermofuges.",
+    "Mettre une tranche ou deux de toast sur les bols de soupe, et empiler sur le fromage.",
+    "Griller jusqu'à ce qu'il fond.",
+    "Alternativement, vous pouvez compléter les toasts sous le grill, puis les servir sur le dessus."
+  ]
+}

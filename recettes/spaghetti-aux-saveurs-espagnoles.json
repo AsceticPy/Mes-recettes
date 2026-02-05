@@ -1,0 +1,55 @@
+{
+  "id": "spaghetti-aux-saveurs-espagnoles",
+  "nom": "Spaghetti aux saveurs espagnoles",
+  "type": "plat",
+  "origines": [
+    "Espagne"
+  ],
+  "tempsPreparation": 28,
+  "tempsCuisson": 3,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/vpcqn01763335688.jpg",
+  "ingredients": [
+    {
+      "nom": "Chorizo",
+      "quantite": 80.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Spaghetti",
+      "quantite": 300.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 20.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Poivre rouge",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Fromage de parmesan",
+      "quantite": 50.0,
+      "unite": "g"
+    }
+  ],
+  "etapes": [
+    "Mettre une casserole d'eau sur un feu vif à ébullition.",
+    "Pendant ce temps, couper le chorizo en bandes avec des ciseaux et hacher le persil et les poivrons (vérifier d'abord les graines perdues).",
+    "Lorsque l'eau est bouillante, ajouter les spaghettis avec une bonne mesure de sel, remuer et revenir à l'ébullition.",
+    "Cuire 3 minutes.",
+    "Dans une grande poêle, faire chauffer l'huile, ajouter le chorizo et les poivrons et beaucoup de poivre noir.",
+    "Cuire une minute environ, jusqu'à ce que les jus soient chauffés et que le paprika du chorizo soit teinté rouge.",
+    "Verser la moitié d'une tasse d'eau de pâtes de la poêle, égoutter le reste et mettre les spaghettis dans la poêle.",
+    "Ajouter le persil et le parmesan, bien mélanger et éclabousser dans l'eau des pâtes, pour humidifier.",
+    "Parmesan supplémentaire à la table."
+  ]
+}

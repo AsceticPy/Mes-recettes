@@ -1,0 +1,61 @@
+{
+  "id": "mouloukhiyah",
+  "nom": "Mouloukhiyah",
+  "type": "plat",
+  "origines": [
+    "Égypte"
+  ],
+  "tempsPreparation": 31,
+  "tempsCuisson": 10,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/x372ug1598733932.jpg",
+  "ingredients": [
+    {
+      "nom": "Mouloukhiyah",
+      "quantite": 800.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Viande bovine",
+      "quantite": 300.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 1.0,
+      "unite": "L"
+    },
+    {
+      "nom": "Couvercle d'ail",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 0.5,
+      "unite": "tasse"
+    }
+  ],
+  "etapes": [
+    "Saute les oignons dans les 3-4 cuillères à soupe d'huile d'olive.",
+    "Ajouter les cubes de boeuf ou les découpettes de poulet, saisir 3-4 min de chaque côté.",
+    "Ajouter 1 litre d'eau ou juste assez pour couvrir la viande.",
+    "Cuire à feu moyen jusqu'à ce que la viande soit faite (en général, je le fais dans la cuisinière à pression et les presser pendant 5 min).",
+    "Ajouter la Mulukhyia congelée et remuer jusqu'à ce qu'elle dégele complètement, puis ébullition.",
+    "Dans une autre casserole, ajouter le 1/4 à 1/2 tasse d'huile d'olive et les gousses d'ail et cuire à feu moyen doux jusqu'à ce que vous puissiez sentir l'ail (ne le brunissez pas, il deviendra amer).",
+    "Ajouter l'huile et l'ail à la mulukhyia et baisser le feu et laisser mijoter 5-10 minutes.",
+    "Ajouter du sel au goût.",
+    "Servir avec une généreuse quantité de jus de citron.",
+    "Vous pouvez le servir avec du riz à grains courts ou du pain pita."
+  ]
+}

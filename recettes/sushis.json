@@ -1,0 +1,75 @@
+{
+  "id": "sushis",
+  "nom": "Sushis",
+  "type": "plat",
+  "origines": [
+    "Japon"
+  ],
+  "tempsPreparation": 31,
+  "tempsCuisson": 20,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/g046bb1663960946.jpg",
+  "ingredients": [
+    {
+      "nom": "Riz sushi",
+      "quantite": 300.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Vin de riz",
+      "quantite": 100.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Sucre de ricin",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Mayonnaise",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Vin de riz",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sauce de soja",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Concombre",
+      "quantite": 1.0,
+      "unite": "pièce"
+    }
+  ],
+  "etapes": [
+    "Mange du riz.",
+    "Posez une feuille de nori sur le tapis, côté brillant vers le bas.",
+    "Plongez les mains dans l'eau vinaigretée, puis tapez des poignées de riz sur le dessus dans une couche d'une épaisseur de 1 cm, laissant le bord le plus éloigné de vous.",
+    "Répartir sur une mayonnaise japonaise.",
+    "Utilisez une cuillère pour étaler une fine couche de mayonnaise au milieu du riz.",
+    "Ajouter le remplissage.",
+    "Obtenez votre enfant pour couronner la mayonnaise avec une ligne de leurs garnitures préférées – ici nous avons utilisé le thon et le concombre.",
+    "Soulevez le bord du tapis sur le riz, en appliquant un peu de pression pour garder tout dans un rouleau serré.",
+    "Restez sur les côtés comme un tampon.",
+    "Lorsque vous arrivez au bord sans riz, brossez avec un peu d'eau et continuez à rouler dans un rouleau serré.",
+    "Enveloppez le film de collage.",
+    "Retirez le tapis et roulez fermement dans le film de collage avant qu'un adulte coupe les sushis en tranches épaisses, puis défaire le film de collage.",
+    "METTRE EN PRESSE SUSHI : Coucher sur un peu de saumon fumé.",
+    "Étaler une boîte de pain avec un film de collage, puis placer une fine couche de saumon fumé à l'intérieur sur le dessus du film de collage.",
+    "Couvrir de riz et presser.",
+    "Appuyez sur environ 3 cm de riz sur le poisson, pliez le film de collage et appuyez autant que possible, en utilisant une autre boîte si vous en avez une.",
+    "Tuez-le comme un sandcastle.",
+    "Tournez le bloc de sushi sur une planche à découper.",
+    "Obtenez un adulte pour couper les doigts, puis retirez le film de collage.",
+    "Pour faire des sauts à la main : choisissez votre garniture.",
+    "Obtenez un petit carré de film de collage et placez une garniture, comme une demi-crevette ou un petit morceau de saumon fumé, dessus.",
+    "Utilisez des mains humides pour rouler des boules de riz de taille noix et placer sur la garniture.",
+    "Faites des boules serrées.",
+    "Regroupez les coins du film d'attache et serrez-les en boules en le tordant, puis défaire et servir."
+  ]
+}

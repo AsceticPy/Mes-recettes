@@ -1,0 +1,61 @@
+{
+  "id": "feuilles-de-nouilles-de-saumon",
+  "nom": "Feuilles de nouilles de saumon",
+  "type": "plat",
+  "origines": [
+    "Vietnam"
+  ],
+  "tempsPreparation": 31,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/prrirc1763781360.jpg",
+  "ingredients": [
+    {
+      "nom": "Nouilles de riz",
+      "quantite": 100.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Oignons de printemps",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Petit pois",
+      "quantite": 50.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Chilli",
+      "quantite": 85.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Coriandre",
+      "quantite": 85.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Chaux",
+      "quantite": 85.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Saumon",
+      "quantite": 300.0,
+      "unite": "g"
+    }
+  ],
+  "etapes": [
+    "Chauffer le four à 200C/fan 180C/gaz 6.",
+    "Mettre les nouilles dans un bol et verser suffisamment d'eau bouillante pour les couvrir.",
+    "Laisser pendant 2 minutes, jusqu'à ce qu'ils soient courbés, mais pas trop doux, puis bien égoutter.",
+    "Retournez au bol avec les oignons de printemps, petits pois, sel et poivre et un tiers du beurre.",
+    "Bien mélanger jusqu'à ce que le beurre ait fondu.",
+    "Pilez les nouilles et les légumes sur deux grands carrés de parchemin de cuisson, puis placez le saumon sur le dessus.",
+    "Couper le reste du beurre et disposer sur le dessus du saumon.",
+    "Porter les extrémités du papier sur le poisson, les plier ensemble pour sceller, puis placer les extrémités du papier en dessous afin qu'il n'y ait pas de trous.",
+    "Mettre les colis sur une plaque de cuisson et cuire 15-20 minutes.",
+    "Transférer dans les assiettes et servir sans délai."
+  ]
+}

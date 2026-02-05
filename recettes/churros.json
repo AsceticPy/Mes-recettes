@@ -1,0 +1,101 @@
+{
+  "id": "churros",
+  "nom": "Churros",
+  "type": "dessert",
+  "origines": [
+    "Espagne"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/nxnny61763250596.jpg",
+  "ingredients": [
+    {
+      "nom": "Beurre",
+      "quantite": 50.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Extrait de vanille",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Farine plate",
+      "quantite": 250.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Poudre de cuisson",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Huile de tournesol",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Pain",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Chocolat noir",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Crème double",
+      "quantite": 100.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 100.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Sirop d'or",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Extrait de vanille",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre de ricin",
+      "quantite": 100.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Cannelle",
+      "quantite": 2.0,
+      "unite": "c. à café"
+    }
+  ],
+  "etapes": [
+    "Faire bouillir la bouilloire, puis mesurer 300ml d'eau bouillante dans une cruche et ajouter le beurre fondu et l'extrait de vanille.",
+    "Sirotez la farine et la poudre à pâte dans un grand bol de mélange avec une grande pincée de sel.",
+    "Faites un puits au centre, puis versez dans le contenu de la cruche et battez très rapidement dans la farine avec une cuillère en bois jusqu'à ce qu'elle soit sans grumeaux.",
+    "Reposez-vous 10-15 minutes pendant que vous faites la sauce.",
+    "Mettre tous les ingrédients de la sauce dans une casserole et fondre doucement ensemble, en remuant occasionnellement jusqu'à ce que vous ayez une sauce lisse et brillante.",
+    "Garder au chaud à feu doux.",
+    "Remplissez une grande casserole profonde d'un tiers plein d'huile.",
+    "La cuisson avec de l'huile chaude peut être dangereuse – avant de commencer, lisez comment faire frire profondément en toute sécurité pour éviter les accidents dans la cuisine.",
+    "Chauffer jusqu'à ce qu'un cube de pain brunisse en 45 secondes à 1 min.",
+    "Couvrir un plateau avec du papier de cuisine et mélanger le sucre de roulette et la cannelle.",
+    "Adapter une buse étoile à un sac de tuyauterie – 1,5-2cm de large est une bonne taille.",
+    "Remplir de la pâte reposée, puis égoutter 2-3 bandes directement dans la casserole, en arrosant chaque bande de pâte avec une paire de ciseaux de cuisine.",
+    "Faire frire jusqu'à ce qu'il soit doré et croustillant.",
+    "Soyez très prudent ici – si des bulles d'air se forment dans les churros, elles peuvent exploser, surtout si l'huile surchauffe ou si vous utilisez de la farine ancienne.",
+    "La cuisson avec de l'huile chaude peut être dangereuse – avant de commencer, lisez comment faire frire profondément en toute sécurité pour éviter les accidents dans la cuisine.",
+    "Gardez les enfants hors de la cuisine et protégez-vous en portant des manches longues et une protection oculaire, et en éloignant votre visage de la poêle.",
+    "Une fois que les churros sont croustillants et dorés, retirez-les de l'huile avec une cuillère à fentes et égouttez sur le plateau en papier de cuisine.",
+    "Continuez à cuire le reste de la pâte en lots, en saupoudrant les churros cuits avec un peu de sucre de cannelle.",
+    "Lorsque vous avez cuit tous les churros, mélanger avec tout sucre de cannelle restant et servir avec la sauce au chocolat, pour tremper.",
+    "Pour voir une vidéo de la façon de préparer les churros, regardez notre recette de sandwich à la crème glacée."
+  ]
+}

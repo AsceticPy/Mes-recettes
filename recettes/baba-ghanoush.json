@@ -1,0 +1,122 @@
+{
+  "nom": "Baba Ghanoush",
+  "type": "plat",
+  "personnes": 4,
+  "tempsPreparation": 41,
+  "tempsCuisson": 60,
+  "ingredients": [
+    {
+      "nom": "Plantes d'oeufs",
+      "quantite": 4,
+      "unite": "gros"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 2,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Sel casher",
+      "quantite": 2,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Citron",
+      "quantite": 1,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Tahini",
+      "quantite": 3,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Huile d'olive vierge extra",
+      "quantite": 3,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Yogourt grec",
+      "quantite": 2,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Poivre cayenne",
+      "quantite": 1,
+      "unite": "pincée"
+    },
+    {
+      "nom": "Menthe",
+      "quantite": 1,
+      "unite": "feuille"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 2,
+      "unite": "c. à soupe"
+    }
+  ],
+  "etapes": [
+    {
+      "texte": "Préchauffer un grill extérieur à feu moyen-élevé et huiler légèrement la grille.",
+      "duree": null
+    },
+    {
+      "texte": "Piquez plusieurs fois la surface de la peau des aubergines avec l'extrémité d'un couteau.",
+      "duree": null
+    },
+    {
+      "texte": "Placer les aubergines directement sur le gril.",
+      "duree": null
+    },
+    {
+      "texte": "Tourner fréquemment avec des pinces pendant que la peau chars.",
+      "duree": null
+    },
+    {
+      "texte": "Cuire jusqu'à ce que les aubergines se soient effondrées et soient très douces, de 25 à 30 minutes.",
+      "duree": null
+    },
+    {
+      "texte": "Transférer dans un bol et couvrir soigneusement avec du papier d'aluminium et laisser refroidir, environ 15 minutes.",
+      "duree": null
+    },
+    {
+      "texte": "Lorsque les aubergines sont assez froides pour être manipulées, les diviser en deux et gratter la chair en une calandre placée sur un bol.",
+      "duree": null
+    },
+    {
+      "texte": "Égoutter 5 ou 10 minutes.",
+      "duree": null
+    },
+    {
+      "texte": "Transférer l'aubergine dans un bol de mélange.",
+      "duree": null
+    },
+    {
+      "texte": "Ajouter l'ail broyé et le sel; écraser jusqu'à crème mais avec un peu de texture, environ 5 minutes.",
+      "duree": null
+    },
+    {
+      "texte": "Ajouter le jus de citron, le tahini, l'huile d'olive et le poivre de Cayenne.",
+      "duree": null
+    },
+    {
+      "texte": "Incorporer le yaourt.",
+      "duree": null
+    },
+    {
+      "texte": "Couvrir le bol d'une enveloppe en plastique et réfrigérer jusqu'à ce qu'il soit complètement réfrigéré.",
+      "duree": null
+    },
+    {
+      "texte": "Incorporer la menthe et le persil et goûter pour ajuster les assaisonnements avant de servir.",
+      "duree": null
+    }
+  ],
+  "origines": [
+    "Syrien"
+  ],
+  "photo": null,
+  "id": "baba-ghanoush"
+}

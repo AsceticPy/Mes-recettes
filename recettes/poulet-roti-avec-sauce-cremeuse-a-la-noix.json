@@ -1,0 +1,93 @@
+{
+  "id": "poulet-roti-avec-sauce-cremeuse-a-la-noix",
+  "nom": "Poulet rôti avec sauce crémeuse à la noix",
+  "type": "plat",
+  "origines": [
+    "Turquie"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 45,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/ro8mzj1763800655.jpg",
+  "ingredients": [
+    {
+      "nom": "Cuisses de poulet",
+      "quantite": 8.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Cumin",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Paprika",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Pain de pita",
+      "quantite": 6.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Stock de poulet",
+      "quantite": 150.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Noix communes",
+      "quantite": 175.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 2.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Crème unique",
+      "quantite": 50.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Citron",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Coriandre",
+      "quantite": 0,
+      "unite": "poignée"
+    }
+  ],
+  "etapes": [
+    "Chauffer le four à 200C/180C ventilateur/gaz 6.",
+    "Dans une boîte rôtie, mélanger le poulet, le cumin, le paprika, 1 c.",
+    "à soupe d'huile d'olive et assaisonnement.",
+    "Cuire pendant 40 minutes jusqu'à ce que le poulet soit croustillant et cuit.",
+    "Pendant ce temps, déchirer 1 pitta pain et placer dans un petit bol.",
+    "Verser sur un bouillon de poulet à soupe et laisser tremper.",
+    "Faire frire les noix dans une poêle pendant environ 3 minutes jusqu'à ce qu'elles soient dorées et grillées.",
+    "Mettez de côté.",
+    "Chauffer le reste d'huile dans la poêle et cuire l'oignon et l'ail jusqu'à ce qu'ils soient adoucis.",
+    "Placez le pain pitta ramolli, le mélange d'oignon et la plupart des noix dans un mélangeur.",
+    "Verser le reste du bouillon de poulet et fouetter jusqu'à ce qu'une pâte rugueuse se forme.",
+    "Remettre le mélange dans la casserole.",
+    "Ajouter la crème et le jus de citron, assaisonner et garder au chaud.",
+    "Lorsque le poulet est cuit, organiser sur un plateau.",
+    "Incorporer la coriandre à travers la sauce et la cuillère dans un bol.",
+    "Hacher grossièrement les noix restantes et disperser sur le poulet.",
+    "Toast les pittas, coupé en quartiers et servir à côté."
+  ]
+}

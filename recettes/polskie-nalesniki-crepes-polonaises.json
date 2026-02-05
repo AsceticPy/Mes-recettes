@@ -1,0 +1,59 @@
+{
+  "id": "polskie-nalesniki-crepes-polonaises",
+  "nom": "Polskie Nalesniki (Crêpes polonaises)",
+  "type": "dessert",
+  "origines": [
+    "Pologne"
+  ],
+  "tempsPreparation": 31,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/58bkyo1593350017.jpg",
+  "ingredients": [
+    {
+      "nom": "Farine",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Oeufs",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 0.75,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0,
+      "unite": "pincée"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    }
+  ],
+  "etapes": [
+    "Ajouter la farine, les oeufs, le lait, l'eau et le sel dans un grand bol puis mélanger avec un mélangeur à main jusqu'à ce que vous ayez une pâte lisse et sans morceaux.",
+    "À ce stade, mélanger le beurre ou l'huile végétale.",
+    "Vous pouvez également les utiliser pour graisser la poêle avant de faire frire chaque crêpe.",
+    "Chauffer une poêle antiadhésive à feu moyen, puis verser la pâte, agiter la poêle pour l'aider à se propager.",
+    "Lorsque le crêpe commence à s'éloigner un peu des côtés, et que le dessus n'est plus mouillé, retournez-le et faites cuire rapidement de l'autre côté.",
+    "Transférer dans une assiette.",
+    "Cuire le reste de la pâte jusqu'à épuisement.",
+    "Servir au chaud, avec le remplissage de votre choix."
+  ]
+}

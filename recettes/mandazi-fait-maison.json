@@ -1,0 +1,50 @@
+{
+  "id": "mandazi-fait-maison",
+  "nom": "Mandazi fait maison",
+  "type": "petit-déjeuner",
+  "origines": [
+    "Kenya"
+  ],
+  "tempsPreparation": 22,
+  "tempsCuisson": 19,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/thazgm1555350962.jpg",
+  "ingredients": [
+    {
+      "nom": "Farine autodidacte",
+      "quantite": 750.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 6.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Oeufs",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 1.0,
+      "unite": "tasse"
+    }
+  ],
+  "etapes": [
+    "C'est une recette que beaucoup de gens ont demandée et j'ai essayé de la rendre aussi simple que possible et j'espère que ça marchera pour vous.",
+    "Assurez-vous d'utiliser la bonne farine qui est essentiellement une avec des agents d'élevage.",
+    "Ajustez la quantité de sucre à votre goût et essayez d'utiliser différentes saveurs pour avoir de la variété chaque fois que vous en avez.",
+    "Vous pouvez utiliser du lait de coco au lieu de lait ordinaire, vous pouvez également ajouter de la noix de coco déshydratée à la farine sèche ou d'autres épices comme des gousses en poudre ou de la cannelle.",
+    "Pour les mandazes santé, ne roulez pas la pâte trop fine avant de faire frire et utiliser la procédure que j'ai indiquée ci-dessus.",
+    "Mélanger la farine, la cannelle et le sucre dans un bol approprié.",
+    "Dans un bol séparé fouetter l'œuf dans le lait.",
+    "Faites un puits au centre de la farine et ajoutez le lait et le mélange d'oeufs et mélangez lentement pour former une pâte.",
+    "Agenouillez la pâte pendant 3-4 minutes ou jusqu'à ce qu'elle cesse de coller sur les côtés du bol et que vous ayez une surface lisse.",
+    "Couvrir la pâte d'un chiffon humide et laisser reposer 15 minutes.",
+    "Rouler la pâte sur une surface légèrement farinée en une pièce de 1 cm d'épaisseur.",
+    "À l'aide d'un petit couteau tranchant, couper la pâte dans la taille souhaitée en laissant de côté pour la friture profonde.",
+    "Chauffer l'huile dans un pot approprié et tremper doucement les morceaux de mandazi pour cuire jusqu'à ce que le premier côté soit brun clair, puis tourner pour cuire sur le second côté.",
+    "Servir chaud ou froid."
+  ]
+}

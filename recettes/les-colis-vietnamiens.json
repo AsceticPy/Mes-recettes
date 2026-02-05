@@ -1,0 +1,90 @@
+{
+  "id": "les-colis-vietnamiens",
+  "nom": "Les colis vietnamiens",
+  "type": "plat",
+  "origines": [
+    "Vietnam"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 20,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/f698g91763768731.jpg",
+  "ingredients": [
+    {
+      "nom": "Crêpes de farine de riz",
+      "quantite": 100.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Nouilles de riz",
+      "quantite": 50.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Poitrine de poulet",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Carottes",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Concombre",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Poivre rouge",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Laitue",
+      "quantite": 0,
+      "unite": "pour servir"
+    },
+    {
+      "nom": "Coriandre",
+      "quantite": 0,
+      "unite": "pour servir"
+    },
+    {
+      "nom": "Menthe",
+      "quantite": 0,
+      "unite": "pour servir"
+    },
+    {
+      "nom": "Sauce de poisson",
+      "quantite": 4.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Vinaigre de riz",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Chaux",
+      "quantite": 0.5,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Chilli rouge",
+      "quantite": 1.0,
+      "unite": "pièce"
+    }
+  ],
+  "etapes": [
+    "Faire tremper le riz dans nos crêpes selon les instructions de l'emballage ou dans l'eau bouillante pendant 30 secondes.",
+    "Retirer et refroidir sur du papier de cuisine.",
+    "Tremper les nouilles de riz selon les instructions de l'emballage, puis les égoutter et les couper en bandes de 2cm.",
+    "Poser un crêpe de riz sur une planche et organiser quelques nouilles de riz, poulet, légumes et feuilles d'herbe environ un tiers du chemin vers le haut, laissant un bord de 1cm sur le côté.",
+    "Pliez les côtés au-dessus des légumes et roulez ensuite en longueur pour faire un cigare.",
+    "A conserver au réfrigérateur, couvert de papier de cuisine humide jusqu'à 1 jour.",
+    "Mélanger les ingrédients pour la sauce à tremper et mettre dans un bol.",
+    "Pour servir, arrangez les rouleaux sur une assiette avec les feuilles et les herbes.",
+    "Pour manger, envelopper chaque rouleau d'un morceau de laitue avec un brin d'herbe et tremper dans la sauce."
+  ]
+}

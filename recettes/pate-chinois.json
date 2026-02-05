@@ -1,0 +1,82 @@
+{
+  "id": "pate-chinois",
+  "nom": "Pate Chinois",
+  "type": "plat",
+  "origines": [
+    "Canada"
+  ],
+  "tempsPreparation": 40,
+  "tempsCuisson": 40,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/yyrrxr1511816289.jpg",
+  "ingredients": [
+    {
+      "nom": "Pommes de terre",
+      "quantite": 4.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 60.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Boeuf haché",
+      "quantite": 450.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Maïs crème",
+      "quantite": 500.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Paprika",
+      "quantite": 0,
+      "unite": "au goût"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 0,
+      "unite": "au goût"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0,
+      "unite": "trait"
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 0,
+      "unite": "trait"
+    }
+  ],
+  "etapes": [
+    "Dans une grande casserole d'eau salée, cuire les pommes de terre jusqu'à ce qu'elles soient très tendres.",
+    "Avec un mascher, écraser grossièrement les pommes de terre avec au moins 30 ml (2 cuillères à soupe) de beurre.",
+    "Avec un mélangeur électrique, purée avec le lait.",
+    "Assaisonner de sel et de poivre.",
+    "Mettez de côté.",
+    "La grille étant en position médiane, préchauffer le four à 190 °C (375 °F).",
+    "Dans une grande poêle, faire revenir l'oignon dans le reste du beurre.",
+    "Ajouter la viande et cuire jusqu'à ce qu'elle soit dorée.",
+    "Assaisonner de sel et de poivre.",
+    "Retirer du feu.",
+    "Appuyez légèrement sur la viande au fond d'un plat carré de 20 cm (8 pouces).",
+    "Couvrir de maïs et de purée de pommes de terre.",
+    "Saupoudrer de paprika et de persil.",
+    "Cuire 30 minutes environ.",
+    "Terminer la cuisson sous le grilleur.",
+    "Laisser refroidir pendant 10 minutes."
+  ]
+}

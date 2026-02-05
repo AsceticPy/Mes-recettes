@@ -1,0 +1,29 @@
+{
+  "name": "cuisine-pwa",
+  "version": "2.0.0",
+  "description": "Application PWA de gestion de recettes de cuisine avec PostgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "USE_DATABASE=false node server.js",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:rebuild": "docker-compose up -d --build"
+  },
+  "keywords": [
+    "cuisine",
+    "recettes",
+    "pwa",
+    "postgresql",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.11.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

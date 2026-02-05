@@ -1,0 +1,58 @@
+{
+  "2026-02-04": {
+    "midi": {
+      "recetteId": "gateaux-de-poulet-thailandais-avec-sauce-pimentee"
+    },
+    "soir": {
+      "recetteId": "pilau-d-agneau-turc"
+    }
+  },
+  "2026-02-05": {
+    "midi": {
+      "recetteId": "pain-de-seigle"
+    },
+    "soir": {
+      "recetteId": "aussie-burgers"
+    }
+  },
+  "2026-02-06": {
+    "midi": {
+      "recetteId": "figues-et-boulettes-d-amande-espagnoles"
+    },
+    "soir": {
+      "recetteId": "pilau-d-agneau-turc"
+    }
+  },
+  "2026-02-07": {
+    "midi": {
+      "recetteId": "pilau-d-agneau-turc"
+    },
+    "soir": {
+      "recetteId": "boeuf-et-choux-cornes"
+    }
+  },
+  "2026-02-08": {
+    "midi": {
+      "recetteId": "gateaux-de-poulet-thailandais-avec-sauce-pimentee"
+    },
+    "soir": {
+      "recetteId": "pain-de-seigle"
+    }
+  },
+  "2026-02-03": {
+    "midi": {
+      "recetteId": "gateaux-de-poulet-thailandais-avec-sauce-pimentee"
+    },
+    "soir": {
+      "recetteId": "seri-muka-kuih"
+    }
+  },
+  "2026-02-02": {
+    "midi": {
+      "recetteId": "aussie-burgers"
+    },
+    "soir": {
+      "recetteId": "figues-et-boulettes-d-amande-espagnoles"
+    }
+  }
+}

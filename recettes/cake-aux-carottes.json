@@ -1,0 +1,84 @@
+{
+  "id": "cake-aux-carottes",
+  "nom": "Cake aux carottes",
+  "type": "dessert",
+  "origines": [
+    "Royaume-Uni"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 85,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/vrspxv1511722107.jpg",
+  "ingredients": [
+    {
+      "nom": "Huile végétale",
+      "quantite": 450.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Farine plate",
+      "quantite": 400.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Bicarbonate de soude",
+      "quantite": 2.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 550.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Oeufs",
+      "quantite": 5.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Cannelle",
+      "quantite": 2.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Carottes",
+      "quantite": 500.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Noix communes",
+      "quantite": 150.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Fromage à la crème",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sucre de ricin",
+      "quantite": 150.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 100.0,
+      "unite": "g"
+    }
+  ],
+  "etapes": [
+    "Pour le gâteau aux carottes, préchauffer le four à 160C/325F/Gas 3.",
+    "Graisse et ligne d'une boîte à gâteau de 26cm/10po.",
+    "Mélanger tous les ingrédients du gâteau aux carottes, sauf les carottes et les noix, dans un bol jusqu'à bien mélanger.",
+    "Incorporer les carottes et les noix.",
+    "Mettre le mélange dans la boîte de gâteau et cuire pendant 1 heure 15 minutes, ou jusqu'à ce qu'une brochette insérée au milieu ressorte propre.",
+    "Retirer le gâteau du four et laisser refroidir pendant 10 minutes, puis retirer soigneusement le gâteau de l'étain et réserver pour refroidir complètement sur une grille de refroidissement.",
+    "Pendant ce temps, pour le glaçage, battre le fromage à la crème, le sucre et le beurre dans un bol jusqu'à ce qu'ils soient moelleux.",
+    "Étendre le glaçage sur le dessus du gâteau avec un couteau à palettes."
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "categorie": "Poids",
+    "unites": ["g", "kg", "mg"]
+  },
+  {
+    "categorie": "Volume",
+    "unites": ["ml", "cl", "L", "dl"]
+  },
+  {
+    "categorie": "Unités",
+    "unites": ["pièce", "pièces", "tranche", "tranches", "feuille", "feuilles", "gousse", "gousses", "brin", "brins", "botte", "bottes", "tête", "têtes", "lanière", "lanières", "quartier", "quartiers", "bâton", "bâtons", "cube", "cubes", "rondelle", "rondelles", "zeste", "zestes", "filet", "filets"]
+  },
+  {
+    "categorie": "Mesures culinaires",
+    "unites": ["c. à soupe", "c. à café", "c. à thé", "tasse", "verre", "pincée", "poignée", "noix", "noisette", "goutte", "gouttes", "trait", "filet"]
+  },
+  {
+    "categorie": "Conditionnements",
+    "unites": ["boîte", "boîtes", "sachet", "sachets", "pot", "pots", "paquet", "paquets", "bouteille", "bouteilles", "tube", "tubes", "barquette", "barquettes", "brique", "briques", "tablette", "tablettes"]
+  },
+  {
+    "categorie": "Tailles",
+    "unites": ["petit", "petite", "petits", "petites", "moyen", "moyenne", "moyens", "moyennes", "gros", "grosse", "gros", "grosses", "grand", "grande", "grands", "grandes"]
+  },
+  {
+    "categorie": "Indications",
+    "unites": ["au goût", "pour servir", "pour friture", "pour graisser", "selon besoin", "optionnel", "pour décorer", "à volonté"]
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "id": "porc-doux-et-aigre",
+  "nom": "Porc doux et aigre",
+  "type": "plat",
+  "origines": [
+    "Chine"
+  ],
+  "tempsPreparation": 40,
+  "tempsCuisson": 20,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/1529442316.jpg",
+  "ingredients": [
+    {
+      "nom": "Porc",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 0,
+      "unite": "trait"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sauce de soja",
+      "quantite": 10.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Étoile",
+      "quantite": 10.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Pure de tomates",
+      "quantite": 30.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Vinaigre",
+      "quantite": 10.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Coriandre",
+      "quantite": 0,
+      "unite": "trait"
+    }
+  ],
+  "etapes": [
+    "Préparation.",
+    "Casser l'œuf dans un bol.",
+    "Séparer le blanc d'œuf et le jaune.",
+    "Porc doux et aigre.",
+    "Couper le filet de porc en bandes.",
+    "Préparez la marinade à l'aide d'une pincée de sel, d'une cuillère à café d'amidon, de deux cuillères à café de sauce soja légère et d'un blanc d'œuf.",
+    "Faire mariner les bandes de porc pendant environ 20 minutes.",
+    "Mettre le reste de l'amidon dans un bol.",
+    "Ajouter de l'eau et du vinaigre pour faire une sauce féculente.",
+    "Porc doux et aigre.",
+    "Instructions de cuisson.",
+    "Verser l'huile de cuisson dans un wok et chauffer à 190°C (375°F).",
+    "Ajouter les lanières de porc marinées et les faire frire jusqu'à ce qu'elles deviennent brunes.",
+    "Retirer le porc cuit du wok et déposer sur une assiette.",
+    "Laissez de l'huile dans le wok.",
+    "Mettre la sauce tomate et le sucre blanc dans le wok et chauffer jusqu'à ce que l'huile et la sauce soient complètement combinées.",
+    "Ajouter un peu d'eau au wok et bien chauffer la sauce douce et aigre avant d'y ajouter les lanières de porc.",
+    "Verser dans la sauce féculente.",
+    "Mélanger tous les ingrédients jusqu'à ce que le porc et la sauce soient bien mélangés.",
+    "Servir sur une assiette et ajouter un peu de coriandre pour la décoration."
+  ]
+}

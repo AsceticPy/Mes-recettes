@@ -1,0 +1,149 @@
+{
+  "id": "poulet-orange-chinois",
+  "nom": "Poulet orange chinois",
+  "type": "plat",
+  "origines": [
+    "Chine"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 12,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/s73ytv1765567838.jpg",
+  "ingredients": [
+    {
+      "nom": "Orange",
+      "quantite": 1.0,
+      "unite": "zeste"
+    },
+    {
+      "nom": "Jus d'orange",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Sauce de soja",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Vinaigre de riz",
+      "quantite": 0.3333333333333333,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Farine de maïs",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Huile de graines de sésame",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Cuisses de poulet",
+      "quantite": 650.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 2.0,
+      "unite": "gros"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poivre noir",
+      "quantite": 0.25,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Farine de maïs",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Farine à usage général",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Huile végétale",
+      "quantite": 2.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 2.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Échalotes",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Échalons",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Semence de sésame",
+      "quantite": 0,
+      "unite": "pour décorer"
+    },
+    {
+      "nom": "Riz",
+      "quantite": 0,
+      "unite": "pour servir"
+    }
+  ],
+  "etapes": [
+    "Faire la sauce orange:.",
+    "Mélanger les ingrédients de la sauce dans un bol moyen.",
+    "Mettez de côté.",
+    "Préparer le poulet:.",
+    "Couper le poulet en cubes d'environ 1 pouce.",
+    "Dans un bol, fouetter les œufs avec du sel et du poivre noir et ajouter le poulet.",
+    "Dans un bol séparé, fouetter ensemble la farine et la fécule de maïs.",
+    "Retirer le poulet des œufs avec une cuillère ou des pinces à fentes, laisser l'excès d'oeuf s'écouler, puis transférer au mélange de fécule de maïs et bien enrober.",
+    "Faire revenir le poulet :.",
+    "Ajoutez de l'huile à une grande poêle de 10 à 12 pouces.",
+    "Chauffer à feu moyen-élevé jusqu'à 350°F.",
+    "Si vous n'avez pas de thermomètre, vous pouvez également tester la température en arrosant dans une certaine farine.",
+    "Si l'huile est assez chaude, elle devrait fêler immédiatement.",
+    "Une fois l'huile chaude, faire frire le poulet en deux lots.",
+    "L'huile pourrait ne pas couvrir complètement le poulet, ça va.",
+    "Cuire 3 à 4 minutes.",
+    "Faire revenir les morceaux de poulet et cuire jusqu'à ce que le poulet soit cuit, environ 3 à 4 minutes de plus.",
+    "La durée totale de cuisson est d'environ 6 à 8 minutes.",
+    "Retirer les cubes de poulet frits et transférer dans une assiette doublée de serviettes en papier, afin que le poulet puisse s'égoutter.",
+    "Répétez jusqu'à ce que tout le poulet soit cuit.",
+    "Laisser mijoter le poulet dans la sauce :.",
+    "Une fois le poulet terminé, verser l'huile chaude et essuyer la casserole propre.",
+    "Ajouter une cuillère à soupe d'huile fraîche avec l'ail haché et l'échalote.",
+    "Cuire une minute et ajouter la sauce.",
+    "Laisser mijoter la sauce jusqu'à ce qu'elle commence à épaissir.",
+    "Une fois la sauce légèrement bouillie, ajouter le poulet frit et mélanger pour enrober.",
+    "La sauce doit continuer à épaissir et coller au poulet.",
+    "Laisser mijoter une minute ou deux de plus.",
+    "Servir le poulet orange sur le riz blanc cuit, garni de graines de sésame et d'écailles fraîches.",
+    "Vous avez adoré cette recette ? Faites-nous savoir avec une note et un commentaire!.",
+    "C'est vrai ! Le poulet orange se conserve bien au réfrigérateur pendant 5 jours.",
+    "Chauffer dans une poêle avec un jet d'eau à feu doux.",
+    "Congeler le poulet orange jusqu'à 3 mois, mais assurez-vous de le décongeler avant de le réchauffer afin que le poulet ne s'agrippe pas ensemble."
+  ]
+}

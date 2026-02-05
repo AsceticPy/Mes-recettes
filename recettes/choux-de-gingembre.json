@@ -1,0 +1,56 @@
+{
+  "id": "choux-de-gingembre",
+  "nom": "Choux de gingembre",
+  "type": "plat",
+  "origines": [
+    "Turquie"
+  ],
+  "tempsPreparation": 31,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/8xuvhj1763794991.jpg",
+  "ingredients": [
+    {
+      "nom": "Aile",
+      "quantite": 4.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Ginger",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Jus de citron",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Poudre de chili",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Cumin",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Chopes de longe d'agneau",
+      "quantite": 8.0,
+      "unite": "pièces"
+    }
+  ],
+  "etapes": [
+    "Mettre l'ail dans un bol avec le gingembre, le jus de citron, l'huile, les épices et l'assaisonnement.",
+    "Blitz avec un mélangeur à main jusqu'à ce que lisse, puis utiliser pour enrober les côtelettes d'agneau des deux côtés.",
+    "Laisser mariner au réfrigérateur pendant quelques heures ou pendant la nuit.",
+    "Chauffer un barbecue jusqu'à ce qu'il soit chaud.",
+    "Barbecue les côtelettes au-dessus des charbons pendant 3 minutes de chaque côté jusqu'à ce que cuit mais toujours rose et juteux au centre."
+  ]
+}

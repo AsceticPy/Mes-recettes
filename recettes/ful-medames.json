@@ -1,0 +1,64 @@
+{
+  "id": "ful-medames",
+  "nom": "Ful Medames",
+  "type": "plat",
+  "origines": [
+    "Égypte"
+  ],
+  "tempsPreparation": 28,
+  "tempsCuisson": 150,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/lvn2d51598732465.jpg",
+  "ingredients": [
+    {
+      "nom": "Haricots larges",
+      "quantite": 2.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 0.3333333333333333,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 0,
+      "unite": "trait"
+    },
+    {
+      "nom": "Citrons",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Couvercle d'ail",
+      "quantite": 4.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Cumin",
+      "quantite": 0,
+      "unite": ""
+    }
+  ],
+  "etapes": [
+    "Comme le temps de cuisson varie selon la qualité et l'âge des haricots, il est bon de les cuire à l'avance et de les réchauffer lorsque vous êtes prêt à servir.",
+    "Cuire les haricots drainés dans une portion fraîche d'eau non salée dans une grande casserole avec le couvercle jusqu'à tendreté, en ajoutant de l'eau pour les couvrir et du sel lorsque les haricots se sont adoucis.",
+    "Ils prennent 2–2 1/2 heures de mijotation douce.",
+    "Lorsque les haricots sont doux, laissez le liquide diminuer.",
+    "Il est habituel de sortir une louche ou deux des haricots et de les écraser avec une partie du liquide de cuisson, puis de remuer ceci dans les haricots.",
+    "Pour épaissir la sauce.",
+    "Servir les haricots dans des bols à soupe saupoudrés de persil haché et accompagnés de pain arabe.",
+    "Passez autour des ingrédients de la vinaigrette pour vous aider : une bouteille d'huile d'olive extra-vierge, les citrons en quartiers, sel et poivre, une petite soucoupe avec l'ail écrasé, une avec des flocons de piment et une avec du cumin moulu.",
+    "Les haricots sont mangés doucement écrasés avec la fourchette, de sorte qu'ils absorbent la vinaigrette.",
+    "Garnitures en option.",
+    "Peler les oeufs durs – 1 par personne – pour les couper dans le bol avec les haricots.",
+    "Garnir les haricots d'une salade de concombre-et-tomate hachée et d'oignons ou d'oignons doux et minces.",
+    "Sinon, passez autour d'un bon bouquet de pétoncles et de tomates et de concombres coupés en bâtonnets.",
+    "Servir avec de la sauce à la crème tahina (page 65) ou de la salade (page 67), avec des cornichons et des oignons tranchés trempés dans du vinaigre pendant 30 minutes.",
+    "Une autre façon de servir des medames pleines est étouffée dans une sauce tomate ailky (voir page 464).",
+    "En Syrie et au Liban, ils mangent des medames pleines de yaourt ou de feta, des olives et de petits concombres.",
+    "Une façon traditionnelle d'épaissir la sauce consiste à jeter une poignée de lentilles rouges (1/4 tasse) dans l'eau au début de la cuisson.",
+    "En Irak, les gros haricots bruns sont utilisés au lieu des petits haricots égyptiens, dans un plat appelé badkila, qui est également vendu pour le petit déjeuner dans la rue."
+  ]
+}

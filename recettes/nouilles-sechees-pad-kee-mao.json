@@ -1,0 +1,79 @@
+{
+  "id": "nouilles-sechees-pad-kee-mao",
+  "nom": "Nouilles séchées (pad kee mao)",
+  "type": "plat",
+  "origines": [
+    "Thaïlande"
+  ],
+  "tempsPreparation": 43,
+  "tempsCuisson": 1,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/2wx8cm1763373419.jpg",
+  "ingredients": [
+    {
+      "nom": "Nouilles de riz plats",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Huile végétale",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 3.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Chillies aux yeux des oiseaux",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Steak longe",
+      "quantite": 225.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Brocoli",
+      "quantite": 100.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Feuilles de basilic",
+      "quantite": 0,
+      "unite": "poignée"
+    },
+    {
+      "nom": "Sauce de soja",
+      "quantite": 4.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sauce à l'huître",
+      "quantite": 4.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sauce de poisson",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "pièce"
+    }
+  ],
+  "etapes": [
+    "Préparer les nouilles suivant les instructions de l'emballage, puis égoutter et réserver.",
+    "Mélanger tous les ingrédients pour la sauce dans un petit bol ou une cruche et réserver.",
+    "Chauffer l'huile dans un grand wok ou une poêle à feu vif et remuer l'ail et le piment pendant 20 secondes jusqu'à ce qu'elle devienne dorée.",
+    "Ajouter le steak et faire revenir 1 minute jusqu'à ce qu'il soit séché et commencer à brunir.",
+    "Ajouter le brocoli et faire revenir le bouillon pendant une autre minute, puis mettre dans les nouilles et ajouter la sauce.",
+    "Faire revenir encore 1-2 minutes jusqu'à bien mélanger et passer à chaud.",
+    "Incorporer le basilic et éteindre la chaleur.",
+    "Servir immédiatement pour éviter la cuisson excessive."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "riz-et-haricots-en-pot-instantane-jamaicain",
+  "nom": "Riz et haricots en pot instantané jamaïcain",
+  "type": "plat",
+  "origines": [
+    "Jamaïque"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 45,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/11bvtm1764795135.jpg",
+  "ingredients": [
+    {
+      "nom": "Huile d'olive",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 1.0,
+      "unite": "gousse"
+    },
+    {
+      "nom": "Oignons de printemps",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Riz",
+      "quantite": 2.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Lait de coco",
+      "quantite": 0.75,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 0.75,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Tous les poissons",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poivre noir",
+      "quantite": 0.25,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Haricots rénaux",
+      "quantite": 450.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Thym",
+      "quantite": 2.0,
+      "unite": "brins"
+    }
+  ],
+  "etapes": [
+    "Instructions.",
+    "Mettez Pot instantané à \"Sauté\".",
+    "Une fois chaud, ajouter l'huile d'olive.",
+    "Ajouter ensuite l'oignon jaune et remuer jusqu'à ramollir, environ 3 minutes.",
+    "Ajouter l'ail et les oignons verts et remuer encore 30 secondes.",
+    "Appuyez sur « Annuler » sur le Pot instantané.",
+    "Ajouter le riz, le lait de coco, l'eau, le sel, l'Allspice et le poivre noir et remuer.",
+    "Verser les haricots non drainés sur le mélange de riz.",
+    "Ne remuez pas.",
+    "Pose des brins de thym sur le dessus.",
+    "Couvrez le pot instantané, en s'assurant que la valve est réglée à -Sealing.",
+    "Appuyez sur le bouton \"Manuel\" ou \"Pression Cook\" sur le pot instantané et définissez pour Haute pression pendant 6 minutes.",
+    "Une fois le temps de cuisson sous pression terminé, laissez-le libérer pendant 10 minutes, puis relâchez rapidement toute pression restante en déplaçant la soupape à \"Venting\".",
+    "Ouvrir le couvercle et enlever les brins de thym.",
+    "Riz fluff avec fourchette et Profitez!.",
+    "Instructions du haut de la poêle.",
+    "Chauffer l'huile d'olive dans un grand pot à feu moyen.",
+    "Ajouter l'oignon jaune et remuer jusqu'à ramollir, environ 3 minutes.",
+    "Ajouter l'ail et les oignons verts et remuer encore 30 secondes.",
+    "Ajouter le riz, les haricots non drainés, le lait de coco, l'eau, le sel, l'alspice et le poivre noir et mélanger.",
+    "Pose le thym sur le dessus.",
+    "Portez le mélange à la mijoter.",
+    "Couvrir avec un couvercle et réduire la chaleur à faible.",
+    "Laisser cuire 18 minutes à feu doux, puis retirer du feu.",
+    "Laissez le couvercle allumé 5 minutes supplémentaires.",
+    "Ouvrez le couvercle et retirez le thym.",
+    "Riz à la fourchette.",
+    "Bon appétit."
+  ]
+}

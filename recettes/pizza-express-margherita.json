@@ -1,0 +1,83 @@
+{
+  "id": "pizza-express-margherita",
+  "nom": "Pizza Express Margherita",
+  "type": "plat",
+  "origines": [
+    "Italie"
+  ],
+  "tempsPreparation": 43,
+  "tempsCuisson": 37,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg",
+  "ingredients": [
+    {
+      "nom": "Eau",
+      "quantite": 150.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Levure",
+      "quantite": 15.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Farine plate",
+      "quantite": 225.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 0,
+      "unite": "filet"
+    },
+    {
+      "nom": "Passata",
+      "quantite": 80.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Mozzarella",
+      "quantite": 70.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Origan",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Basilic",
+      "quantite": 0,
+      "unite": "feuilles"
+    },
+    {
+      "nom": "Poivre noir",
+      "quantite": 0,
+      "unite": "pincée"
+    }
+  ],
+  "etapes": [
+    "1 Préchauffer le four à 230°C.",
+    "2 Ajouter le sucre et écraser la levure fraîche dans de l'eau chaude.",
+    "3 Laisser reposer le mélange de 10 à 15 minutes dans un endroit chaud (nous trouvons un seuil de fenêtre sur une journée ensoleillée fonctionne le mieux) jusqu'à ce que la mousse se développe à la surface.",
+    "4 Faites tremper la farine et le sel dans un grand bol de mélange, faites un puits au milieu et versez dans le mélange de levure et d'huile d'olive.",
+    "5 Farinez légèrement vos mains, et mélangez lentement les ingrédients jusqu'à ce qu'ils se lient.",
+    "6 Poussez votre surface avec de la farine.",
+    "7 Jetez la pâte et commencez à pétrir pendant 10 minutes jusqu'à ce qu'elle soit lisse, soyeuse et douce.",
+    "8 Placez dans un plateau de cuisson légèrement huilé et antiadhésif (nous utilisons un plateau rond, mais n'importe quelle forme fera!).",
+    "9 Étalez la passata sur le dessus en vous assurant d'aller au bord.",
+    "10 Placez uniformément la mozzarella (ou autre fromage) sur le dessus, assaisonner avec l'origan et le poivre noir, puis arroser avec un peu d'huile d'olive.",
+    "11 Cuire au four 10-12 minutes jusqu'à ce que le fromage soit légèrement coloré.",
+    "12 Lorsque vous êtes prêt, placez la feuille de basilic sur le dessus et placez-la!."
+  ]
+}

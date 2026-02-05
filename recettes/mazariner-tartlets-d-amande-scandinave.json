@@ -1,0 +1,104 @@
+{
+  "id": "mazariner-tartlets-d-amande-scandinave",
+  "nom": "Mazariner – Tartlets d'amande scandinave",
+  "type": "dessert",
+  "origines": [
+    "Norvège"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/uh1n5u1763075545.jpg",
+  "ingredients": [
+    {
+      "nom": "Farine",
+      "quantite": 3.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Sucre en poudre",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Sucre en poudre",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 100.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Extrait de vanille",
+      "quantite": 2.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Farine",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Farine d'amande",
+      "quantite": 2.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Extrait d'amande",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre en poudre",
+      "quantite": 2.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Crème lourde",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Extrait d'amande",
+      "quantite": 0.25,
+      "unite": "c. à café"
+    }
+  ],
+  "etapes": [
+    "Mélanger la farine et le sucre en poudre dans un robot alimentaire.",
+    "Ajouter le beurre et le pouls jusqu'à ce qu'il soit uniformément distribué.",
+    "Ajouter l'oeuf et le pouls jusqu'à ce que la pâte se réunisse.",
+    "Versez la pâte sur une surface farinée.",
+    "Couper la pâte en rond avec une grande tasse.",
+    "Pressez les cercles dans une poêle à muffins graissée.",
+    "Mettez la casserole de coquillages dans le réfrigérateur pendant que vous préparez le remplissage d'amande.",
+    "Remplissage des amandes.",
+    "Préchauffer le four à 355 °F (180 °C).",
+    "Battre l'œuf et le sucre en poudre jusqu'à ce qu'il soit épais et aéré.",
+    "Faire fondre le beurre et le mélanger dans le mélange d'oeufs.",
+    "Incorporer la vanille, la farine et l'extrait d'amande.",
+    "Incorporer la farine d'amande.",
+    "Tuyau ou cuillère le remplissage d'amande sur les coquilles, remplir les coquilles environ 3/4 plein.",
+    "Cuire le mazariner pendant 20 à 25 minutes, jusqu'à ce qu'il soit doré.",
+    "Refroidir sur une grille.",
+    "Mélanger le sucre en poudre et le liquide jusqu'à ce que vous obteniez une glaçure extensible.",
+    "Répartir la glaçure sur le dessus du mazariner et si vous le souhaitez, décorer avec des saupoudrers, ou tout ce que vous voulez."
+  ]
+}

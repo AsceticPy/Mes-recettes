@@ -1,0 +1,142 @@
+{
+  "id": "tomates-d-agneau-et-epices-douces",
+  "nom": "Tomates d'agneau et épices douces",
+  "type": "plat",
+  "origines": [
+    "Maroc"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 100,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/qtwtss1468572261.jpg",
+  "ingredients": [
+    {
+      "nom": "Huile d'olive",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Gingembre",
+      "quantite": 4.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Ail",
+      "quantite": 2.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Tomates",
+      "quantite": 800.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Jus de citron",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sucre de ricin",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Feuilles de vigne",
+      "quantite": 50.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Ampoule de fenouil",
+      "quantite": 1.0,
+      "unite": "gros"
+    },
+    {
+      "nom": "Menthe d'agneau",
+      "quantite": 400.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "moyen"
+    },
+    {
+      "nom": "Pommes de terre",
+      "quantite": 1.0,
+      "unite": "petit"
+    },
+    {
+      "nom": "Riz basmati",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Persil haché",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Coriandre",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Jus de citron",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Ail",
+      "quantite": 2.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Girofle",
+      "quantite": 0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Cannelle",
+      "quantite": 0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Tomates",
+      "quantite": 2.0,
+      "unite": "moyen"
+    }
+  ],
+  "etapes": [
+    "Utilisez ici des feuilles de vigne marinées, conservées en saumure.",
+    "Les petites feuilles délicates sont meilleures que les grandes feuilles charnues mais, si seulement les grandes feuilles sont à la main, puis les tailler à environ 12 par 12 cm afin que vous ne obtenez pas trop de couches de feuilles autour du remplissage.",
+    "Et enlève les tiges.",
+    "Égoutter les feuilles conservées, les immerger dans l'eau bouillante pendant 10 minutes, puis laisser sécher sur une serviette à thé avant utilisation.",
+    "Le riz Basmati au beurre et aux noix de pin est un accompagnement idéal.",
+    "Couscous est génial aussi.",
+    "C'est quatre.",
+    "D'abord le remplissage.",
+    "Mettre tous les ingrédients, à part les tomates, dans un bol.",
+    "Couper les tomates en deux, râper grossièrement dans le bol et jeter les peaux.",
+    "Ajouter une demi cuillère à café de sel et un peu de poivre noir, et remuer.",
+    "Laisser sur le côté, ou au réfrigérateur, jusqu'à une journée.",
+    "Avant d'utiliser, pressez doucement avec vos mains et videz les jus qui sortent.",
+    "Pour faire la sauce, faire chauffer l'huile dans une casserole moyenne.",
+    "Ajouter le gingembre et l'ail, cuire une minute ou deux, en prenant soin de ne pas les brûler, puis ajouter la tomate, le jus de citron et le sucre.",
+    "Assaisonner et laisser mijoter 20 minutes.",
+    "Tandis que la sauce bouillonne, préparez les feuilles de vigne.",
+    "Utilisez des feuilles déchirées ou cassées pour aligner la base d'une grande casserole.",
+    "Couper les feuilles du fenouil, les couper verticalement en tranches d'épaisseur de 0,5cm et les répartir sur la base de la poêle pour couvrir complètement.",
+    "Poser une feuille de vigne préparée (voir intro) sur une surface de travail, côté veineux vers le haut.",
+    "Mettre deux cuillères à café de remplissage à la base de la feuille dans une bande de 2cm de long sur 1cm de large.",
+    "Pliez les côtés de la feuille sur le remplissage, puis roulez-la fermement de bas en haut, en forme de cigare.",
+    "Placer dans la casserole, coller et répéter avec les feuilles restantes, les placer étroitement à côté les unes des autres en lignes ou en cercles (en deux couches si nécessaire).",
+    "Verser la sauce sur les feuilles (et, si nécessaire, ajouter de l'eau juste pour couvrir).",
+    "Placer une plaque sur le dessus, pour peser les feuilles vers le bas, puis couvrir avec un couvercle.",
+    "Porter à ébullition, réduire le feu et laisser mijoter pendant 70 minutes.",
+    "La plupart du liquide doit s'évaporer.",
+    "Retirer du feu et laisser refroidir un peu - ils sont mieux servis au chaud.",
+    "Lorsque vous servez, apportez à la table dans la casserole - il semble génial.",
+    "Servir quelques feuilles de vigne et tranches de fenouil avec du riz chaud.",
+    "Déposer les jus de cuisson sur le dessus et garnir de coriandre."
+  ]
+}

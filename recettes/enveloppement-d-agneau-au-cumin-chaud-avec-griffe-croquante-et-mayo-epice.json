@@ -1,0 +1,84 @@
+{
+  "id": "enveloppement-d-agneau-au-cumin-chaud-avec-griffe-croquante-et-mayo-epice",
+  "nom": "Enveloppement d'agneau au cumin chaud avec griffe croquante et mayo épicé",
+  "type": "plat",
+  "origines": [
+    "Turquie"
+  ],
+  "tempsPreparation": 43,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/jyylmo1763790808.jpg",
+  "ingredients": [
+    {
+      "nom": "Jambe d'agneau",
+      "quantite": 4.0,
+      "unite": "petit"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 2.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Cumin au sol",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Vinaigre à vin blanc",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Carottes",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Oignons de printemps",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Chou blanc",
+      "quantite": 400.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Peppadew doux peppers",
+      "quantite": 5.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Mayonnaise",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Pain de pita",
+      "quantite": 4.0,
+      "unite": "gros"
+    }
+  ],
+  "etapes": [
+    "Chauffer une poêle.",
+    "Frotter les steaks d'agneau avec l'huile, le cumin et un peu d'assaisonnement.",
+    "Grincer pendant environ 3-4 minutes de chaque côté ou jusqu'à ce que cuit à votre goût.",
+    "Placer d'un côté sur une assiette pour se reposer.",
+    "Dans un grand bol, mélanger le sucre dans le vinaigre jusqu'à dissolution.",
+    "Ajouter les carottes, les oignons de printemps, le chou et un peu d'assaisonnement, et mélanger.",
+    "Blitz les poivrons entiers et la mayo dans un robot alimentaire.",
+    "Ajouter un tas de salade à chaque pain plat.",
+    "Couper l'agneau, couper tout excès de graisse et déposer sur la salade, en bruissant avec les jus de repos.",
+    "Déposer sur la mayo et disperser avec quelques-uns des poivrons tranchés.",
+    "Montez et mangez.",
+    "Si vous utilisez Pitta, partagez-vous.",
+    "Servir toute salade supplémentaire sur le côté."
+  ]
+}

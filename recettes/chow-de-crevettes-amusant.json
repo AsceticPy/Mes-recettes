@@ -1,0 +1,116 @@
+{
+  "id": "chow-de-crevettes-amusant",
+  "nom": "Chow de crevettes amusant",
+  "type": "plat",
+  "origines": [
+    "Chine"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 15,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/1529445434.jpg",
+  "ingredients": [
+    {
+      "nom": "Nouilles à bâton de riz",
+      "quantite": 0.5,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Crevettes",
+      "quantite": 224.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 0.5,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 0,
+      "unite": "pincée"
+    },
+    {
+      "nom": "Huile de graines de sésame",
+      "quantite": 2.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Farine de maïs",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Huile",
+      "quantite": 4.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Ail haché",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Ginger",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Graines de haricots",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Oignons de printemps",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Vin de cuisine",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sauce à l'huître",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 0.5,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Vinaigre",
+      "quantite": 0.5,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sauce de soja",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    }
+  ],
+  "etapes": [
+    "ÉTAPE 1 - SELON LES NOODLES DU RICE.",
+    "Faire tremper les nouilles de riz jusqu'à ce qu'elles soient molles.",
+    "ÉTAPE 2 - FEUILLER LES NOODLES.",
+    "Faire bouillir les nouilles pendant 10-15 minutes puis rincer à l'eau froide pour arrêter le processus de cuisson des nouilles.",
+    "ÉTAPE 3 -MARINER LE SHRIMP.",
+    "Dans un bol, ajouter les crevettes, l'œuf, 1 pincée de poivre blanc, 1 cuillère à thé d'huile de graines de sésame, 1 cuillère à soupe d'amidon de maïs et 1 cuillère à soupe d'huile.",
+    "Bien mélanger.",
+    "ÉTAPE 4 - FRE STIR.",
+    "Dans un wok ajouter 2 cuillères à soupe d'huile, crevettes et les remuer jusqu'à ce qu'il soit doré.",
+    "Réserver les crevettes.",
+    "Ajouter 1 cuillère à soupe d'huile au travail, puis ajouter l'ail haché, le gingembre et tous les légumes.",
+    "Ajouter les nouilles au wok.",
+    "Ajouter ensuite du vin de cuisson de sherry, de la sauce huître, du sucre, du vinaigre, de l'huile de graines de sésame, 1 pincée de poivre blanc et de la sauce soja.",
+    "Ajouter les crevettes.",
+    "Pour épaissir la sauce, fouetter ensemble 1 cuillère à soupe d'amidon de maïs et 2 cuillère à soupe d'eau dans un bol et ajouter lentement à votre brassage jusqu'à ce que ce soit la bonne épaisseur."
+  ]
+}

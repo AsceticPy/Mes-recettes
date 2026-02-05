@@ -1,0 +1,84 @@
+{
+  "id": "spaghetti-bolognese",
+  "nom": "Spaghetti Bolognese",
+  "type": "plat",
+  "origines": [
+    "Italie"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
+  "ingredients": [
+    {
+      "nom": "Oignons",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Ail",
+      "quantite": 1.0,
+      "unite": "gousse"
+    },
+    {
+      "nom": "Boeuf haché maigre",
+      "quantite": 500.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Champignons",
+      "quantite": 90.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Origan séché",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Tomates",
+      "quantite": 400.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Viande bovine chaude",
+      "quantite": 300.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Purée de tomates",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sauce worcestershire",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Spaghetti",
+      "quantite": 350.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Parmesan",
+      "quantite": 0,
+      "unite": ""
+    }
+  ],
+  "etapes": [
+    "Mettre l'oignon et l'huile dans une grande casserole et faire frire sur une chaleur assez élevée pendant 3-4 minutes.",
+    "Ajouter l'ail et la menthe et faire frire jusqu'à ce qu'ils brunissent tous les deux.",
+    "Ajouter les champignons et les herbes et cuire encore quelques minutes.",
+    "Incorporer les tomates, le stock de bœuf, le ketchup ou la purée, la sauce Worcestershire et l'assaisonnement.",
+    "Porter à ébullition, puis réduire le feu, couvrir et laisser mijoter, en remuant occasionnellement, pendant 30 minutes.",
+    "Pendant ce temps, cuire les spaghettis dans une grande casserole d'eau bouillante salée, selon les instructions du paquet.",
+    "Égoutter bien, faire passer l'eau chaude à travers, le remettre dans la poêle et ajouter un trait d'huile d'olive, si vous voulez, puis remuer dans la sauce à la viande.",
+    "Servir dans des bols chauds et du fromage parmesan rond à la main, pour saupoudrer sur le dessus."
+  ]
+}

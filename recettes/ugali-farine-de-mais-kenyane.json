@@ -1,0 +1,33 @@
+{
+  "id": "ugali-farine-de-mais-kenyane",
+  "nom": "Ugali – farine de maïs kényane",
+  "type": "petit-déjeuner",
+  "origines": [
+    "Kenya"
+  ],
+  "tempsPreparation": 16,
+  "tempsCuisson": 45,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/smoa3h1762341142.jpg",
+  "ingredients": [
+    {
+      "nom": "Eau",
+      "quantite": 2.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Maïs blanc",
+      "quantite": 0.5,
+      "unite": "tasse"
+    }
+  ],
+  "etapes": [
+    "Porter l'eau à ébullition dans une casserole moyenne.",
+    "Réduisez la chaleur à faible, et en remuant constamment avec un fouet, ajoutez lentement la farine de maïs à l'eau bouillante.",
+    "Les ugali commenceront à s'épaissir assez rapidement.",
+    "Continuer la cuisson à feu doux, en remuant constamment avec une cuillère en bois robuste, jusqu'à ce que le ugali commence à s'éloigner des côtés de la poêle, à tenir ensemble et à prendre l'arôme de maïs rôti.",
+    "Faites-le immédiatement sur une assiette de service.",
+    "Si vous voulez, à l'aide d'une cuillère ou d'une spatule, la façonner rapidement en un disque épais ou rond.",
+    "Le ugali continuera à se raffermir à mesure qu'il refroidit et sera assez épais pour être coupé avec un couteau (similaire à la polenta ferme)."
+  ]
+}

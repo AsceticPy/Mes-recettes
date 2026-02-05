@@ -1,0 +1,93 @@
+{
+  "nom": "Aussie Burgers",
+  "type": "plat",
+  "personnes": 4,
+  "tempsPreparation": 26,
+  "tempsCuisson": 6,
+  "ingredients": [
+    {
+      "nom": "Lean minced steak",
+      "quantite": 500,
+      "unite": "g"
+    },
+    {
+      "nom": "Racines de betterave cuites",
+      "quantite": 100,
+      "unite": "g"
+    },
+    {
+      "nom": "Pain de naan",
+      "quantite": 2,
+      "unite": "petit"
+    },
+    {
+      "nom": "Rocket",
+      "quantite": 50,
+      "unite": "g"
+    },
+    {
+      "nom": "Crème sourée et trempette",
+      "quantite": 4,
+      "unite": "c. à soupe"
+    }
+  ],
+  "etapes": [
+    {
+      "texte": "Faites les hamburgers: Astucez la viande dans un bol et saupoudrez sur 1 c.",
+      "duree": null
+    },
+    {
+      "texte": "à thé de sel et un bon broyage de poivre noir.",
+      "duree": null
+    },
+    {
+      "texte": "Travailler avec des mains mouillées pour mélanger dans l'assaisonnement.",
+      "duree": null
+    },
+    {
+      "texte": "Divisez en quatre avec vos mains et formez en burgers.",
+      "duree": null
+    },
+    {
+      "texte": "(Il peut être gelé à ce stade.).",
+      "duree": null
+    },
+    {
+      "texte": "Triez vos ingrédients : Coupez la betterave et partagez les pains naan.",
+      "duree": null
+    },
+    {
+      "texte": "Faire griller les naans : Chauffer une poêle ou un barbecue.",
+      "duree": null
+    },
+    {
+      "texte": "Glisser les naans des deux côtés jusqu'à ce que légèrement grillé et réserver.",
+      "duree": null
+    },
+    {
+      "texte": "Ajouter les hamburgers au grill ou au barbecue et cuire 2-3 minutes, puis tourner et cuire l'autre côté pendant 2-3 minutes supplémentaires.",
+      "duree": null
+    },
+    {
+      "texte": "Assemblez le plat: Placez une moitié de naan grillé sur chaque assiette de service et mettez une pile de fusée sur chaque.",
+      "duree": null
+    },
+    {
+      "texte": "Garnir d'un hamburger, puis de quelques tranches de betterave et d'une poupée de crème aigre.",
+      "duree": null
+    },
+    {
+      "texte": "Saupoudrer de sel et de poivre noir fraîchement moulu et servir immédiatement avec une grande salade verte et des chips.",
+      "duree": null
+    },
+    {
+      "texte": "Un verre de vin rouge ne passerait pas mal non plus.",
+      "duree": null
+    }
+  ],
+  "origines": [
+    "Australien"
+  ],
+  "photo": null,
+  "id": "aussie-burgers"
+}

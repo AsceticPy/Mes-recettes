@@ -1,0 +1,107 @@
+{
+  "id": "borsch",
+  "nom": "Borsch",
+  "type": "plat",
+  "origines": [
+    "Ukraine"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/804v1j1764367088.jpg",
+  "ingredients": [
+    {
+      "nom": "Boeuf",
+      "quantite": 1.0,
+      "unite": "kg"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Feuille de la baie",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Pommes de terre",
+      "quantite": 2.5,
+      "unite": "kg"
+    },
+    {
+      "nom": "Huile de tournesol",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Carottes",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Racines de betterave",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Poivre rouge",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Tomates étagées",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Pruneaux",
+      "quantite": 6.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Chou blanc",
+      "quantite": 0.5,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Haricots rénaux",
+      "quantite": 400.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Creme fraiche",
+      "quantite": 100.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Dill",
+      "quantite": 0,
+      "unite": "botte"
+    },
+    {
+      "nom": "Pain croustillant",
+      "quantite": 0,
+      "unite": "pour servir"
+    }
+  ],
+  "etapes": [
+    "Pour faire le stock, mettre la viande, l'oignon entier, la feuille de laurier et 2 litres d'eau froide légèrement salée dans une grande casserole.",
+    "Faire cuire à feu très doux pendant 1 h 30 min ou jusqu'à ce que le shin de bœuf soit doux et s'effondre facilement – cela peut prendre jusqu'à 3 heures.",
+    "Éliminez la ordure avec une cuillère de temps en temps.",
+    "Séparer tous les morceaux de boeuf dans le bouillon, retirer l'oignon entier et jeter.",
+    "Ajouter les pommes de terre au borscht, bien assaisonner de sel et de poivre et cuire pendant 10-15 minutes jusqu'à tendreté.",
+    "Pendant ce temps, chauffer l'huile de tournesol dans une grande poêle profonde.",
+    "Ajouter l'oignon en dés et la carotte et cuire à feu moyen, en remuant, jusqu'à ce que la carotte soit molle et soit sur le point de commencer à caraméliser.",
+    "Ajouter la betterave et cuire environ 5 minutes en remuant occasionnellement.",
+    "Ajouter le poivre rouge, si vous l'utilisez, et cuire encore 2 minutes, puis ajouter les tomates et les pruneaux, remuer, puis augmenter le feu et faire bouillir pour réduire légèrement, avant d'ajouter tout au borscht.",
+    "Ajouter le chou déchiqueté et les haricots des reins et cuire 7-10 minutes ou jusqu'à tendreté.",
+    "Servir avec une poupée de crème fraîche ou de crème aigre, beaucoup d'aneth hachée et un peu de pain croustillant."
+  ]
+}

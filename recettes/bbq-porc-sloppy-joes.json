@@ -1,0 +1,112 @@
+{
+  "nom": "BBQ Porc Sloppy Joes",
+  "type": "plat",
+  "personnes": 4,
+  "tempsPreparation": 45,
+  "tempsCuisson": 44,
+  "ingredients": [
+    {
+      "nom": "Oignons rouges",
+      "quantite": 1,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 2,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Chaux",
+      "quantite": 1,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Pain",
+      "quantite": 2,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Porc",
+      "quantite": 450,
+      "unite": "g"
+    },
+    {
+      "nom": "Sauce barbeque",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Sucre chaude",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "La tomate ketchup",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Huile végétale",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Pomme de terre",
+      "quantite": 3,
+      "unite": ""
+    }
+  ],
+  "etapes": [
+    "Préchauffer le four à 450 degrés.",
+    "Laver et sécher tous les produits.",
+    "Couper les patates douces en quartiers de 1⁄2 pouce.",
+    "Verser sur une plaque de cuisson avec une bruine d'huile, de sel et de poivre.",
+    "Faire rôtir jusqu'à ce qu'il soit bruni et tendre, 20-25 minutes.",
+    "Pendant ce temps, couper en deux et peler l'oignon.",
+    "Couper le plus fin possible jusqu'à ce que vous ayez 1⁄4 tasse (1⁄2 tasse pour 4 portions); hacher finement les oignons restants.",
+    "Peler et hacher finement l'ail.",
+    "Couper la chaux; presser le jus dans un petit bol.",
+    "Coupez les petits pains.",
+    "Ajouter 1 beurre TBSP (2 TBSP pour 4) dans un petit bol à micro-ondes séparé; micro-ondes jusqu'à fusion, 30 secondes.",
+    "Brossez sur les côtés coupés des pains.",
+    "Au bol, ajouter l'oignon tranché, 1⁄4 c.",
+    "à thé de sucre (1⁄2 c.",
+    "à thé pour 4 portions) et une pincée de sel.",
+    "Mélanger; mettre de côté pour piquer rapidement.",
+    "Chauffer une bruine d'huile dans une grande casserole à feu moyen-vif.",
+    "Ajouter l'oignon haché et assaisonner de sel et de poivre.",
+    "Cuire en remuant, jusqu'à ramollir, 4-5 minutes.",
+    "Ajouter l'ail et cuire jusqu'à parfumer, 30 secondes de plus.",
+    "Ajouter le porc et assaisonner de sel et de poivre.",
+    "Cuire en morceaux, jusqu'à ce que la viande soit dorée et cuite, 4-6 minutes.",
+    "Alors que le porc cuit, dans un troisième petit bol, mélanger la sauce BBQ, le liquide de décapage de l'oignon, 3 ketchup TBSP (6 TBSP pour 4 portions), 1⁄2 c.",
+    "à thé sucre (1 c.",
+    "à thé pour 4) et 1⁄4 tasse d'eau (1⁄3 tasse pour 4).",
+    "Une fois le porc cuit, ajouter le mélange de sauce BBQ dans la poêle.",
+    "Cuire en remuant, jusqu'à ce que la sauce épaississe, 2-3 minutes.",
+    "Boucher et assaisonner de sel et de poivre.",
+    "Pendant ce temps, griller les pains au four ou au grille-pain jusqu'à ce qu'ils soient dorés, 3-5 minutes.",
+    "Divisez les pains grillés entre les assiettes et remplissez avec autant de porc BBQ que vous le souhaitez.",
+    "Garnir d'oignon mariné et de sauce chaude.",
+    "Servir avec des coins de patate douce sur le côté."
+  ],
+  "origines": [
+    "États-Unis"
+  ],
+  "id": "bbq-porc-sloppy-joes"
+}

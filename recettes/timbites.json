@@ -1,0 +1,67 @@
+{
+  "id": "timbites",
+  "nom": "Timbites",
+  "type": "dessert",
+  "origines": [
+    "Canada"
+  ],
+  "tempsPreparation": 37,
+  "tempsCuisson": 20,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/txsupu1511815755.jpg",
+  "ingredients": [
+    {
+      "nom": "Farine",
+      "quantite": 2.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 0.3333333333333333,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Poudre de cuisson",
+      "quantite": 3.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Huile",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Huile",
+      "quantite": 0,
+      "unite": "pour friture"
+    },
+    {
+      "nom": "Sucre glacé",
+      "quantite": 0,
+      "unite": "pour décorer"
+    }
+  ],
+  "etapes": [
+    "Mélanger les ingrédients secs.",
+    "Mélanger les ingrédients humides et les incorporer au sec.",
+    "Mélanger jusqu'à ce qu'il soit lisse.",
+    "Passez par les cuillères à café (pas plus gros) en huile chaude (365 degrés, pas plus chaud), tournant après quelques instants jusqu'à ce que doré brun de tous les côtés.",
+    "Retirer et égoutter.",
+    "Rouler dans le sucre de cannelle tout en restant chaud et servir."
+  ]
+}

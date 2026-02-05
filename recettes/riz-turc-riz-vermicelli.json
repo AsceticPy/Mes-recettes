@@ -1,0 +1,53 @@
+{
+  "id": "riz-turc-riz-vermicelli",
+  "nom": "Riz turc (riz vermicelli)",
+  "type": "plat",
+  "origines": [
+    "Turquie"
+  ],
+  "tempsPreparation": 25,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/xw1ruy1763786501.jpg",
+  "ingredients": [
+    {
+      "nom": "Riz",
+      "quantite": 300.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Huile végétale",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Vermicelli pâtes",
+      "quantite": 70.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Beurre non salé",
+      "quantite": 30.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Stock de poulet",
+      "quantite": 600.0,
+      "unite": "ml"
+    }
+  ],
+  "etapes": [
+    "Verser le riz dans un très grand bol sous eau froide courante et égoutter soigneusement l'eau du bol à travers un tamis.",
+    "Répétez quelques fois jusqu'à ce que l'eau dans le bol soit claire, puis remplissez le bol d'eau froide et laissez le riz tremper pendant 10 minutes pendant que vous faites cuire les vermicelles.",
+    "Mettre l'huile dans une poêle moyenne à feu moyen.",
+    "Ajouter les vermicelles et remuer continuellement jusqu'à ce que les brins deviennent un riche brun doré, 2-3 minutes.",
+    "Retirer du feu, remuer le beurre jusqu'à ce qu'il fond et laisser refroidir les vermicelles pendant 1-2 minutes.",
+    "Égoutter soigneusement le riz dans un tamis.",
+    "Ajouter le riz dans la poêle et bien remuer.",
+    "Verser le bouillon chaud dans la poêle, saupoudrer de 1⁄2 c.",
+    "à thé de sel, bien remuer, puis retourner la poêle à feu vif.",
+    "Porter à ébullition, puis réduire le feu au plus bas il ira, mettre le couvercle sur la poêle et laisser mijoter pendant 7-9 minutes.",
+    "Retirez la casserole du feu, couvrez-la de quelques feuilles de papier de cuisine ou d'une serviette à thé légère et du couvercle de la casserole, et laissez le riz s'asseoir dans la casserole pendant 10 minutes.",
+    "Remonter avec une fourchette avant de servir."
+  ]
+}

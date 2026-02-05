@@ -1,0 +1,96 @@
+version: '3.8'
+
+services:
+  # ============================================
+  # Service PostgreSQL
+  # ============================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: cuisine_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER:-cuisine_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-CuisineApp2024!SecureP@ss}
+      POSTGRES_DB: ${DB_NAME:-cuisine_db}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      # Persistance des données
+      - postgres_data:/var/lib/postgresql/data
+      # Script d'initialisation
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-cuisine_user} -d ${DB_NAME:-cuisine_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - cuisine_network
+
+  # ============================================
+  # Service Application Node.js
+  # ============================================
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cuisine_app
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-cuisine_db}
+      DB_USER: ${DB_USER:-cuisine_user}
+      DB_PASSWORD: ${DB_PASSWORD:-CuisineApp2024!SecureP@ss}
+      PORT: 3000
+    ports:
+      - "${APP_PORT:-8000}:3000"
+    volumes:
+      # Photos des recettes (persistance)
+      - ./photos:/app/photos
+      # Données JSON pour migration initiale
+      - ./recettes:/app/recettes:ro
+      - ./data:/app/data:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - cuisine_network
+
+  # ============================================
+  # Service pgAdmin
+  # ============================================
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: cuisine_pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@cuisine.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin123}
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "${PGADMIN_PORT:-5051}:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - cuisine_network
+
+# ============================================
+# Volumes persistants
+# ============================================
+volumes:
+  postgres_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+
+# ============================================
+# Réseau
+# ============================================
+networks:
+  cuisine_network:
+    driver: bridge

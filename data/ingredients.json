@@ -1,0 +1,92 @@
+[
+  {
+    "categorie": "Viandes & Poissons",
+    "items": [
+      "Poulet", "Boeuf", "Porc", "Agneau", "Veau", "Canard", "Dinde",
+      "Lardons", "Jambon", "Saucisse", "Bacon",
+      "Saumon", "Thon", "Cabillaud", "Crevettes", "Moules", "Anchois"
+    ]
+  },
+  {
+    "categorie": "Légumes",
+    "items": [
+      "Tomate", "Oignon", "Ail", "Carotte", "Pomme de terre", "Courgette",
+      "Aubergine", "Poivron", "Haricots verts", "Petits pois", "Épinards",
+      "Salade", "Concombre", "Céleri", "Poireau", "Chou", "Brocoli",
+      "Champignon", "Artichaut", "Asperge", "Betterave", "Radis",
+      "Fenouil", "Navet", "Courge", "Potiron"
+    ]
+  },
+  {
+    "categorie": "Fruits",
+    "items": [
+      "Pomme", "Poire", "Banane", "Orange", "Citron", "Citron vert",
+      "Fraise", "Framboise", "Myrtille", "Cerise", "Pêche", "Abricot",
+      "Raisin", "Melon", "Pastèque", "Ananas", "Mangue", "Kiwi",
+      "Figue", "Prune", "Grenade"
+    ]
+  },
+  {
+    "categorie": "Produits laitiers",
+    "items": [
+      "Lait", "Crème fraîche", "Beurre", "Yaourt", "Fromage blanc",
+      "Parmesan", "Gruyère", "Emmental", "Mozzarella", "Feta",
+      "Chèvre", "Roquefort", "Comté", "Camembert", "Ricotta",
+      "Mascarpone", "Crème liquide"
+    ]
+  },
+  {
+    "categorie": "Oeufs & Féculents",
+    "items": [
+      "Oeufs", "Pâtes", "Riz", "Semoule", "Quinoa", "Boulgour",
+      "Lentilles", "Pois chiches", "Haricots rouges", "Haricots blancs",
+      "Pain", "Pain de mie", "Farine", "Maïzena"
+    ]
+  },
+  {
+    "categorie": "Herbes aromatiques",
+    "items": [
+      "Persil", "Ciboulette", "Basilic", "Menthe", "Coriandre",
+      "Thym", "Romarin", "Laurier", "Estragon", "Aneth", "Sauge",
+      "Origan", "Cerfeuil"
+    ]
+  },
+  {
+    "categorie": "Épices",
+    "items": [
+      "Sel", "Poivre", "Paprika", "Cumin", "Curry", "Curcuma",
+      "Cannelle", "Muscade", "Gingembre", "Piment", "Cayenne",
+      "Coriandre moulue", "Cardamome", "Clou de girofle", "Safran",
+      "Garam masala", "Ras el hanout", "Herbes de Provence",
+      "Piment d'Espelette", "Sumac", "Za'atar"
+    ]
+  },
+  {
+    "categorie": "Condiments & Sauces",
+    "items": [
+      "Huile d'olive", "Huile de tournesol", "Huile de sésame",
+      "Vinaigre de vin", "Vinaigre balsamique", "Vinaigre de cidre",
+      "Moutarde", "Mayonnaise", "Ketchup", "Sauce soja",
+      "Sauce Worcestershire", "Tabasco", "Harissa", "Pesto",
+      "Concentré de tomate", "Sauce tomate", "Crème de soja"
+    ]
+  },
+  {
+    "categorie": "Sucré & Pâtisserie",
+    "items": [
+      "Sucre", "Sucre glace", "Sucre roux", "Miel", "Sirop d'érable",
+      "Confiture", "Chocolat noir", "Chocolat au lait", "Cacao",
+      "Vanille", "Levure", "Levure chimique", "Gélatine",
+      "Amandes", "Noisettes", "Noix", "Noix de coco"
+    ]
+  },
+  {
+    "categorie": "Conserves & Autres",
+    "items": [
+      "Tomates concassées", "Tomates pelées", "Olives noires", "Olives vertes",
+      "Câpres", "Cornichons", "Bouillon de poule", "Bouillon de légumes",
+      "Vin blanc", "Vin rouge", "Cognac", "Rhum",
+      "Lait de coco", "Pâte feuilletée", "Pâte brisée", "Pâte sablée"
+    ]
+  }
+]

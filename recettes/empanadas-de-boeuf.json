@@ -1,0 +1,126 @@
+{
+  "id": "empanadas-de-boeuf",
+  "nom": "Empanadas de boeuf",
+  "type": "plat",
+  "origines": [
+    "Uruguayen"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/dxpc7j1764370714.jpg",
+  "ingredients": [
+    {
+      "nom": "Lard",
+      "quantite": 60.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 340.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Farine à usage général",
+      "quantite": 600.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Tomates",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 1.0,
+      "unite": "gousse"
+    },
+    {
+      "nom": "Oignons rouges",
+      "quantite": 1.0,
+      "unite": "gros"
+    },
+    {
+      "nom": "Oignons de printemps",
+      "quantite": 0,
+      "unite": "botte"
+    },
+    {
+      "nom": "Steak longe",
+      "quantite": 750.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Origan séché",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Paprika",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Flacons de poivre rouge",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0,
+      "unite": "au goût"
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 0,
+      "unite": "au goût"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Laver les œufs",
+      "quantite": 0,
+      "unite": "filet"
+    },
+    {
+      "nom": "Sauce chimiahurri",
+      "quantite": 0,
+      "unite": "filet"
+    }
+  ],
+  "etapes": [
+    "Pour la pâte, placer le saindoux, l'eau chaude et le sel dans un grand bol de pétrissage et remuer.",
+    "Ajouter la farine et l'origan et pétrir cinq miutes à la main ou avec la fonction de pétrissage de votre machine.",
+    "Laisser reposer pendant au moins une demi-heure ou passer la nuit au réfrigérateur.",
+    "Pour le remplissage placez les tomates pendant environ 30 secondes dans l'eau bouillante, puis refroidissez à l'eau froide et pelez la peau et coupez en cubes.",
+    "Presser l'ail par la presse à l'ail, couper les oignons en cubes.",
+    "Laisser mijoter l'ail et les oignons dans un peu d'huile d'olive jusqu'à translucide.",
+    "Sortir les oignons et l'ail et faire revenir la viande à feu vif de tous les côtés.",
+    "Assaisonner avec toutes les herbes et ajouter les oignons, l'ail et les tomates.",
+    "Laisser mijoter quelques minutes, ajouter le sel, le poivre et les épices supplémentaires au goût.",
+    "Vous pouvez préparer la viande la veille, refroidir au réfrigérateur si vous le faites.",
+    "Faire bouillir les œufs et les couper en cubes et mélanger avec la viande préparée.",
+    "Couper la pâte en deux et rouler une demi-doucement sur la surface farinée.",
+    "Découpez les cercles d'environ 12-15 cm de diamètre.",
+    "Le mien a un diamètre de 12,5 cm.",
+    "Placez environ 2-4 cuillères à café de remplissage sur un cercle, placez un peu d'eau autour des bords et repliez-vous sur l'autre moitié pour obtenir des demi-lunes.",
+    "Assurez-vous de sceller les bords avec une fourchette.",
+    "Répétez jusqu'à ce que vous n'ayez plus de pâte et de remplissage.",
+    "Entre-temps, préchauffez le four à 200 degrés Celsius.",
+    "Badigeonner les empanadas avec le lavage des oeufs et cuire environ 8 empanadas sur une plaque de cuisson doublée de papier parchemin pendant environ 25min ou jusqu'à or.",
+    "Servir au chaud avec la sauce chimichurri."
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "poivrons-farcis-avec-quinoa-et-haricots-noirs",
+  "nom": "Poivrons farcis avec quinoa et haricots noirs",
+  "type": "plat",
+  "origines": [
+    "Mexique"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 57,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/b66myb1683207208.jpg",
+  "ingredients": [
+    {
+      "nom": "Poivre vert",
+      "quantite": 4.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "petit"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 2.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Quinoa",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Haricots noirs",
+      "quantite": 1.0,
+      "unite": "boîte"
+    },
+    {
+      "nom": "Maïs doux",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Tomates coupées en dés",
+      "quantite": 1.0,
+      "unite": "boîte"
+    },
+    {
+      "nom": "Cumin",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poudre de chili",
+      "quantite": 0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Paprika fumé",
+      "quantite": 0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0,
+      "unite": "au goût"
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 0,
+      "unite": "au goût"
+    },
+    {
+      "nom": "Fromage mexicain éraflé",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Cilantro",
+      "quantite": 0,
+      "unite": ""
+    }
+  ],
+  "etapes": [
+    "Préchauffez votre four à 375°F (190°C).",
+    "Graisser légèrement un plat de cuisson de 9x13 pouces ou un plat similaire.",
+    "Placez les moitiés de poivron dans le plat de cuisson préparé, coupez le côté vers le haut.",
+    "Cuire 15 à 20 minutes ou jusqu'à ce qu'il soit légèrement ramolli.",
+    "Pendant que les poivrons font cuire, préparer le remplissage.",
+    "Dans une grande poêle, faire chauffer l'huile d'olive à feu moyen.",
+    "Ajouter l'oignon haché et cuire 3-4 minutes, jusqu'à ramollir.",
+    "Ajouter l'ail et cuire encore 1 minute, jusqu'à odorat.",
+    "Incorporer le quinoa cuit, les haricots noirs, le maïs, les tomates en dés, le cumin moulu, la poudre de chili, le paprika fumé, le sel et le poivre.",
+    "Cuire 5-7 minutes, jusqu'à ce qu'il soit chauffé.",
+    "Retirer la poêle du feu et remuer 1 tasse du fromage déchiqueté, en cas d'utilisation.",
+    "Retirez les poivrons du four et rangez soigneusement chaque moitié de poivre avec le mélange de quinoa et de haricots noirs.",
+    "Garnir les poivrons farcis avec le reste 1/2 tasse de fromage déchiqueté, s'il l'utilise.",
+    "Remettre les poivrons farcis au four, et cuire encore 15-20 minutes, jusqu'à ce que le fromage soit fondu et que les poivrons soient tendres.",
+    "Retirer du four et laisser refroidir les poivrons farcis pendant 5 minutes avant de servir.",
+    "Garnir de coriandre fraîchement hachée."
+  ]
+}

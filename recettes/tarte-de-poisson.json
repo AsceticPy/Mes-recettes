@@ -1,0 +1,110 @@
+{
+  "id": "tarte-de-poisson",
+  "nom": "Tarte de poisson",
+  "type": "plat",
+  "origines": [
+    "Royaume-Uni"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 58,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg",
+  "ingredients": [
+    {
+      "nom": "Pommes de terre flottées",
+      "quantite": 900.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Lait semi-écrémé",
+      "quantite": 600.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Filets de poissons blancs",
+      "quantite": 800.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Farine pure",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Nutmeg",
+      "quantite": 0,
+      "unite": ""
+    },
+    {
+      "nom": "Crème double",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Artichauts de jérusalem",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Fuite",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Crevettes",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 0,
+      "unite": "poignée"
+    },
+    {
+      "nom": "Dill",
+      "quantite": 0,
+      "unite": "poignée"
+    },
+    {
+      "nom": "Citron",
+      "quantite": 1.0,
+      "unite": "zeste"
+    },
+    {
+      "nom": "Gruyère",
+      "quantite": 25.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Citron",
+      "quantite": 1.0,
+      "unite": "pièce"
+    }
+  ],
+  "etapes": [
+    "01.Passer les pommes de terre dans une grande casserole d'eau salée froide et porter à ébullition.",
+    "Baisser le feu, couvrir, puis laisser mijoter doucement pendant 15 minutes jusqu'à tendreté.",
+    "Égoutter, puis retourner à la poêle à feu doux pendant 30 secondes pour dégager toute eau excédentaire.",
+    "Mash avec 1 c.",
+    "à soupe d'huile d'olive, puis assaisonner.",
+    "02.Pendant ce temps, mettre le lait dans une grande casserole, ajouter le poisson et porter à ébullition.",
+    "Retirer du feu, couvrir et laisser reposer 3 minutes.",
+    "Enlevez le poisson (réserver le lait) et faites sécher avec du papier de cuisine, puis flocez doucement dans un plat à l'épreuve du four, en jetant la peau et les os.",
+    "03.Chauffer le reste d'huile dans une casserole, remuer la farine et cuire 30 secondes.",
+    "Mélanger graduellement 200-250ml de lait réservé (découper le reste).",
+    "Grattez la muscade, assaisonnez, puis bullez jusqu'à épaississement.",
+    "Incorporer la crème.",
+    "04.Préchauffer le four à 190°C/fan 170°C/gaz 5.",
+    "Râper les artichauts et ajouter au plat avec le poireau, les crevettes et les herbes.",
+    "Incorporer le zeste de citron et le jus dans la sauce, puis verser.",
+    "Mélanger doucement avec une cuillère en bois.",
+    "05.Pousser le mash sur le mélange de poisson, puis utiliser une fourchette pour faire des pics, qui sera croustillant et brun comme il cuit.",
+    "Saupoudrer le fromage, puis cuire 35 à 40 minutes jusqu'à ce qu'il soit doré et bouillonnant.",
+    "Servir avec des verts flirtés."
+  ]
+}

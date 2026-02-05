@@ -1,0 +1,54 @@
+{
+  "id": "sledz-w-oleju-polish-herrings",
+  "nom": "Sledz w Oleju (Polish Herrings)",
+  "type": "plat",
+  "origines": [
+    "Pologne"
+  ],
+  "tempsPreparation": 28,
+  "tempsCuisson": 60,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/7ttta31593350374.jpg",
+  "ingredients": [
+    {
+      "nom": "Hareng",
+      "quantite": 8.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Tous les poissons",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Feuille de la baie",
+      "quantite": 1.0,
+      "unite": "pièce"
+    }
+  ],
+  "etapes": [
+    "Faire tremper le hareng dans l'eau froide pendant au moins 1 heure.",
+    "Si elle est très salée, répéter, changer l'eau à chaque fois.",
+    "Égoutter soigneusement et trancher le hareng en morceaux de morsure.",
+    "Placer dans un pot suffisamment grand pour accueillir les pièces et couvrir d'huile, de tout-puce, de grains de poivre et de feuilles de laurier.",
+    "Fermez le pot.",
+    "Réfrigérer 2 à 3 jours avant de manger.",
+    "Cela restera réfrigéré jusqu'à 2 semaines.",
+    "Servir avec des tranches d'oignon ou d'oignon finement hachées, du citron et du persil ou de l'aneth."
+  ]
+}

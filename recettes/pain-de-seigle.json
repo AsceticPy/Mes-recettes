@@ -1,0 +1,60 @@
+{
+  "id": "pain-de-seigle",
+  "nom": "Pain de seigle",
+  "type": "accompagnement",
+  "origines": [
+    "Pologne"
+  ],
+  "tempsPreparation": 28,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/lmc6r51764365554.jpg",
+  "ingredients": [
+    {
+      "nom": "Rye",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Farine de pain blanche forte",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Levure",
+      "quantite": 10.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Chérie",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Graines de carvi",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    }
+  ],
+  "etapes": [
+    "Mettre les farines, la levure et le sel dans un bol.",
+    "Dans une cruche, mélanger le miel avec 250 ml d'eau chaude, verser le liquide dans le bol et mélanger pour former une pâte.",
+    "La farine de seigle peut être assez sèche et absorbe beaucoup d'eau, si la pâte semble trop sèche ajouter plus d'eau chaude jusqu'à ce que vous ayez une pâte douce.",
+    "Le seigle contient moins de gluten que la farine blanche afin que la pâte ne se sente pas aussi printanière qu'un pain blanc conventionnel.",
+    "Placer la pâte dans un bol bien huilé, couvrir de pellicule de collage et laisser monter à un endroit chaud pendant 1-2 heures, ou jusqu'à ce qu'à peu près doublé en taille.",
+    "Poussez une boîte de pain de 2 lb/900g avec de la farine.",
+    "Remettre la pâte sur votre surface de travail et pétrir brièvement pour éteindre les bulles d'air.",
+    "Si vous utilisez des graines de carvi, faites-les entrer dans la pâte.",
+    "Formez un pain ovale lisse et sautez dans votre étain.",
+    "Couvrir l'étain d'un film de collage huilé et laisser monter quelque part au chaud pendant 1 à 1,5 h, ou jusqu'à ce que la taille double.",
+    "Chauffer le four à 220C/200C ventilateur/gaz 7.",
+    "Retirer le film de collage et épousseter la surface du pain avec de la farine de seigle.",
+    "Coupez quelques incisions sur un angle puis faites cuire pendant 30 minutes jusqu'à ce que le son soit brun foncé et creux lorsqu'on tape.",
+    "Transférer sur une grille de refroidissement et laisser refroidir au moins 20 minutes avant de servir."
+  ]
+}

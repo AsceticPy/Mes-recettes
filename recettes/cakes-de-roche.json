@@ -1,0 +1,65 @@
+{
+  "id": "cakes-de-roche",
+  "nom": "Cakes de roche",
+  "type": "dessert",
+  "origines": [
+    "Royaume-Uni"
+  ],
+  "tempsPreparation": 34,
+  "tempsCuisson": 20,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/tqrrsq1511723764.jpg",
+  "ingredients": [
+    {
+      "nom": "Farine autodidacte",
+      "quantite": 225.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sucre de ricin",
+      "quantite": 75.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Poudre de cuisson",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 125.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Fruits secs",
+      "quantite": 150.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Oeufs",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Extrait de vanille",
+      "quantite": 2.0,
+      "unite": "c. à café"
+    }
+  ],
+  "etapes": [
+    "Préchauffer le four à 180C/350F/Gas 4 et aligner un plateau de cuisson avec le parchemin de cuisson.",
+    "Mélanger la farine, le sucre et la poudre à pâte dans un bol et frotter le beurre cube jusqu'à ce que le mélange ressemble à de la chapelure, puis mélanger dans les fruits secs.",
+    "Dans un bol propre, battre l'œuf et le lait avec l'extrait de vanille.",
+    "Ajouter le mélange d'oeufs aux ingrédients secs et remuer avec une cuillère jusqu'à ce que le mélange se réunisse comme une pâte épaisse et grumelée.",
+    "Ajouter une cuillère à café plus de lait si vous en avez vraiment besoin pour faire le mélange coller ensemble.",
+    "Placez des cuillères de golf de la taille du mélange sur le plateau de cuisson préparé.",
+    "Laisser de l'espace entre eux car ils s'aplatissent et s'étalent pour doubler leur taille pendant la cuisson.",
+    "Cuire au four 15-20 minutes, jusqu'à ce qu'il soit doré.",
+    "Retirer du four, laisser refroidir pendant quelques minutes puis les tourner sur un support de fil pour refroidir."
+  ]
+}

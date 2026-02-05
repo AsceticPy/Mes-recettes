@@ -1,0 +1,72 @@
+{
+  "id": "grilles-aubergines-et-hummus",
+  "nom": "Grilles aubergines et hummus",
+  "type": "plat",
+  "origines": [
+    "Turquie"
+  ],
+  "tempsPreparation": 37,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/zub3s91764110535.jpg",
+  "ingredients": [
+    {
+      "nom": "Aubergine",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Huile végétale",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Pain",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Hummus",
+      "quantite": 300.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Noix communes",
+      "quantite": 100.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 40.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Tomates de cerise",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Citron",
+      "quantite": 0.5,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Huile d'olive vierge extra",
+      "quantite": 0,
+      "unite": "filet"
+    }
+  ],
+  "etapes": [
+    "Disposer l'aubergine en une seule couche sur une grande plaque de cuisson.",
+    "Badigeonner paresseusement l'huile végétale, puis assaisonner généreusement.",
+    "Griller pendant 15 minutes, tourner deux fois et brosser à l'huile jusqu'à ce que les tranches soient ramollies et cuites.",
+    "Pendant ce temps, fouetter le pain en miettes.",
+    "Ajouter 2 c.",
+    "à thé d'huile et revenir brièvement, pour enrober.",
+    "Étaler quelques tsps d'hummus sur chaque tranche d'aubergine.",
+    "Astucez la chapelure sur une grande assiette, puis pressez le côté hummus des aubergines dans la chapelure pour enrober.",
+    "Grillez encore, mijotez-le, pendant environ 3 minutes jusqu'à ce qu'il soit doré.",
+    "Mélanger les noix, le persil et les tomates cerises dans un bol, assaisonner, puis ajouter le jus de citron et l'huile d'olive et mélanger à nouveau.",
+    "Servir les grills avec la salade, une poupée plus hummus et un peu de pain pitta."
+  ]
+}

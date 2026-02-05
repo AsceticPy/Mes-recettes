@@ -1,0 +1,73 @@
+{
+  "id": "salade-de-pates-mediterraneennes",
+  "nom": "Salade de pâtes méditerranéennes",
+  "type": "plat",
+  "origines": [
+    "Italie"
+  ],
+  "tempsPreparation": 37,
+  "tempsCuisson": 10,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/wvqpwt1468339226.jpg",
+  "ingredients": [
+    {
+      "nom": "Boules de mozzarella",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Tomates à la prune",
+      "quantite": 250.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Basilic frais",
+      "quantite": 1.0,
+      "unite": "botte"
+    },
+    {
+      "nom": "Farfalle",
+      "quantite": 350.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Huile d'olive extra vierge",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Olives vertes",
+      "quantite": 40.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Thon",
+      "quantite": 200.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0,
+      "unite": "au goût"
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 0,
+      "unite": "au goût"
+    }
+  ],
+  "etapes": [
+    "Porter une grande casserole d'eau salée à ébullition.",
+    "Ajouter les pâtes, remuer une fois et cuire environ 10 minutes ou selon les instructions sur le paquet.",
+    "Pendant ce temps, laver les tomates et les couper en quartiers.",
+    "Couper les olives.",
+    "Lavez le basilic.",
+    "Mettez les tomates dans un saladier et déchirez les feuilles de basilic.",
+    "Ajouter une cuillère à soupe d'huile d'olive et mélanger.",
+    "Lorsque les pâtes sont prêtes, égoutter dans une calandre et passer l'eau froide dessus pour la refroidir rapidement.",
+    "Mélanger les pâtes dans le saladier avec les tomates et le basilic.",
+    "Ajouter les olives tranchées, les boules de mozzarella drainées et les morceaux de thon.",
+    "Bien mélanger et laisser reposer la salade pendant au moins une demi-heure pour permettre aux saveurs de se mêler.",
+    "Saupoudrer les pâtes d'une mouture généreuse de poivre noir et arroser avec le reste de l'huile d'olive juste avant de servir."
+  ]
+}

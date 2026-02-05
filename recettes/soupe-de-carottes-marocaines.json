@@ -1,0 +1,68 @@
+{
+  "id": "soupe-de-carottes-marocaines",
+  "nom": "Soupe de carottes marocaines",
+  "type": "plat",
+  "origines": [
+    "Maroc"
+  ],
+  "tempsPreparation": 34,
+  "tempsCuisson": 12,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/jcr46d1614763831.jpg",
+  "ingredients": [
+    {
+      "nom": "Carottes",
+      "quantite": 6.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Couvercle d'ail",
+      "quantite": 4.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Cumin",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Coriandre",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Garam masala",
+      "quantite": 0.25,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Jus de citron",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    }
+  ],
+  "etapes": [
+    "Préchauffer le four à 180° C.",
+    "Mélanger les carottes, l'oignon, l'ail, les graines de cumin, les graines de coriandre, le sel et l'huile d'olive dans un bol et bien mélanger.",
+    "Transférer sur un plateau de cuisson.",
+    "Mettre le plateau de cuisson au four préchauffé et rôtir pendant 10-12 minutes ou jusqu'à ce que les carottes ramollissent.",
+    "Retirer du feu et refroidir.",
+    "Mouiller le mélange de carottes cuites avec un peu d'eau pour faire une pâte lisse et de la déformation dans un bol.",
+    "Chauffer le mélange de carottes dans une poêle antiadhésive.",
+    "Ajouter deux tasses d'eau et porter à ébullition.",
+    "Ajouter la poudre de garam masala et mélanger.",
+    "Ajouter le sel et bien mélanger.",
+    "Retirer du feu, ajouter le jus de citron et bien mélanger.",
+    "Servir chaud."
+  ]
+}

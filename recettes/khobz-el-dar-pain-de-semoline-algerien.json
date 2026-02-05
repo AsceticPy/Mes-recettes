@@ -1,0 +1,96 @@
+{
+  "id": "khobz-el-dar-pain-de-semoline-algerien",
+  "nom": "Khobz el Dar (pain de sémoline algérien)",
+  "type": "accompagnement",
+  "origines": [
+    "Algérien"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 175,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/5u37fy1764116774.jpg",
+  "ingredients": [
+    {
+      "nom": "Farine de semolina",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Farine de semolina",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Semence de sésame",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Levure",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0.75,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Huile végétale",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Farine à usage général",
+      "quantite": 3.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Farine à usage général",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    }
+  ],
+  "etapes": [
+    "Mélanger 1/2 tasse plus 2 cuillères à soupe de semoule, 2 cuillères à soupe de graines de sésame, sucre, levure et sel ensemble dans un grand bol.",
+    "fouetter dans l'huile, l'oeuf et le blanc d'oeuf.",
+    "Incorporer lentement le lait chaud jusqu'à ce qu'une pâte liquide se forme.",
+    "Couvrir le bol d'une assiette ou d'un enveloppement plastique; laisser reposer à température ambiante jusqu'à ce qu'il soit mousseux, environ 1 heure.",
+    "Incorporer 2 3/4 tasses de farine avec une cuillère en bois jusqu'à ce qu'une pâte collante se forme.",
+    "Couvrir à nouveau et laisser reposer 30 minutes.",
+    "Disposer une plaque de cuisson avec du papier parchemin ou un tapis de cuisson.",
+    "Saupoudrer 1 cuillère à soupe de farine sur la pâte et vos mains.",
+    "Mélanger la pâte, ajouter la farine au besoin, 1 cuillère à soupe à la fois, jusqu'à ce qu'elle s'éloigne des côtés du bol.",
+    "Façonner un pain rond et placer sur la plaque de cuisson préparée.",
+    "Couvrir lâchement avec une serviette et laisser lever pendant 1 heure dans un endroit chaud jusqu'à ce que le pain double en volume.",
+    "Préchauffer le four à 400 degrés F (200 degrés Celsius).",
+    "Battre le jaune d'œuf et arroser dans un bol avec une fourchette; brosser sur toute la surface du pain.",
+    "Saupoudrer 1 cuillère à soupe de graines de sésame sur le dessus.",
+    "Cuire au four préchauffé jusqu'à ce que le pain soit doré, environ 20 à 25 minutes."
+  ]
+}

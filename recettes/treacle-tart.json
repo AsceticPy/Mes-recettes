@@ -1,0 +1,70 @@
+{
+  "id": "treacle-tart",
+  "nom": "Treacle Tart",
+  "type": "dessert",
+  "origines": [
+    "Royaume-Uni"
+  ],
+  "tempsPreparation": 28,
+  "tempsCuisson": 60,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/wprvrw1511641295.jpg",
+  "ingredients": [
+    {
+      "nom": "Farine plate",
+      "quantite": 250.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 135.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sirop d'or",
+      "quantite": 400.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Fil d'ariane",
+      "quantite": 150.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Citrons",
+      "quantite": 2.0,
+      "unite": "zeste"
+    },
+    {
+      "nom": "Oeufs",
+      "quantite": 1.0,
+      "unite": "pièce"
+    }
+  ],
+  "etapes": [
+    "Faire d'abord la pâte courte en croûte : mesurer la farine dans un grand bol et frotter le beurre avec le bout des doigts jusqu'à ce que le mélange ressemble à de fines chapelures (autrement, cela peut être fait dans un robot alimentaire).",
+    "Ajouter environ trois cuillères à soupe d'eau froide et mélanger à une pâte ferme, envelopper dans un film de collage et refroidir au réfrigérateur pendant environ 20 minutes.",
+    "Préchauffer le four à 200C/400F/Gas 6 et mettre un plateau de cuisson lourd dans le four pour chauffer.",
+    "Graisser une boîte de flan à fond lisse de 18cm/7 po de profondeur avec du beurre.",
+    "Retirer environ 150g/51⁄2oz de pâte de la balle principale et réserver pour le plateau.",
+    "Rouler le reste de la pâtisserie finement sur une surface de travail légèrement farinée et aligner la boîte de flan préparée avec la pâtisserie.",
+    "Piquez la base avec une fourchette, pour arrêter la base qui monte pendant la cuisson.",
+    "Placez la pâtisserie réservée pour le plateau sur le film de collage et roulez finement.",
+    "Lavez la pâtisserie et mettez de côté pour refroidir au réfrigérateur (le film de collage facilite le déplacement).",
+    "Ne pas couper en bandes à ce stade.",
+    "Ne lavez pas les bandes d'oeufs une fois qu'elles sont sur la tarte, car elles s'égoutteront dans le mélange de treacle.",
+    "Pour le remplir, chauffer doucement le sirop dans une grande casserole, mais ne pas faire bouillir.",
+    "Une fois fondu, ajouter la chapelure, le jus de citron et le zeste au sirop.",
+    "(Vous pouvez ajouter moins de citron si vous préférez moins de goût d'agrumes.) Si le mélange semble rugueux, ajoutez quelques miettes de pain.",
+    "Verser le mélange de sirop dans l'étain doublé et mettre à niveau la surface.",
+    "Retirer la pâtisserie réservée du réfrigérateur et la couper en longues bandes, 1cm/1⁄2po de large.",
+    "Assurez-vous qu'ils sont tous plus longs que les bords de la boîte de tarte.",
+    "Lavez le bord de la pâtisserie dans l'étain, et commencez à faire le treillis tissé sur le mélange, laissez les bandes suspendues sur le bord de l'étain.",
+    "Une fois le treillis en place, utilisez le bord en étain pour couper les bandes en appuyant sur les mains, créant ainsi une finition soignée.",
+    "Cuire sur le plateau de cuisson préchauffé dans le four chaud pendant environ 10 minutes jusqu'à ce que la pâtisserie commence à colorier, puis réduire la température du four à 180C/350F/Gas 4.",
+    "Si à ce stade le treillis semble devenir trop brun foncé, couvrir la tarte d'une feuille d'étain.",
+    "Cuire encore 25-30 minutes jusqu'à ce que la pâtisserie soit dorée et que le set de remplissage.",
+    "Retirer la tarte du four et laisser fermer dans l'étain.",
+    "Servir chaud ou froid."
+  ]
+}

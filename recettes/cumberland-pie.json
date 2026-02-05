@@ -1,0 +1,104 @@
+{
+  "id": "cumberland-pie",
+  "nom": "Cumberland Pie",
+  "type": "plat",
+  "origines": [
+    "Royaume-Uni"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/pvfkz61761595976.jpg",
+  "ingredients": [
+    {
+      "nom": "Céleri",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Carottes",
+      "quantite": 2.0,
+      "unite": "gros"
+    },
+    {
+      "nom": "Feuilles de baies",
+      "quantite": 5.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Thym",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Huile végétale",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Farine",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Pure de tomates",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Sauce worcestershire",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Cubes pour le stock de boeuf",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Bœuf à lame de plumes",
+      "quantite": 800.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Pommes de terre",
+      "quantite": 800.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Cheddar mature",
+      "quantite": 25.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Fromage de parmesan",
+      "quantite": 25.0,
+      "unite": "g"
+    }
+  ],
+  "etapes": [
+    "Chauffer le four à 160C/140C ventilateur/gaz 3.",
+    "Adoucir le céleri, l'oignon, les carottes, la baie et 1 thym dans une casserole avec 1 c.",
+    "à soupe d'huile et le beurre pendant 10 minutes.",
+    "Incorporer la farine, puis la purée, la sauce Worcestershire et les cubes de bouillon.",
+    "Mélanger graduellement 600 ml d'eau chaude, puis mettre le boeuf au bout et laisser mijoter.",
+    "Couvrir et cuire au four pendant 2 heures 30 minutes, puis découvrir et cuire pendant 30 minutes -1 heure de plus jusqu'à ce que la viande soit vraiment tendre et la sauce épaissie.",
+    "Pendant ce temps, faire cuire les pommes de terre dans une casserole d'eau bouillante jusqu'à ce qu'elles ne soient pas faites mais environ 3⁄4 de la façon dont elles sont faites.",
+    "Transférer la viande dans un plat de cuisson.",
+    "Couper en rondelles d'une épaisseur de 1 cm et mélanger délicatement avec l'assaisonnement, l'huile restante et les feuilles de thym.",
+    "Coucher sur le bœuf, disperser avec le fromage comme vous couchez.",
+    "Vous pouvez couvrir et refroidir la tarte maintenant pendant 1 jour, ou geler jusqu'à 3 mois.",
+    "Augmenter le four à 200C/180C ventilateur/gaz 6 et cuire 30-40 minutes jusqu'à ce qu'il soit doré et croustillant, et faire bouillir la sauce si le plat est refroidi.",
+    "Servir avec des pois."
+  ]
+}

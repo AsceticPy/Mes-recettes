@@ -1,0 +1,87 @@
+{
+  "id": "farine-d-oeuf-de-tomate-chinoise",
+  "nom": "Farine d'oeuf de tomate chinoise",
+  "type": "plat",
+  "origines": [
+    "Chine"
+  ],
+  "tempsPreparation": 40,
+  "tempsCuisson": 11,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/rwvw8q1765660071.jpg",
+  "ingredients": [
+    {
+      "nom": "Tomates de prune",
+      "quantite": 450.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Huile végétale",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Oeufs",
+      "quantite": 5.0,
+      "unite": "gros"
+    },
+    {
+      "nom": "Huile de graines de sésame",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poudre de bouillon de poulet",
+      "quantite": 2.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 2.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0.25,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Oignons de printemps",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Riz jasmin",
+      "quantite": 2.0,
+      "unite": "tasse"
+    }
+  ],
+  "etapes": [
+    "Vous pouvez utiliser le bouillon de poulet à la place de la poudre de bouillon de poulet.",
+    "Ajouter 1/4 tasse de bouillon suivie de 2 cuillères à café de fécule de maïs dissoutes dans 1 c.",
+    "à soupePréparer les tomates:.",
+    "Couper les tomates en deux.",
+    "Retirer la tige dure de chaque moitié qui se connecte à la vigne.",
+    "Couper chaque moitié en tiers égaux (vous obtiendrez 6 tranches de chaque tomate).",
+    "Faire les œufs doux brouillés:.",
+    "Dans une poêle antiadhésive froide de 8 à 10 pouces, ajouter l'huile végétale et les œufs battus.",
+    "Tournez le feu à moyen.",
+    "Une fois qu'une fine couche d'oeufs commence à cuire sur le fond, poussez les oeufs dans une direction pour créer des couches d'oeufs brouillés.",
+    "Cuire, en remuant doucement tout le temps, jusqu'à ce que les oeufs brouillés soient généralement fixés mais encore légèrement mouillés et brillants, 2 à 5 minutes.",
+    "Enlevez les œufs dans une assiette et, si nécessaire, essuyez la poêle.",
+    "Faire revenir les tomates et les assaisonnements:.",
+    "Ajouter l'huile de sésame dans la poêle suivie des tomates et faire revenir à feu moyen jusqu'à ce que les tomates soient adoucies mais pas musquées, environ 3 minutes.",
+    "Ajouter la poudre de bouillon de poulet, le sucre et le poivre blanc.",
+    "Mélanger jusqu'à ce que le sucre et le bouillon se soient dissous, environ 1 minute.",
+    "Ajouter les œufs, faire revenir et garnir:.",
+    "Ajouter les œufs dans la poêle avec les tomates.",
+    "Faire cuire pendant environ 2 minutes pour chauffer et mélanger.",
+    "Goûter, ajouter du sel seulement si nécessaire.",
+    "Saupoudrer d'oignons verts et servir avec du riz cuit à la vapeur.on d'eau, plus sel au goût."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "boeuf-et-choux-cornes",
+  "nom": "Boeuf et choux cornés",
+  "type": "plat",
+  "origines": [
+    "Irlande"
+  ],
+  "tempsPreparation": 22,
+  "tempsCuisson": 65,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/xb97a81583266727.jpg",
+  "ingredients": [
+    {
+      "nom": "Bouteille",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Petites pommes de terre",
+      "quantite": 10.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Carottes",
+      "quantite": 5.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Chou",
+      "quantite": 1.0,
+      "unite": "tête"
+    }
+  ],
+  "etapes": [
+    "Mettre le boeuf corné dans un grand pot ou un four hollandais et couvrir d'eau.",
+    "Ajouter le paquet d'épices qui est venu avec le bœuf corné.",
+    "Couvrir la casserole et porter à ébullition, puis laisser mijoter.",
+    "Laisser mijoter environ 50 minutes par livre ou jusqu'à tendreté.",
+    "Ajouter les pommes de terre entières, peler et couper les carottes et cuire jusqu'à ce que les légumes soient presque tendres.",
+    "Ajouter le chou et cuire encore 15 minutes.",
+    "Retirer la viande et laisser reposer 15 minutes.",
+    "Mettre les légumes dans un bol et couvrir.",
+    "Ajouter autant de bouillon (liquide de cuisson réservé dans le four hollandais ou grand pot) que vous voulez.",
+    "Couper la viande à travers le grain."
+  ]
+}

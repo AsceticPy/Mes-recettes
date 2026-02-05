@@ -1,0 +1,43 @@
+{
+  "id": "creme-glacee-aux-noix-de-raisin",
+  "nom": "Crème glacée aux noix de raisin",
+  "type": "dessert",
+  "origines": [
+    "Jamaïque"
+  ],
+  "tempsPreparation": 22,
+  "tempsCuisson": 360,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/1xscby1764790242.jpg",
+  "ingredients": [
+    {
+      "nom": "Crème lourde",
+      "quantite": 2.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Lait condensé",
+      "quantite": 7.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Extrait de vanille",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Céréales d'écrous à raisins",
+      "quantite": 1.0,
+      "unite": "tasse"
+    }
+  ],
+  "etapes": [
+    "Dans un grand bol, utilisez un mélangeur électrique pour fouetter la crème lourde froide jusqu'à ce que des pics raides se forment.",
+    "Incorporer délicatement le lait condensé sucré et l'extrait de vanille jusqu'à bien mélanger.",
+    "Pliez dans les céréales et remuez jusqu'à ce que le mélange soit uniformément distribué.",
+    "Verser le mélange dans un contenant sans danger pour le congélateur (comme une poêle à pain).",
+    "Placer l'enveloppe plastique sur le dessus de la crème glacée pour éviter les brûlures au congélateur.",
+    "Couvrir le récipient et le congeler pendant au moins 6 heures ou jusqu'à ce qu'il soit solide.",
+    "Une fois congelée, laissez la crème glacée s'asseoir à température ambiante pendant quelques minutes pour ramollir légèrement avant d'écoper et de servir."
+  ]
+}

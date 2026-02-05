@@ -1,0 +1,84 @@
+{
+  "id": "pilaf-d-agneau-plov",
+  "nom": "Pilaf d'agneau (Plov)",
+  "type": "plat",
+  "origines": [
+    "Russie"
+  ],
+  "tempsPreparation": 43,
+  "tempsCuisson": 145,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/kos9av1699014767.jpg",
+  "ingredients": [
+    {
+      "nom": "Agneau",
+      "quantite": 50.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Pruneaux",
+      "quantite": 120.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Jus de citron",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Beurre",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Agneau",
+      "quantite": 450.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 2.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Stock de légumes",
+      "quantite": 600.0,
+      "unite": "ml"
+    },
+    {
+      "nom": "Riz",
+      "quantite": 2.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Safran",
+      "quantite": 0,
+      "unite": "pincée"
+    },
+    {
+      "nom": "Persil",
+      "quantite": 0,
+      "unite": "pour décorer"
+    }
+  ],
+  "etapes": [
+    "Placer les raisins secs et les pruneaux dans un petit bol et verser suffisamment d'eau pour couvrir.",
+    "Ajouter le jus de citron et laisser tremper au moins 1 heure.",
+    "Couper à peu près les pruneaux.",
+    "Pendant ce temps, faire chauffer le beurre dans une grande casserole, ajouter l'oignon et cuire 5 minutes.",
+    "Ajouter l'agneau cube, l'agneau moulu et les gousses d'ail concassées.",
+    "Faire frire 5 minutes, en remuant constamment jusqu'à ce qu'il soit doré.",
+    "Verser 2/3 tasses (150 millilitres) de stock dans la casserole.",
+    "Porter à ébullition, puis baisser le feu, couvrir et laisser mijoter pendant 1 heure, ou jusqu'à ce que l'agneau soit tendre.",
+    "Ajouter le reste du stock et porter à ébullition.",
+    "Ajouter le riz blanc à grains longs rincé et une grande pincée de safran.",
+    "Incorporer, puis couvrir et laisser mijoter pendant 15 minutes, ou jusqu'à ce que le riz soit tendre.",
+    "Ajouter les raisins secs égouttés, les pruneaux hachés égouttés et le sel et le poivre au goût.",
+    "Chauffer pendant quelques minutes, puis tourner sur un plat de service chaud et garnir de brins de persil à feuilles plates."
+  ]
+}

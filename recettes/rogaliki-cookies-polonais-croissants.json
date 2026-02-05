@@ -1,0 +1,60 @@
+{
+  "id": "rogaliki-cookies-polonais-croissants",
+  "nom": "Rogaliki (Cookies polonais croissants)",
+  "type": "dessert",
+  "origines": [
+    "Pologne"
+  ],
+  "tempsPreparation": 28,
+  "tempsCuisson": 27,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/7mxnzz1593350801.jpg",
+  "ingredients": [
+    {
+      "nom": "Beurre",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Oeufs",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Fromage à la crème",
+      "quantite": 224.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Poudre de cuisson",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Farine",
+      "quantite": 3.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Jambon",
+      "quantite": 1.0,
+      "unite": "pot"
+    }
+  ],
+  "etapes": [
+    "Dans un bol moyen, mélanger les jaunes d'oeufs, le fromage philly et la poudre à pâte à l'aide d'un mélangeur à main.",
+    "Commencez soigneusement à ajouter la farine.",
+    "Quand le mélange ne sera pas bien mélanger, et ressemblera à des copeaux de bois, ranger le mélangeur et utiliser vos mains pétrir la pâte.",
+    "Créez un rouleau et couvrez-le en feuilles et congelez-le pendant 15 minutes.",
+    "Pour l'instant, préchauffez le four à 375.",
+    "Sortir la pâte et la séparer en deux.",
+    "Rouler et découper 3 pouces transgresse.",
+    "Faites autant que vous pouvez et au centre de chaque mettre une petite cuillère de confiture.",
+    "Roulez-les en croissant.",
+    "Placer les croissants sur une plaque à biscuits graissée et cuire 10-12 minutes ou jusqu'à ce qu'ils soient dorés.",
+    "Répéter avec le reste de la pâte.",
+    "Lorsque vous les retirez, mettez de côté et saupoudrez de sucre en poudre sur le dessus.",
+    "Cela fait environ 3 lots de 20 biscuits chacun.",
+    "Total compte environ 60 cookies."
+  ]
+}

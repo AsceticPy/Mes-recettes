@@ -1,0 +1,91 @@
+{
+  "id": "knafeh",
+  "nom": "Knafeh",
+  "type": "dessert",
+  "origines": [
+    "Arabie saoudite"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 30,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/76nffj1763593933.jpg",
+  "ingredients": [
+    {
+      "nom": "Knafeh",
+      "quantite": 400.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Beurre non salé",
+      "quantite": 6.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Coloration des aliments jaunes",
+      "quantite": 1.0,
+      "unite": "pincée"
+    },
+    {
+      "nom": "Mozzarella",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Fromage à la crème",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 4.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Farine de maïs",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Eau de rose",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Jus de citron",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    }
+  ],
+  "etapes": [
+    "Prenez kanfhe dans un bol et coupez-les à peu près.",
+    "Verser le beurre fondu, la couleur de la nourriture jaune et bien mélanger avec vos mains.",
+    "Dans un bol séparé mélanger lait, fromage à la crème, sucre, amidon de maïs bien.",
+    "Allumez la flamme et faites bouillir le liquide, quand il devient épais éteignez la flamme laissez refroidir un peu.",
+    "Ajouter la mozzarella et bien mélanger.",
+    "Faites maintenant une base avec la moitié du kanfhe dans un plat, appuyez doucement sur pour bien mettre la pâte à niveau.",
+    "Verser le mélange de fromage sur le dessus et le mettre à niveau avec une cuillère.",
+    "Couvrez-le avec l'autre moitié du kanfhe.",
+    "Mettre le plat dans un four préchauffé à 200 degrés pendant environ 20-25 minutes.",
+    "C'est prêt quand le kunafa est doré et croquant à la surface.",
+    "Faire bouillir dans une casserole et y dissoudre le sucre pendant 4 à 5 minutes.",
+    "OU le cuire jusqu'à ce qu'il épaisse légèrement et continuer à remuer.",
+    "Ajouter le jus de citron avec de l'eau de rose, bien mélanger.",
+    "Versez uniformément le sirop sur le kunafa dès qu'il sort du four.",
+    "Votre kunafa est prêt à servir."
+  ]
+}

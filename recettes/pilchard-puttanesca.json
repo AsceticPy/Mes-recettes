@@ -1,0 +1,68 @@
+{
+  "id": "pilchard-puttanesca",
+  "nom": "Pilchard puttanesca",
+  "type": "plat",
+  "origines": [
+    "Italie"
+  ],
+  "tempsPreparation": 37,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/vvtvtr1511180578.jpg",
+  "ingredients": [
+    {
+      "nom": "Spaghetti",
+      "quantite": 300.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 2.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Chilli rouge",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Pure de tomates",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Pilchards",
+      "quantite": 425.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Olives noires",
+      "quantite": 70.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Parmesan",
+      "quantite": 0,
+      "unite": ""
+    }
+  ],
+  "etapes": [
+    "Cuire les pâtes suivant les instructions de l'emballage.",
+    "Chauffer l'huile dans une poêle antiadhésive et cuire l'oignon, l'ail et le piment pendant 3-4 minutes pour adoucir.",
+    "Incorporer la purée de tomates et cuire 1 min, puis ajouter les pilchards avec leur sauce.",
+    "Cuire, casser le poisson avec une cuillère en bois, puis ajouter les olives et continuer à cuire quelques minutes de plus.",
+    "Égoutter les pâtes et les ajouter à la casserole avec 2-3 c.",
+    "à soupe de l'eau de cuisson.",
+    "Bien mélanger tout, puis diviser entre les assiettes et servir, dispersé avec le parmesan."
+  ]
+}

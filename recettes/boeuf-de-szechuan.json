@@ -1,0 +1,126 @@
+{
+  "id": "boeuf-de-szechuan",
+  "nom": "Boeuf de Széchuan",
+  "type": "plat",
+  "origines": [
+    "Chine"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/1529443236.jpg",
+  "ingredients": [
+    {
+      "nom": "Viande bovine",
+      "quantite": 225.0,
+      "unite": "g"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Huile de graines de sésame",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 1.0,
+      "unite": "pincée"
+    },
+    {
+      "nom": "Blanc d'oeuf",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Étoile",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Huile",
+      "quantite": 4.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Ginger",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 0.75,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Carottes",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Poivre vert",
+      "quantite": 0.75,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Céleri",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Champignons",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Vin de cuisine",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Sauce à l'huître",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Sucre chaude",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sucre",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sauce de soja",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    }
+  ],
+  "etapes": [
+    "ÉTAPE 1 - MARINER LA BEF.",
+    "Dans un bol, ajouter le boeuf, le sel, l'huile de graines de sésame, le poivre blanc, le blanc d'oeuf, 2 cuillères à soupe d'amidon de maïs et 1 cuillère à soupe d'huile.",
+    "ÉTAPE 2 - FERME DE STIR.",
+    "Cuire d'abord le boeuf en ajoutant 2 cuillères à soupe d'huile jusqu'à ce que le boeuf soit doré.",
+    "Réserver le boeuf.",
+    "Dans un wok, ajouter 1 cuillère à soupe d'huile, du gingembre haché, de l'ail haché et faire revenir quelques secondes.",
+    "Ajouter ensuite tous les légumes et ajouter le vin de cuisson et 1 tasse d'eau.",
+    "Pour faire la sauce ajouter la sauce aux huîtres, la sauce au poivre chaud et le sucre.",
+    "Ajouter le boeuf cuit et 1 cuillère de sauce soja.",
+    "Pour épaissir la sauce, fouettez ensemble 1 cuillère à soupe de fécule de maïs et 2 cuillère à soupe d'eau dans un bol et ajoutez lentement à votre brassage jusqu'à ce que l'épaisseur soit correcte."
+  ]
+}

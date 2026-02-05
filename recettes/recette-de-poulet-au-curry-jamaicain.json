@@ -1,0 +1,101 @@
+{
+  "id": "recette-de-poulet-au-curry-jamaicain",
+  "nom": "Recette de poulet au curry jamaïcain",
+  "type": "plat",
+  "origines": [
+    "Jamaïque"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 115,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/o5fuq51764789643.jpg",
+  "ingredients": [
+    {
+      "nom": "Cuisses de poulet",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Poudre de curry",
+      "quantite": 0.5,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Assaisonnement tout usage",
+      "quantite": 1.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Oignon",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Oignons de printemps",
+      "quantite": 3.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Poivre vert",
+      "quantite": 0.5,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Aile",
+      "quantite": 4.0,
+      "unite": "gousses"
+    },
+    {
+      "nom": "Bonnet écossais",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Thym",
+      "quantite": 3.0,
+      "unite": "brins"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Eau",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Pommes de terre russes",
+      "quantite": 1.0,
+      "unite": "gros"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0,
+      "unite": "au goût"
+    },
+    {
+      "nom": "Poivre",
+      "quantite": 0,
+      "unite": "au goût"
+    }
+  ],
+  "etapes": [
+    "Four néerlandais.",
+    "Instructions.",
+    "Ajouter les cuisses de poulet, assaisonnement tout usage, 1 cuillère à soupe de poudre de curry, oignon, oignons verts, poivre vert, gousses d'ail, poivre de bonnet de scotch (si vous l'utilisez), et le thym dans un grand bol et mélanger, en veillant à ce que tous les morceaux de poulet soient recouverts de l'assaisonnement.",
+    "Couvrir et réfrigérer pendant au moins 1 heure ou jusqu'à la nuit.",
+    "Un poulet est fait mariner, retirer les oignons, les poivrons et les gousses d'ail du poulet et réserver.",
+    "Chauffer l'huile d'olive dans une grande casserole à feu moyen.",
+    "Ajouter le reste de la poudre de curry et remuer, cuire environ 20-30 secondes.",
+    "Ajouter les oignons, le poivre vert, les girofles d'ail, le thym et le poivre de bonnet de scotch (si utilisé) pour cuire et remuer jusqu'à ce que les oignons aient ramolli, environ 3-5 minutes.",
+    "Si vos oignons et poivrons sont à l'air sec, ajoutez environ 1 cuillère à soupe d'eau.",
+    "Ajouter le poulet et 1⁄4 tasse d'eau dans la casserole.",
+    "Couvrir et réduire le feu à moyen faible.",
+    "Cuire en remuant occasionnellement pendant 30 à 35 minutes.",
+    "Quand il reste environ 15 minutes, remuer la pomme de terre et continuer à cuire couvert.",
+    "Une fois le poulet cuit et les pommes de terre ramollies, retirer du feu.",
+    "Sel et poivre au goût."
+  ]
+}

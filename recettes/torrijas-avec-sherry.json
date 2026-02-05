@@ -1,0 +1,69 @@
+{
+  "id": "torrijas-avec-sherry",
+  "nom": "Torrijas avec sherry",
+  "type": "petit-déjeuner",
+  "origines": [
+    "Espagne"
+  ],
+  "tempsPreparation": 37,
+  "tempsCuisson": 25,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/f3ee3y1763309332.jpg",
+  "ingredients": [
+    {
+      "nom": "Œuf",
+      "quantite": 2.0,
+      "unite": "moyen"
+    },
+    {
+      "nom": "Crème double",
+      "quantite": 2.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 2.0,
+      "unite": "pièces"
+    },
+    {
+      "nom": "Sucre de castre doré",
+      "quantite": 3.0,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Cher sherry",
+      "quantite": 3.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Pain",
+      "quantite": 4.0,
+      "unite": "tranches"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 0,
+      "unite": "pour friture"
+    },
+    {
+      "nom": "Sucre glacé",
+      "quantite": 0,
+      "unite": "pour servir"
+    },
+    {
+      "nom": "Creme fraiche",
+      "quantite": 0,
+      "unite": "pour servir"
+    }
+  ],
+  "etapes": [
+    "Dans un grand bol peu profond, battre les œufs avec la crème, le lait, le sucre de castre doré et le sherry.",
+    "Couper chaque tranche de pain en deux et les tremper dans le mélange d'oeufs, en tournant pour s'assurer qu'ils obtiennent un bon revêtement de chaque côté.",
+    "Faire tremper le pain dans le mélange d'oeufs pendant 10 minutes pour absorber le liquide (en les retournant avec soin de temps en temps et en s'assurant qu'ils ne deviennent pas trop soyeux).",
+    "Chauffer 11⁄2 c.",
+    "à soupe d'huile d'olive dans une grande poêle et cuire le pain environ 3 minutes de chaque côté jusqu'à ce qu'il soit doré foncé et croustillant sur le bord.",
+    "Gardez les tranches au chaud dans un four bas pendant que vous faites cuire le reste.",
+    "Divisez les tortijas entre les assiettes et la poussière avec le sucre glace.",
+    "Servir avec crème fraîche ou yogourt grec sur le côté."
+  ]
+}

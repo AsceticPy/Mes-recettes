@@ -1,0 +1,95 @@
+{
+  "id": "sandwich-a-chiches",
+  "nom": "Sandwich à chiches",
+  "type": "plat",
+  "origines": [
+    "États-Unis"
+  ],
+  "tempsPreparation": 45,
+  "tempsCuisson": 32,
+  "personnes": 4,
+  "image": "https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg",
+  "ingredients": [
+    {
+      "nom": "Poitrine de poulet",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Jus de pickle",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Œuf",
+      "quantite": 1.0,
+      "unite": "pièce"
+    },
+    {
+      "nom": "Lait",
+      "quantite": 0.25,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Farine",
+      "quantite": 0.5,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Sucre glacé",
+      "quantite": 1.0,
+      "unite": "c. à soupe"
+    },
+    {
+      "nom": "Paprika",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sel",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poivre noir",
+      "quantite": 0.25,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poudre d'ail",
+      "quantite": 0.25,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Sel de céleri",
+      "quantite": 0.25,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Poivre cayenne",
+      "quantite": 0.5,
+      "unite": "c. à café"
+    },
+    {
+      "nom": "Huile d'olive",
+      "quantite": 1.0,
+      "unite": "tasse"
+    },
+    {
+      "nom": "Buns de bourgeons de graines de sésame",
+      "quantite": 1.0,
+      "unite": "pièce"
+    }
+  ],
+  "etapes": [
+    "Enveloppez le poulet de façon souple entre l'enveloppe en plastique et livrez doucement avec le côté plat d'un filet de viande jusqu'à environ 1/2 pouce d'épaisseur tout autour.",
+    "Couper en deux morceaux, autant que possible.",
+    "Faire mariner dans le jus de cornichon pendant 30 minutes à une heure (ajouter une cuillère à café de sauce Tabasco pour un sandwich épicé).",
+    "Battre l'œuf avec le lait dans un bol.",
+    "Mélanger la farine, le sucre et les épices dans un autre bol.",
+    "Laisser tremper les morceaux de poulet dans l'œuf des deux côtés, puis enrober la farine des deux côtés.",
+    "Chauffer l'huile dans une poêle (1/2 pouce de profondeur) à environ 345-350.",
+    "Faire frire chaque coupette pendant 2 minutes de chaque côté, ou jusqu'à ce qu'elle soit dorée et cuite.",
+    "Blot sur du papier et servir sur des pains grillés avec des tranches de cornichons."
+  ]
+}
