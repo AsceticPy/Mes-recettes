@@ -538,6 +538,66 @@ async function handleRequest(req, res) {
       return;
     }
 
+    // ========== API STATISTIQUES (Feature 5, 6, 7) ==========
+
+    // GET /api/statistiques - Récupère toutes les statistiques
+    if (pathname === '/api/statistiques' && req.method === 'GET') {
+      if (!dbConnected) {
+        sendError(res, 'Fonctionnalité disponible uniquement avec PostgreSQL', 503);
+        return;
+      }
+
+      const stats = await queries.getStatistiques();
+      sendJson(res, stats);
+      return;
+    }
+
+    // ========== API NOTES PERSONNELLES (Feature 16) ==========
+
+    // GET /api/notes-recette/:recetteId - Récupère les notes d'une recette
+    if (pathname.match(/^\/api\/notes-recette\/\d+$/) && req.method === 'GET') {
+      if (!dbConnected) {
+        sendError(res, 'Fonctionnalité disponible uniquement avec PostgreSQL', 503);
+        return;
+      }
+
+      const recetteId = parseInt(pathname.split('/').pop());
+      const notes = await queries.getNotesRecette(recetteId);
+      sendJson(res, notes);
+      return;
+    }
+
+    // POST /api/notes-recette - Ajoute une note
+    if (pathname === '/api/notes-recette' && req.method === 'POST') {
+      if (!dbConnected) {
+        sendError(res, 'Fonctionnalité disponible uniquement avec PostgreSQL', 503);
+        return;
+      }
+
+      const { recetteId, contenu } = await parseJsonBody(req);
+      if (!recetteId || !contenu) {
+        sendError(res, 'recetteId et contenu requis', 400);
+        return;
+      }
+
+      const note = await queries.ajouterNote(recetteId, contenu);
+      sendJson(res, note);
+      return;
+    }
+
+    // DELETE /api/notes-recette/:noteId - Supprime une note
+    if (pathname.match(/^\/api\/notes-recette\/\d+$/) && req.method === 'DELETE') {
+      if (!dbConnected) {
+        sendError(res, 'Fonctionnalité disponible uniquement avec PostgreSQL', 503);
+        return;
+      }
+
+      const noteId = parseInt(pathname.split('/').pop());
+      await queries.supprimerNote(noteId);
+      sendJson(res, { success: true });
+      return;
+    }
+
     // ========== API UPLOAD PHOTOS ==========
 
     if (pathname === '/api/photos' && req.method === 'POST') {
@@ -615,6 +675,134 @@ async function handleRequest(req, res) {
           sendError(res, 'Erreur traitement upload', 500);
         }
       });
+      return;
+    }
+
+    // ========== API TAGS ==========
+
+    // GET /api/tags - Liste tous les tags
+    if (pathname === '/api/tags' && req.method === 'GET') {
+      if (dbConnected) {
+        const tags = await queries.getAllTags();
+        sendJson(res, tags);
+      } else {
+        sendJson(res, []);
+      }
+      return;
+    }
+
+    // GET /api/recette-tags/:recetteId - Tags d'une recette
+    if (pathname.match(/^\/api\/recette-tags\//) && req.method === 'GET') {
+      if (dbConnected) {
+        const recetteId = pathname.replace('/api/recette-tags/', '');
+        const tags = await queries.getRecetteTags(recetteId);
+        sendJson(res, tags);
+      } else {
+        sendJson(res, []);
+      }
+      return;
+    }
+
+    // ========== API DASHBOARD ==========
+
+    // GET /api/dashboard/config - Configuration des widgets
+    if (pathname === '/api/dashboard/config' && req.method === 'GET') {
+      if (dbConnected) {
+        const config = await queries.getDashboardConfig();
+        sendJson(res, config);
+      } else {
+        sendJson(res, [
+          { id: 1, widgetType: 'recettes_recentes', position: 0, visible: true, config: { nombre: 5 } },
+          { id: 2, widgetType: 'favoris', position: 1, visible: true, config: { nombre: 5 } },
+          { id: 3, widgetType: 'planning_jour', position: 2, visible: true, config: {} },
+          { id: 4, widgetType: 'suggestion_jour', position: 3, visible: true, config: {} }
+        ]);
+      }
+      return;
+    }
+
+    // POST /api/dashboard/config - Mettre à jour la configuration
+    if (pathname === '/api/dashboard/config' && req.method === 'POST') {
+      if (!dbConnected) {
+        sendError(res, 'Fonctionnalité disponible uniquement avec PostgreSQL', 503);
+        return;
+      }
+      const configs = await parseJsonBody(req);
+      const result = await queries.updateDashboardConfig(configs);
+      sendJson(res, result);
+      return;
+    }
+
+    // GET /api/dashboard/data - Données du dashboard
+    if (pathname === '/api/dashboard/data' && req.method === 'GET') {
+      if (dbConnected) {
+        const data = await queries.getDashboardData();
+        sendJson(res, data);
+      } else {
+        sendJson(res, { recentes: [], favoris: [], planningJour: [] });
+      }
+      return;
+    }
+
+    // ========== API SUGGESTIONS ==========
+
+    // GET /api/suggestion - Suggestion du jour
+    if (pathname === '/api/suggestion' && req.method === 'GET') {
+      if (dbConnected) {
+        const suggestion = await queries.getSuggestion();
+        sendJson(res, suggestion);
+      } else {
+        sendJson(res, null);
+      }
+      return;
+    }
+
+    // ========== API NOTIFICATIONS ==========
+
+    // GET /api/notification-settings - Paramètres de notification
+    if (pathname === '/api/notification-settings' && req.method === 'GET') {
+      if (dbConnected) {
+        const settings = await queries.getNotificationSettings();
+        sendJson(res, settings);
+      } else {
+        sendJson(res, {
+          timerNotifications: true,
+          mealReminder: true,
+          reminderTime: '18:00:00',
+          activeDays: ['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche']
+        });
+      }
+      return;
+    }
+
+    // POST /api/notification-settings - Mettre à jour les paramètres
+    if (pathname === '/api/notification-settings' && req.method === 'POST') {
+      if (!dbConnected) {
+        sendError(res, 'Fonctionnalité disponible uniquement avec PostgreSQL', 503);
+        return;
+      }
+      const settings = await parseJsonBody(req);
+      const result = await queries.updateNotificationSettings(settings);
+      sendJson(res, result);
+      return;
+    }
+
+    // ========== API ÉQUILIBRE NUTRITIONNEL ==========
+
+    // GET /api/equilibre-nutritionnel?dateDebut=...&dateFin=...
+    if (pathname === '/api/equilibre-nutritionnel' && req.method === 'GET') {
+      if (!dbConnected) {
+        sendJson(res, { compteurs: {}, alertes: [], repas: [] });
+        return;
+      }
+      const dateDebut = url.searchParams.get('dateDebut');
+      const dateFin = url.searchParams.get('dateFin');
+      if (!dateDebut || !dateFin) {
+        sendError(res, 'dateDebut et dateFin requis', 400);
+        return;
+      }
+      const data = await queries.getEquilibreNutritionnel(dateDebut, dateFin);
+      sendJson(res, data);
       return;
     }
 

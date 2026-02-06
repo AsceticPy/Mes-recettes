@@ -23,9 +23,11 @@ async function getAllRecettes() {
       r.nombre_personnes as "personnes",
       r.image_url as "image",
       r.photo_locale as "photo",
+      r.niveau_difficulte as "niveauDifficulte",
       COALESCE(get_recette_origines(r.id), ARRAY[]::TEXT[]) as origines,
       COALESCE(get_recette_ingredients_json(r.id), '[]'::jsonb) as ingredients,
-      COALESCE(get_recette_etapes_json(r.id), '[]'::jsonb) as etapes
+      COALESCE(get_recette_etapes_json(r.id), '[]'::jsonb) as etapes,
+      COALESCE(get_recette_tags_json(r.id), '[]'::jsonb) as tags
     FROM recettes r
     LEFT JOIN types_plat t ON r.type_id = t.id
     ORDER BY r.nom
@@ -48,9 +50,11 @@ async function getRecetteById(id) {
       r.nombre_personnes as "personnes",
       r.image_url as "image",
       r.photo_locale as "photo",
+      r.niveau_difficulte as "niveauDifficulte",
       COALESCE(get_recette_origines(r.id), ARRAY[]::TEXT[]) as origines,
       COALESCE(get_recette_ingredients_json(r.id), '[]'::jsonb) as ingredients,
-      COALESCE(get_recette_etapes_json(r.id), '[]'::jsonb) as etapes
+      COALESCE(get_recette_etapes_json(r.id), '[]'::jsonb) as etapes,
+      COALESCE(get_recette_tags_json(r.id), '[]'::jsonb) as tags
     FROM recettes r
     LEFT JOIN types_plat t ON r.type_id = t.id
     WHERE r.id = $1
@@ -82,8 +86,8 @@ async function createRecette(recetteData) {
 
     // Insérer la recette
     await client.query(`
-      INSERT INTO recettes (id, nom, type_id, temps_preparation, temps_cuisson, nombre_personnes, image_url, photo_locale)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      INSERT INTO recettes (id, nom, type_id, temps_preparation, temps_cuisson, nombre_personnes, image_url, photo_locale, niveau_difficulte)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
     `, [
       recetteData.id,
       recetteData.nom,
@@ -92,7 +96,8 @@ async function createRecette(recetteData) {
       recetteData.tempsCuisson || 0,
       recetteData.personnes || 4,
       recetteData.image || null,
-      recetteData.photo || null
+      recetteData.photo || null,
+      recetteData.niveauDifficulte || null
     ]);
 
     // Insérer les origines
@@ -114,6 +119,16 @@ async function createRecette(recetteData) {
             [recetteData.id, origineResult.rows[0].id]
           );
         }
+      }
+    }
+
+    // Insérer les tags
+    if (recetteData.tags && Array.isArray(recetteData.tags)) {
+      for (const tagId of recetteData.tags) {
+        await client.query(
+          'INSERT INTO recette_tags (recette_id, tag_id) VALUES ($1, $2) ON CONFLICT DO NOTHING',
+          [recetteData.id, tagId]
+        );
       }
     }
 
@@ -189,6 +204,7 @@ async function updateRecette(id, recetteData) {
         nombre_personnes = $6,
         image_url = COALESCE($7, image_url),
         photo_locale = COALESCE($8, photo_locale),
+        niveau_difficulte = $9,
         updated_at = CURRENT_TIMESTAMP
       WHERE id = $1
     `, [
@@ -199,13 +215,15 @@ async function updateRecette(id, recetteData) {
       recetteData.tempsCuisson || 0,
       recetteData.personnes || 4,
       recetteData.image,
-      recetteData.photo
+      recetteData.photo,
+      recetteData.niveauDifficulte || null
     ]);
 
     // Supprimer et réinsérer les relations
     await client.query('DELETE FROM recettes_origines WHERE recette_id = $1', [id]);
     await client.query('DELETE FROM recettes_ingredients WHERE recette_id = $1', [id]);
     await client.query('DELETE FROM etapes_recette WHERE recette_id = $1', [id]);
+    await client.query('DELETE FROM recette_tags WHERE recette_id = $1', [id]);
 
     // Réinsérer les origines
     if (recetteData.origines && Array.isArray(recetteData.origines)) {
@@ -226,6 +244,16 @@ async function updateRecette(id, recetteData) {
             [id, origineResult.rows[0].id]
           );
         }
+      }
+    }
+
+    // Réinsérer les tags
+    if (recetteData.tags && Array.isArray(recetteData.tags)) {
+      for (const tagId of recetteData.tags) {
+        await client.query(
+          'INSERT INTO recette_tags (recette_id, tag_id) VALUES ($1, $2) ON CONFLICT DO NOTHING',
+          [id, tagId]
+        );
       }
     }
 
@@ -552,8 +580,9 @@ async function updatePlanning(data) {
     await client.query('DELETE FROM planning');
 
     for (const [date, repas] of Object.entries(data)) {
+      if (!repas) continue;
       for (const [moment, info] of Object.entries(repas)) {
-        if (info.recetteId) {
+        if (info && info.recetteId) {
           await client.query(`
             INSERT INTO planning (date_repas, moment, recette_id)
             VALUES ($1, $2, $3)
@@ -895,6 +924,455 @@ async function getHistoriqueRecetteById(historiqueId) {
   return result.rows[0] || null;
 }
 
+// ============================================
+// STATISTIQUES (Feature 5, 6, 7)
+// ============================================
+
+/**
+ * Récupère toutes les statistiques culinaires
+ */
+async function getStatistiques() {
+  // Total de réalisations
+  const totalResult = await db.query(`
+    SELECT COUNT(*) as total FROM historique_recettes WHERE statut = 'terminee'
+  `);
+  const totalRealisations = parseInt(totalResult.rows[0].total) || 0;
+
+  // Temps total en cuisine (en minutes)
+  const tempsResult = await db.query(`
+    SELECT COALESCE(SUM(r.temps_preparation + r.temps_cuisson), 0) as temps
+    FROM historique_recettes hr
+    JOIN recettes r ON hr.recette_id = r.id
+    WHERE hr.statut = 'terminee'
+  `);
+  const tempsTotal = parseInt(tempsResult.rows[0].temps) || 0;
+
+  // Réalisations ce mois-ci
+  const moisResult = await db.query(`
+    SELECT COUNT(*) as total
+    FROM historique_recettes
+    WHERE statut = 'terminee'
+    AND date_fin >= DATE_TRUNC('month', CURRENT_DATE)
+  `);
+  const ceMois = parseInt(moisResult.rows[0].total) || 0;
+
+  // Favoris réalisés
+  const favorisResult = await db.query(`
+    SELECT COUNT(DISTINCT hr.recette_id) as total
+    FROM historique_recettes hr
+    JOIN favoris f ON hr.recette_id = f.recette_id
+    WHERE hr.statut = 'terminee'
+  `);
+  const favorisRealises = parseInt(favorisResult.rows[0].total) || 0;
+
+  // Top 10 recettes
+  const topResult = await db.query(`
+    SELECT
+      hr.recette_id as "recetteId",
+      r.nom,
+      COUNT(*) as count
+    FROM historique_recettes hr
+    JOIN recettes r ON hr.recette_id = r.id
+    WHERE hr.statut = 'terminee'
+    GROUP BY hr.recette_id, r.nom
+    ORDER BY count DESC
+    LIMIT 10
+  `);
+  const topRecettes = topResult.rows.map(r => ({
+    recetteId: r.recetteId,
+    nom: r.nom,
+    count: parseInt(r.count)
+  }));
+
+  // Stats par type
+  const typeResult = await db.query(`
+    SELECT
+      t.code as type,
+      COUNT(*) as count
+    FROM historique_recettes hr
+    JOIN recettes r ON hr.recette_id = r.id
+    JOIN types_plat t ON r.type_id = t.id
+    WHERE hr.statut = 'terminee'
+    GROUP BY t.code
+    ORDER BY count DESC
+  `);
+  const parType = typeResult.rows.map(r => ({
+    type: r.type,
+    count: parseInt(r.count)
+  }));
+
+  // Stats par origine
+  const origineResult = await db.query(`
+    SELECT
+      o.nom as origine,
+      COUNT(*) as count
+    FROM historique_recettes hr
+    JOIN recettes r ON hr.recette_id = r.id
+    JOIN recettes_origines ro ON r.id = ro.recette_id
+    JOIN origines o ON ro.origine_id = o.id
+    WHERE hr.statut = 'terminee'
+    GROUP BY o.nom
+    ORDER BY count DESC
+    LIMIT 6
+  `);
+  const parOrigine = origineResult.rows.map(r => ({
+    origine: r.origine,
+    count: parseInt(r.count)
+  }));
+
+  // Réalisations par jour (pour le calendrier)
+  const joursResult = await db.query(`
+    SELECT
+      DATE(date_fin) as date,
+      COUNT(*) as count
+    FROM historique_recettes
+    WHERE statut = 'terminee'
+    AND date_fin >= CURRENT_DATE - INTERVAL '90 days'
+    GROUP BY DATE(date_fin)
+    ORDER BY date
+  `);
+  const realisationsParJour = joursResult.rows.map(r => ({
+    date: r.date,
+    count: parseInt(r.count)
+  }));
+
+  return {
+    totalRealisations,
+    tempsTotal,
+    ceMois,
+    favorisRealises,
+    topRecettes,
+    parType,
+    parOrigine,
+    realisationsParJour
+  };
+}
+
+// ============================================
+// NOTES PERSONNELLES (Feature 16)
+// ============================================
+
+/**
+ * Récupère les notes d'une recette
+ */
+async function getNotesRecette(recetteId) {
+  const result = await db.query(`
+    SELECT
+      id,
+      recette_id as "recetteId",
+      contenu,
+      date_creation as "dateCreation"
+    FROM notes_recettes
+    WHERE recette_id = $1
+    ORDER BY date_creation DESC
+  `, [recetteId]);
+
+  return result.rows;
+}
+
+/**
+ * Ajoute une note à une recette
+ */
+async function ajouterNote(recetteId, contenu) {
+  const result = await db.query(`
+    INSERT INTO notes_recettes (recette_id, contenu)
+    VALUES ($1, $2)
+    RETURNING id, recette_id as "recetteId", contenu, date_creation as "dateCreation"
+  `, [recetteId, contenu]);
+
+  return result.rows[0];
+}
+
+/**
+ * Supprime une note
+ */
+async function supprimerNote(noteId) {
+  await db.query('DELETE FROM notes_recettes WHERE id = $1', [noteId]);
+  return { success: true };
+}
+
+// ============================================
+// TAGS
+// ============================================
+
+async function getAllTags() {
+  const result = await db.query(`
+    SELECT id, nom, categorie, icone, couleur
+    FROM tags
+    ORDER BY categorie, nom
+  `);
+  return result.rows;
+}
+
+async function getRecetteTags(recetteId) {
+  const result = await db.query(`
+    SELECT t.id, t.nom, t.categorie, t.icone, t.couleur
+    FROM recette_tags rt
+    JOIN tags t ON rt.tag_id = t.id
+    WHERE rt.recette_id = $1
+    ORDER BY t.categorie, t.nom
+  `, [recetteId]);
+  return result.rows;
+}
+
+// ============================================
+// DASHBOARD
+// ============================================
+
+async function getDashboardConfig() {
+  const result = await db.query(`
+    SELECT id, widget_type as "widgetType", position, visible, config
+    FROM dashboard_config
+    ORDER BY position
+  `);
+  return result.rows;
+}
+
+async function updateDashboardConfig(configs) {
+  const client = await db.getClient();
+  try {
+    await client.query('BEGIN');
+    for (const config of configs) {
+      await client.query(`
+        UPDATE dashboard_config
+        SET position = $2, visible = $3, config = $4, updated_at = CURRENT_TIMESTAMP
+        WHERE id = $1
+      `, [config.id, config.position, config.visible, JSON.stringify(config.config)]);
+    }
+    await client.query('COMMIT');
+    return { success: true };
+  } catch (error) {
+    await client.query('ROLLBACK');
+    throw error;
+  } finally {
+    client.release();
+  }
+}
+
+async function getDashboardData() {
+  // Recettes récentes (dernières consultées/réalisées)
+  const recentesResult = await db.query(`
+    SELECT DISTINCT ON (r.id)
+      r.id, r.nom, t.code as type, r.photo_locale as photo, r.image_url as image,
+      r.niveau_difficulte as "niveauDifficulte",
+      hr.date_debut as "dateAcces"
+    FROM historique_recettes hr
+    JOIN recettes r ON hr.recette_id = r.id
+    LEFT JOIN types_plat t ON r.type_id = t.id
+    ORDER BY r.id, hr.date_debut DESC
+    LIMIT 10
+  `);
+  // Re-sort by most recent access
+  const recentes = recentesResult.rows.sort((a, b) => new Date(b.dateAcces) - new Date(a.dateAcces)).slice(0, 5);
+
+  // Favoris
+  const favorisResult = await db.query(`
+    SELECT r.id, r.nom, t.code as type, r.photo_locale as photo, r.image_url as image,
+      r.niveau_difficulte as "niveauDifficulte"
+    FROM favoris f
+    JOIN recettes r ON f.recette_id = r.id
+    LEFT JOIN types_plat t ON r.type_id = t.id
+    ORDER BY f.date_ajout DESC
+    LIMIT 10
+  `);
+
+  // Planning du jour
+  const today = new Date().toISOString().split('T')[0];
+  const planningResult = await db.query(`
+    SELECT p.moment, r.id as "recetteId", r.nom as "recetteNom",
+      r.photo_locale as photo, r.image_url as image
+    FROM planning p
+    JOIN recettes r ON p.recette_id = r.id
+    WHERE p.date_repas = $1
+    ORDER BY p.moment
+  `, [today]);
+
+  // Formater le planning du jour en { midi: recetteId, soir: recetteId }
+  const planningJour = {};
+  for (const row of planningResult.rows) {
+    planningJour[row.moment] = row.recetteId;
+  }
+
+  return {
+    recentes,
+    favoris: favorisResult.rows,
+    planningJour
+  };
+}
+
+// ============================================
+// SUGGESTIONS INTELLIGENTES
+// ============================================
+
+async function getSuggestion() {
+  // Algorithme de suggestion basé sur :
+  // 1. Les favoris (poids élevé)
+  // 2. Les recettes non réalisées depuis longtemps
+  // 3. Les recettes populaires
+  // 4. Éviter les répétitions récentes
+
+  // Récupérer les recettes réalisées ces 3 derniers jours pour les exclure
+  const recentesResult = await db.query(`
+    SELECT DISTINCT recette_id FROM historique_recettes
+    WHERE date_debut >= CURRENT_DATE - INTERVAL '3 days'
+  `);
+  const recentIds = recentesResult.rows.map(r => r.recette_id);
+
+  // Essayer d'abord les favoris non réalisés récemment
+  let result = await db.query(`
+    SELECT r.id, r.nom, t.code as type, r.photo_locale as photo, r.image_url as image,
+      r.temps_preparation as "tempsPreparation", r.temps_cuisson as "tempsCuisson",
+      r.nombre_personnes as personnes, r.niveau_difficulte as "niveauDifficulte",
+      COALESCE(get_recette_origines(r.id), ARRAY[]::TEXT[]) as origines,
+      COALESCE(get_recette_tags_json(r.id), '[]'::jsonb) as tags
+    FROM favoris f
+    JOIN recettes r ON f.recette_id = r.id
+    LEFT JOIN types_plat t ON r.type_id = t.id
+    WHERE r.id != ALL($1::varchar[])
+    ORDER BY RANDOM()
+    LIMIT 1
+  `, [recentIds]);
+
+  if (result.rows.length > 0) {
+    return { ...result.rows[0], raison: 'favori' };
+  }
+
+  // Sinon, recettes non réalisées depuis longtemps
+  result = await db.query(`
+    SELECT r.id, r.nom, t.code as type, r.photo_locale as photo, r.image_url as image,
+      r.temps_preparation as "tempsPreparation", r.temps_cuisson as "tempsCuisson",
+      r.nombre_personnes as personnes, r.niveau_difficulte as "niveauDifficulte",
+      COALESCE(get_recette_origines(r.id), ARRAY[]::TEXT[]) as origines,
+      COALESCE(get_recette_tags_json(r.id), '[]'::jsonb) as tags,
+      MAX(hr.date_debut) as "derniereRealisation"
+    FROM recettes r
+    LEFT JOIN types_plat t ON r.type_id = t.id
+    LEFT JOIN historique_recettes hr ON r.id = hr.recette_id AND hr.statut = 'terminee'
+    WHERE r.id != ALL($1::varchar[])
+    GROUP BY r.id, r.nom, t.code, r.photo_locale, r.image_url,
+      r.temps_preparation, r.temps_cuisson, r.nombre_personnes, r.niveau_difficulte
+    ORDER BY MAX(hr.date_debut) ASC NULLS FIRST, RANDOM()
+    LIMIT 1
+  `, [recentIds]);
+
+  if (result.rows.length > 0) {
+    return { ...result.rows[0], raison: result.rows[0].derniereRealisation ? 'pas_recente' : 'jamais_realisee' };
+  }
+
+  // Dernier recours : n'importe quelle recette
+  result = await db.query(`
+    SELECT r.id, r.nom, t.code as type, r.photo_locale as photo, r.image_url as image,
+      r.temps_preparation as "tempsPreparation", r.temps_cuisson as "tempsCuisson",
+      r.nombre_personnes as personnes, r.niveau_difficulte as "niveauDifficulte",
+      COALESCE(get_recette_origines(r.id), ARRAY[]::TEXT[]) as origines,
+      COALESCE(get_recette_tags_json(r.id), '[]'::jsonb) as tags
+    FROM recettes r
+    LEFT JOIN types_plat t ON r.type_id = t.id
+    ORDER BY RANDOM()
+    LIMIT 1
+  `);
+
+  return result.rows.length > 0 ? { ...result.rows[0], raison: 'aleatoire' } : null;
+}
+
+// ============================================
+// NOTIFICATIONS
+// ============================================
+
+async function getNotificationSettings() {
+  const result = await db.query(`
+    SELECT id, timer_notifications as "timerNotifications",
+      meal_reminder as "mealReminder",
+      reminder_time as "reminderTime",
+      active_days as "activeDays"
+    FROM notification_settings
+    LIMIT 1
+  `);
+  return result.rows[0] || { timerNotifications: true, mealReminder: true, reminderTime: '18:00:00', activeDays: ['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'] };
+}
+
+async function updateNotificationSettings(settings) {
+  const result = await db.query(`
+    UPDATE notification_settings SET
+      timer_notifications = $1,
+      meal_reminder = $2,
+      reminder_time = $3,
+      active_days = $4,
+      updated_at = CURRENT_TIMESTAMP
+    WHERE id = 1
+    RETURNING id
+  `, [
+    settings.timerNotifications,
+    settings.mealReminder,
+    settings.reminderTime,
+    JSON.stringify(settings.activeDays)
+  ]);
+  return { success: result.rowCount > 0 };
+}
+
+// ============================================
+// ÉQUILIBRAGE NUTRITIONNEL
+// ============================================
+
+async function getEquilibreNutritionnel(dateDebut, dateFin) {
+  // Analyser les recettes planifiées sur la période
+  const result = await db.query(`
+    SELECT
+      p.date_repas,
+      p.moment,
+      r.id as "recetteId",
+      r.nom as "recetteNom",
+      COALESCE(get_recette_tags_json(r.id), '[]'::jsonb) as tags
+    FROM planning p
+    JOIN recettes r ON p.recette_id = r.id
+    WHERE p.date_repas >= $1 AND p.date_repas <= $2
+    ORDER BY p.date_repas, p.moment
+  `, [dateDebut, dateFin]);
+
+  // Compter les catégories de tags
+  const compteurs = {
+    viandeRouge: 0,
+    viandeBlanche: 0,
+    poisson: 0,
+    vegetarien: 0,
+    vegan: 0,
+    legumes: 0,
+    feculents: 0,
+    totalRepas: result.rows.length
+  };
+
+  const alertes = [];
+
+  for (const row of result.rows) {
+    const tags = row.tags || [];
+    const tagNoms = tags.map(t => t.nom);
+    if (tagNoms.includes('Végétarien')) compteurs.vegetarien++;
+    if (tagNoms.includes('Vegan')) compteurs.vegan++;
+    if (tagNoms.includes('Pescetarien')) compteurs.poisson++;
+    if (tagNoms.includes('Léger')) compteurs.legumes++;
+    if (tagNoms.includes('Riche en protéines')) compteurs.viandeRouge++;
+  }
+
+  // Générer des alertes
+  if (compteurs.totalRepas > 0) {
+    if (compteurs.vegetarien === 0 && compteurs.vegan === 0) {
+      alertes.push({ type: 'warning', message: 'Pas de repas végétarien cette semaine. Pensez à varier !' });
+    }
+    if (compteurs.vegetarien + compteurs.vegan >= compteurs.totalRepas * 0.5) {
+      alertes.push({ type: 'success', message: 'Bonne variété de protéines !' });
+    }
+    if (compteurs.legumes >= compteurs.totalRepas * 0.3) {
+      alertes.push({ type: 'success', message: 'Bon apport en légumes !' });
+    }
+  }
+
+  return {
+    compteurs,
+    alertes,
+    repas: result.rows
+  };
+}
+
 module.exports = {
   // Recettes
   getAllRecettes,
@@ -932,5 +1410,25 @@ module.exports = {
   getHistoriqueRecettes,
   getNombreRealisations,
   getAllNombreRealisations,
-  getHistoriqueRecetteById
+  getHistoriqueRecetteById,
+  // Statistiques (Feature 5, 6, 7)
+  getStatistiques,
+  // Notes personnelles (Feature 16)
+  getNotesRecette,
+  ajouterNote,
+  supprimerNote,
+  // Tags
+  getAllTags,
+  getRecetteTags,
+  // Dashboard
+  getDashboardConfig,
+  updateDashboardConfig,
+  getDashboardData,
+  // Suggestions
+  getSuggestion,
+  // Notifications
+  getNotificationSettings,
+  updateNotificationSettings,
+  // Équilibre nutritionnel
+  getEquilibreNutritionnel
 };

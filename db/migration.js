@@ -402,6 +402,152 @@ async function migrateHistoriqueCourses() {
 }
 
 /**
+ * Applique les migrations de schéma pour les nouvelles fonctionnalités
+ */
+async function migrateSchema() {
+  console.log('→ Vérification du schéma...');
+
+  // Ajouter colonne niveau_difficulte si elle n'existe pas
+  try {
+    await db.query(`
+      ALTER TABLE recettes ADD COLUMN IF NOT EXISTS niveau_difficulte VARCHAR(20)
+      CHECK (niveau_difficulte IN ('Facile', 'Moyen', 'Difficile'))
+    `);
+  } catch (e) {
+    // La colonne existe peut-être déjà avec la contrainte
+    if (!e.message.includes('already exists')) {
+      console.log('  Note: niveau_difficulte -', e.message);
+    }
+  }
+
+  // Créer table tags si elle n'existe pas
+  await db.query(`
+    CREATE TABLE IF NOT EXISTS tags (
+      id SERIAL PRIMARY KEY,
+      nom VARCHAR(50) UNIQUE NOT NULL,
+      categorie VARCHAR(50),
+      icone VARCHAR(10),
+      couleur VARCHAR(7),
+      created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    )
+  `);
+
+  // Créer table recette_tags si elle n'existe pas
+  await db.query(`
+    CREATE TABLE IF NOT EXISTS recette_tags (
+      recette_id VARCHAR(255) REFERENCES recettes(id) ON DELETE CASCADE,
+      tag_id INTEGER REFERENCES tags(id) ON DELETE CASCADE,
+      PRIMARY KEY (recette_id, tag_id)
+    )
+  `);
+
+  // Créer les index s'ils n'existent pas
+  await db.query(`CREATE INDEX IF NOT EXISTS idx_recette_tags_recette ON recette_tags(recette_id)`);
+  await db.query(`CREATE INDEX IF NOT EXISTS idx_recette_tags_tag ON recette_tags(tag_id)`);
+
+  // Insérer les tags prédéfinis
+  const tagsPredefinis = [
+    ['Végétarien', 'regime', '🥬', '#27ae60'],
+    ['Vegan', 'regime', '🌱', '#2ecc71'],
+    ['Sans porc', 'regime', '🥩', '#e67e22'],
+    ['Halal', 'regime', '☪️', '#8e44ad'],
+    ['Casher', 'regime', '✡️', '#2980b9'],
+    ['Pescetarien', 'regime', '🐟', '#1abc9c'],
+    ['Sans gluten', 'allergen', '🌾', '#f39c12'],
+    ['Sans lactose', 'allergen', '🥛', '#3498db'],
+    ['Sans fruits à coque', 'allergen', '🥜', '#e74c3c'],
+    ['Sans fruits de mer', 'allergen', '🦐', '#c0392b'],
+    ['Sans œufs', 'allergen', '🥚', '#d35400'],
+    ['Sans arachides', 'allergen', '🌰', '#a04000'],
+    ['Riche en protéines', 'nutrition', '💪', '#9b59b6'],
+    ['Léger', 'nutrition', '🥗', '#27ae60'],
+    ['Faible en calories', 'nutrition', '🔥', '#e74c3c'],
+    ['Bon pour le cœur', 'nutrition', '❤️', '#e74c3c'],
+    ['Oméga-3', 'nutrition', '🧠', '#3498db'],
+    ['Thermomix', 'autre', '🤖', '#9b59b6'],
+    ['Rapide', 'autre', '⚡', '#f1c40f'],
+    ['Un seul plat', 'autre', '🍽️', '#e67e22'],
+    ['Préparation à l\'avance', 'autre', '❄️', '#3498db'],
+    ['Se congèle bien', 'autre', '🧊', '#2980b9']
+  ];
+
+  for (const [nom, categorie, icone, couleur] of tagsPredefinis) {
+    await db.query(
+      `INSERT INTO tags (nom, categorie, icone, couleur) VALUES ($1, $2, $3, $4) ON CONFLICT (nom) DO NOTHING`,
+      [nom, categorie, icone, couleur]
+    );
+  }
+
+  // Créer table dashboard_config si elle n'existe pas
+  await db.query(`
+    CREATE TABLE IF NOT EXISTS dashboard_config (
+      id SERIAL PRIMARY KEY,
+      widget_type VARCHAR(50) NOT NULL,
+      position INTEGER DEFAULT 0,
+      visible BOOLEAN DEFAULT true,
+      config JSONB DEFAULT '{}'::jsonb,
+      created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    )
+  `);
+
+  // Insérer la config par défaut si vide
+  const dashResult = await db.query('SELECT COUNT(*) as count FROM dashboard_config');
+  if (parseInt(dashResult.rows[0].count) === 0) {
+    await db.query(`
+      INSERT INTO dashboard_config (widget_type, position, visible, config) VALUES
+        ('recettes_recentes', 0, true, '{"nombre": 5}'::jsonb),
+        ('favoris', 1, true, '{"nombre": 5}'::jsonb),
+        ('planning_jour', 2, true, '{}'::jsonb),
+        ('suggestion_jour', 3, true, '{}'::jsonb)
+    `);
+  }
+
+  // Créer table notification_settings si elle n'existe pas
+  await db.query(`
+    CREATE TABLE IF NOT EXISTS notification_settings (
+      id SERIAL PRIMARY KEY,
+      timer_notifications BOOLEAN DEFAULT true,
+      meal_reminder BOOLEAN DEFAULT true,
+      reminder_time TIME DEFAULT '18:00:00',
+      active_days JSONB DEFAULT '["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"]'::jsonb,
+      created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    )
+  `);
+
+  const notifResult = await db.query('SELECT COUNT(*) as count FROM notification_settings');
+  if (parseInt(notifResult.rows[0].count) === 0) {
+    await db.query(`INSERT INTO notification_settings (timer_notifications, meal_reminder) VALUES (true, true)`);
+  }
+
+  // Créer la fonction get_recette_tags_json si elle n'existe pas
+  await db.query(`
+    CREATE OR REPLACE FUNCTION get_recette_tags_json(p_recette_id VARCHAR)
+    RETURNS JSONB AS $$
+    BEGIN
+      RETURN (
+        SELECT COALESCE(jsonb_agg(
+          jsonb_build_object(
+            'id', t.id,
+            'nom', t.nom,
+            'categorie', t.categorie,
+            'icone', t.icone,
+            'couleur', t.couleur
+          ) ORDER BY t.categorie, t.nom
+        ), '[]'::jsonb)
+        FROM recette_tags rt
+        JOIN tags t ON rt.tag_id = t.id
+        WHERE rt.recette_id = p_recette_id
+      );
+    END;
+    $$ LANGUAGE plpgsql
+  `);
+
+  console.log('  ✓ Schéma mis à jour');
+}
+
+/**
  * Exécute la migration complète
  */
 async function runMigration() {
@@ -439,6 +585,9 @@ async function runMigration() {
       await migratePlanning();
       await migrateHistoriqueCourses();
     }
+
+    // Toujours appliquer les migrations de schéma
+    await migrateSchema();
 
     console.log('');
     console.log('✓ Migration terminée avec succès !');

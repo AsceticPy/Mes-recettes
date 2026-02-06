@@ -24,7 +24,15 @@
       </div>
       <ul class="sidebar-menu">
         <li>
-          <a href="#" data-page="recettes" class="sidebar-link active">
+          <a href="#" data-page="dashboard" class="sidebar-link active">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            <span>Accueil</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="recettes" class="sidebar-link">
             <svg viewBox="0 0 24 24" width="20" height="20">
               <path fill="currentColor" d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
             </svg>
@@ -53,6 +61,14 @@
               <path fill="currentColor" d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
             </svg>
             <span>Historique</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="statistiques" class="sidebar-link">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+            </svg>
+            <span>Statistiques</span>
           </a>
         </li>
         <li id="menu-reprendre-container" class="menu-reprendre-container hidden">
@@ -91,6 +107,14 @@
             <span>Gestion Unités</span>
           </a>
         </li>
+        <li>
+          <a href="#" data-page="notifications" class="sidebar-link">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+            </svg>
+            <span>Notifications</span>
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -107,12 +131,72 @@
           </svg>
         </button>
         <h1 id="page-title">Mes Recettes</h1>
+        <div class="header-actions">
+          <button id="btn-conversion" class="btn-header-action" aria-label="Conversion d'unités" title="Conversion d'unités">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm3-6c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/>
+            </svg>
+          </button>
+          <button id="btn-theme" class="btn-header-action" aria-label="Personnaliser le thème" title="Thème">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+          </button>
+        </div>
       </header>
 
       <!-- Pages -->
       <main id="pages-container">
+        <!-- Page Dashboard -->
+        <div id="page-dashboard" class="page active">
+          <div class="dashboard-container" id="dashboard-container">
+            <!-- Widget Suggestion du jour -->
+            <div class="dashboard-widget" id="widget-suggestion" data-widget="suggestion_jour">
+              <div class="widget-header">
+                <h3>Suggestion du jour</h3>
+                <button type="button" id="btn-refresh-suggestion" class="btn-widget-action" title="Nouvelle suggestion">
+                  <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+                </button>
+              </div>
+              <div class="widget-body" id="suggestion-contenu">
+                <p class="widget-loading">Chargement...</p>
+              </div>
+            </div>
+
+            <!-- Widget Planning du jour -->
+            <div class="dashboard-widget" id="widget-planning-jour" data-widget="planning_jour">
+              <div class="widget-header">
+                <h3>Planning du jour</h3>
+              </div>
+              <div class="widget-body" id="planning-jour-contenu">
+                <p class="widget-loading">Chargement...</p>
+              </div>
+            </div>
+
+            <!-- Widget Recettes récentes -->
+            <div class="dashboard-widget" id="widget-recentes" data-widget="recettes_recentes">
+              <div class="widget-header">
+                <h3>Recettes récentes</h3>
+              </div>
+              <div class="widget-body" id="recentes-contenu">
+                <p class="widget-loading">Chargement...</p>
+              </div>
+            </div>
+
+            <!-- Widget Favoris -->
+            <div class="dashboard-widget" id="widget-favoris" data-widget="favoris">
+              <div class="widget-header">
+                <h3>Mes favoris</h3>
+              </div>
+              <div class="widget-body" id="favoris-dashboard-contenu">
+                <p class="widget-loading">Chargement...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Page liste des recettes -->
-        <div id="page-recettes" class="page active">
+        <div id="page-recettes" class="page">
           <div class="filtres-container">
             <div class="search-box">
               <input type="text" id="recherche" placeholder="Rechercher une recette..." aria-label="Rechercher une recette">
@@ -136,6 +220,13 @@
                 <option value="61">Plus de 1h</option>
               </select>
 
+              <select id="filtre-difficulte" aria-label="Filtrer par difficulté">
+                <option value="">Toutes difficultés</option>
+                <option value="Facile">Facile</option>
+                <option value="Moyen">Moyen</option>
+                <option value="Difficile">Difficile</option>
+              </select>
+
               <select id="filtre-origine" aria-label="Filtrer par origine">
                 <option value="">Toutes les origines</option>
               </select>
@@ -147,6 +238,7 @@
                 <option value="origine">Origine / Pays</option>
                 <option value="realisations">Nombre de réalisations</option>
                 <option value="temps">Temps total</option>
+                <option value="difficulte">Difficulté</option>
               </select>
 
               <button type="button" id="filtre-favoris" class="btn-filtre-favoris" aria-label="Afficher les favoris">
@@ -162,6 +254,27 @@
                 </svg>
                 <span>Aléatoire</span>
               </button>
+
+              <button type="button" id="btn-ce-soir" class="btn-ce-soir" aria-label="Ce soir je cuisine avec...">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05l-5 2V1h-1.97v6.05l-4.03-2L10 9.31V1H8.03v8.31L4 5.05l1.66 16.48c.1.82.79 1.46 1.63 1.46h1.66l.1-2.23c.02-.66.58-1.22 1.28-1.22h6.34c.7 0 1.26.56 1.28 1.22l.11 2.23z"/>
+                </svg>
+                <span>Ce soir...</span>
+              </button>
+
+              <!-- Toggle vue grille/liste -->
+              <div class="vue-toggle">
+                <button type="button" id="btn-vue-grille" class="btn-vue active" aria-label="Vue grille" title="Vue grille">
+                  <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path fill="currentColor" d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z"/>
+                  </svg>
+                </button>
+                <button type="button" id="btn-vue-liste" class="btn-vue" aria-label="Vue liste" title="Vue liste">
+                  <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path fill="currentColor" d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"/>
+                  </svg>
+                </button>
+              </div>
             </div>
 
             <div class="filtre-ingredients-section">
@@ -184,6 +297,30 @@
                 <div class="ingredients-filter-actions">
                   <span id="ingredients-count">0 ingrédient(s) sélectionné(s)</span>
                   <button id="btn-clear-ingredients" class="btn-clear">Effacer tout</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="filtre-tags-section">
+              <button id="btn-toggle-tags" class="btn-toggle-ingredients">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+                </svg>
+                <span>Filtrer par tags</span>
+                <svg class="chevron" viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+              </button>
+
+              <div id="tags-filter-panel" class="ingredients-filter-panel hidden">
+                <p class="ingredients-filter-info">Sélectionnez les tags pour filtrer les recettes :</p>
+                <div class="ingredients-search-box">
+                  <input type="text" id="tags-filter-search" placeholder="Rechercher un tag..." aria-label="Rechercher un tag">
+                </div>
+                <div id="tags-filter-chips" class="ingredients-tags"></div>
+                <div class="ingredients-filter-actions">
+                  <span id="tags-filter-count">0 tag(s) sélectionné(s)</span>
+                  <button id="btn-clear-tags" class="btn-clear">Effacer tout</button>
                 </div>
               </div>
             </div>
@@ -241,8 +378,19 @@
                 </svg>
                 PDF
               </button>
+              <!-- Bouton Notes (Feature 16) -->
+              <button id="btn-notes-recette" class="btn-action-detail" title="Notes personnelles">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                </svg>
+                Notes
+              </button>
             </div>
           </div>
+
+          <!-- Tags de la recette (Feature 10) -->
+          <div id="detail-tags" class="detail-tags"></div>
+          <div id="detail-difficulte" class="detail-difficulte hidden"></div>
 
           <div class="recette-detail" id="recette-detail">
             <div class="recette-header">
@@ -479,9 +627,26 @@
               </div>
 
               <div class="form-group">
+                <label for="input-difficulte">Niveau de difficulté *</label>
+                <select id="input-difficulte" required>
+                  <option value="">Choisir...</option>
+                  <option value="Facile">Facile</option>
+                  <option value="Moyen">Moyen</option>
+                  <option value="Difficile">Difficile</option>
+                </select>
+              </div>
+
+              <div class="form-group">
                 <label for="input-origines">Origine(s) / Cuisine(s)</label>
                 <p class="form-hint" style="margin-bottom: 0.5rem;">Sélectionnez une ou plusieurs origines culinaires</p>
                 <div id="origines-tags" class="origines-tags-select"></div>
+              </div>
+
+              <!-- Tags alimentaires dynamiques -->
+              <div class="form-group">
+                <label>Tags alimentaires</label>
+                <p class="form-hint" style="margin-bottom: 0.5rem;">Sélectionnez les tags correspondants</p>
+                <div id="tags-recette-select" class="tags-speciaux"></div>
               </div>
             </section>
 
@@ -544,14 +709,19 @@
         <!-- Page Planning de la semaine -->
         <div id="page-planning" class="page">
           <div class="planning-header">
+            <!-- Toggle semaine/mois (Feature 8) -->
+            <div class="planning-vue-toggle">
+              <button type="button" id="btn-vue-semaine" class="btn-vue-planning active">Semaine</button>
+              <button type="button" id="btn-vue-mois" class="btn-vue-planning">Mois</button>
+            </div>
             <div class="planning-navigation">
-              <button type="button" id="btn-semaine-precedente" class="btn-nav-semaine" aria-label="Semaine précédente">
+              <button type="button" id="btn-semaine-precedente" class="btn-nav-semaine" aria-label="Période précédente">
                 <svg viewBox="0 0 24 24" width="20" height="20">
                   <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
                 </svg>
               </button>
               <span id="planning-periode" class="planning-periode">Semaine du 1 au 7 janvier 2024</span>
-              <button type="button" id="btn-semaine-suivante" class="btn-nav-semaine" aria-label="Semaine suivante">
+              <button type="button" id="btn-semaine-suivante" class="btn-nav-semaine" aria-label="Période suivante">
                 <svg viewBox="0 0 24 24" width="20" height="20">
                   <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                 </svg>
@@ -565,8 +735,39 @@
             </button>
           </div>
 
+          <!-- Vue Semaine -->
           <div id="planning-calendrier" class="planning-calendrier">
             <!-- Calendrier généré par JS -->
+          </div>
+
+          <!-- Vue Mois (Feature 8) -->
+          <div id="planning-mensuel" class="planning-mensuel hidden">
+            <div class="planning-mensuel-header">
+              <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
+            </div>
+            <div id="planning-mensuel-grille" class="planning-mensuel-grille">
+              <!-- Grille mensuelle générée par JS -->
+            </div>
+          </div>
+
+          <!-- Équilibre nutritionnel -->
+          <div id="equilibre-nutritionnel" class="equilibre-section">
+            <div class="equilibre-header">
+              <h3>Équilibre nutritionnel de la semaine</h3>
+              <button type="button" id="btn-toggle-equilibre" class="btn-toggle-section">
+                <svg class="chevron" viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+              </button>
+            </div>
+            <div id="equilibre-contenu" class="equilibre-contenu hidden">
+              <div class="equilibre-barres" id="equilibre-barres">
+                <!-- Barres de répartition générées par JS -->
+              </div>
+              <div class="equilibre-alertes" id="equilibre-alertes">
+                <!-- Alertes et recommandations générées par JS -->
+              </div>
+            </div>
           </div>
         </div>
 
@@ -655,6 +856,158 @@
             </svg>
             <p>Aucune recette dans l'historique</p>
             <p class="hint">Démarrez une recette pour commencer à suivre votre progression</p>
+          </div>
+        </div>
+
+        <!-- Page Statistiques (Features 5, 6, 7) -->
+        <div id="page-statistiques" class="page">
+          <div class="stats-header">
+            <h2>Mes Statistiques Culinaires</h2>
+            <!-- Badge de progression (Feature 7) -->
+            <div id="badge-progression" class="badge-progression">
+              <div class="badge-icon">👨‍🍳</div>
+              <div class="badge-info">
+                <span class="badge-titre">Chef débutant</span>
+                <span class="badge-details">0 recettes réalisées</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Résumé global (Feature 5) -->
+          <div class="stats-resume">
+            <div class="stat-card">
+              <div class="stat-icon">🍽️</div>
+              <div class="stat-value" id="stats-total-recettes">0</div>
+              <div class="stat-label">Recettes réalisées</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">⏱️</div>
+              <div class="stat-value" id="stats-temps-total">0h</div>
+              <div class="stat-label">Temps en cuisine</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">📅</div>
+              <div class="stat-value" id="stats-ce-mois">0</div>
+              <div class="stat-label">Ce mois-ci</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">⭐</div>
+              <div class="stat-value" id="stats-favoris">0</div>
+              <div class="stat-label">Favoris cuisinés</div>
+            </div>
+          </div>
+
+          <!-- Top recettes (Feature 5) -->
+          <section class="stats-section">
+            <h3>🏆 Top 10 des recettes les plus réalisées</h3>
+            <div id="stats-top-recettes" class="stats-top-liste"></div>
+          </section>
+
+          <!-- Graphiques de répartition (Feature 5) -->
+          <div class="stats-graphiques">
+            <section class="stats-section stats-half">
+              <h3>🍴 Par type de plat</h3>
+              <div id="stats-par-type" class="stats-donut-container"></div>
+            </section>
+            <section class="stats-section stats-half">
+              <h3>🌍 Par origine culinaire</h3>
+              <div id="stats-par-origine" class="stats-donut-container"></div>
+            </section>
+          </div>
+
+          <!-- Calendrier des réalisations (Feature 6) -->
+          <section class="stats-section">
+            <h3>📅 Calendrier des réalisations</h3>
+            <div class="calendrier-navigation">
+              <button type="button" id="btn-calendrier-mois-prec" class="btn-nav-semaine">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+              </button>
+              <span id="calendrier-mois-titre" class="calendrier-mois-titre">Janvier 2024</span>
+              <button type="button" id="btn-calendrier-mois-suiv" class="btn-nav-semaine">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+              </button>
+            </div>
+            <div id="calendrier-realisations" class="calendrier-realisations"></div>
+          </section>
+
+          <!-- Progression vers le prochain badge (Feature 7) -->
+          <section class="stats-section">
+            <h3>🎯 Progression vers le prochain badge</h3>
+            <div id="progression-badge" class="progression-badge-container">
+              <div class="progression-badge-info">
+                <span class="badge-actuel">Chef débutant</span>
+                <span class="badge-suivant">→ Chef amateur (10 recettes)</span>
+              </div>
+              <div class="progression-bar-large">
+                <div id="progression-badge-fill" class="progression-fill" style="width: 0%"></div>
+              </div>
+              <span class="progression-label">0 / 10 recettes</span>
+            </div>
+          </section>
+        </div>
+
+        <!-- Page Notifications -->
+        <div id="page-notifications" class="page">
+          <div class="notifications-settings">
+            <h2>Paramètres des notifications</h2>
+
+            <div class="notification-section">
+              <div class="notification-option">
+                <div class="notification-option-info">
+                  <h3>Notifications de timer</h3>
+                  <p>Recevoir une notification quand un minuteur de cuisson est terminé</p>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="notif-timer" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <div class="notification-option">
+                <div class="notification-option-info">
+                  <h3>Rappel repas</h3>
+                  <p>Recevoir un rappel quotidien pour préparer le repas du soir</p>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="notif-rappel-repas">
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <div class="notification-sub-option" id="rappel-repas-options">
+                <label for="notif-heure-rappel">Heure du rappel</label>
+                <input type="time" id="notif-heure-rappel" value="18:00">
+              </div>
+
+              <div class="notification-sub-option" id="rappel-jours-options">
+                <label>Jours actifs</label>
+                <div class="jours-toggle">
+                  <label class="jour-checkbox"><input type="checkbox" value="1" checked><span>Lun</span></label>
+                  <label class="jour-checkbox"><input type="checkbox" value="2" checked><span>Mar</span></label>
+                  <label class="jour-checkbox"><input type="checkbox" value="3" checked><span>Mer</span></label>
+                  <label class="jour-checkbox"><input type="checkbox" value="4" checked><span>Jeu</span></label>
+                  <label class="jour-checkbox"><input type="checkbox" value="5" checked><span>Ven</span></label>
+                  <label class="jour-checkbox"><input type="checkbox" value="6"><span>Sam</span></label>
+                  <label class="jour-checkbox"><input type="checkbox" value="0"><span>Dim</span></label>
+                </div>
+              </div>
+            </div>
+
+            <div class="notification-section">
+              <h3>Permission du navigateur</h3>
+              <p id="notif-permission-status">Statut : vérification en cours...</p>
+              <button type="button" id="btn-demander-notif" class="btn-action">Autoriser les notifications</button>
+            </div>
+
+            <div class="notification-actions">
+              <button type="button" id="btn-sauver-notifications" class="btn-action btn-primary">
+                Enregistrer les paramètres
+              </button>
+            </div>
           </div>
         </div>
 
@@ -927,8 +1280,24 @@
             </div>
 
             <div class="form-group">
+              <label for="edit-difficulte">Niveau de difficulté *</label>
+              <select id="edit-difficulte" required>
+                <option value="">Choisir...</option>
+                <option value="Facile">Facile</option>
+                <option value="Moyen">Moyen</option>
+                <option value="Difficile">Difficile</option>
+              </select>
+            </div>
+
+            <div class="form-group">
               <label>Origine(s) / Cuisine(s)</label>
               <div id="edit-origines-tags" class="origines-tags-select"></div>
+            </div>
+
+            <!-- Tags alimentaires dynamiques -->
+            <div class="form-group">
+              <label>Tags alimentaires</label>
+              <div id="edit-tags-recette-select" class="tags-speciaux"></div>
             </div>
           </section>
 
@@ -1148,6 +1517,195 @@
             </svg>
             Copier la liste
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal "Ce soir je cuisine avec..." (Feature 3) -->
+  <div id="modal-ce-soir" class="modal-overlay">
+    <div class="modal modal-ce-soir">
+      <div class="modal-header">
+        <h3>🍳 Ce soir, je cuisine avec...</h3>
+        <button type="button" id="btn-close-modal-ce-soir" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-hint">Sélectionnez les ingrédients que vous avez à disposition :</p>
+        <div class="ce-soir-search">
+          <input type="text" id="ce-soir-recherche" placeholder="Rechercher un ingrédient...">
+        </div>
+        <div id="ce-soir-ingredients" class="ce-soir-ingredients"></div>
+        <div class="ce-soir-selection">
+          <span id="ce-soir-count">0 ingrédient(s) sélectionné(s)</span>
+          <button type="button" id="btn-ce-soir-clear" class="btn-clear">Effacer</button>
+        </div>
+        <button type="button" id="btn-ce-soir-chercher" class="btn-primary-form">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+          Trouver des recettes
+        </button>
+        <div id="ce-soir-resultats" class="ce-soir-resultats hidden">
+          <h4>Recettes possibles :</h4>
+          <div id="ce-soir-liste" class="ce-soir-liste"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Notes personnelles (Feature 16) -->
+  <div id="modal-notes" class="modal-overlay">
+    <div class="modal modal-notes">
+      <div class="modal-header">
+        <h3>📝 Notes personnelles</h3>
+        <button type="button" id="btn-close-modal-notes" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="notes-historique" class="notes-historique">
+          <!-- Notes précédentes -->
+        </div>
+        <div class="notes-nouvelle">
+          <label for="input-nouvelle-note">Ajouter une note :</label>
+          <textarea id="input-nouvelle-note" placeholder="Ex: La prochaine fois, mettre moins de sel..."></textarea>
+          <button type="button" id="btn-ajouter-note" class="btn-primary-form">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+            Ajouter la note
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Thèmes (Feature 25) -->
+  <div id="modal-themes" class="modal-overlay">
+    <div class="modal modal-themes">
+      <div class="modal-header">
+        <h3>🎨 Personnaliser le thème</h3>
+        <button type="button" id="btn-close-modal-themes" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="theme-section">
+          <h4>Mode d'affichage</h4>
+          <div class="theme-modes">
+            <button type="button" class="theme-mode-btn active" data-mode="light">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1z"/>
+              </svg>
+              Clair
+            </button>
+            <button type="button" class="theme-mode-btn" data-mode="dark">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+              </svg>
+              Sombre
+            </button>
+          </div>
+        </div>
+        <div class="theme-section">
+          <h4>Couleur d'accent</h4>
+          <div class="theme-colors">
+            <button type="button" class="theme-color-btn active" data-color="#e74c3c" style="background: #e74c3c;" title="Rouge (par défaut)"></button>
+            <button type="button" class="theme-color-btn" data-color="#3498db" style="background: #3498db;" title="Bleu"></button>
+            <button type="button" class="theme-color-btn" data-color="#27ae60" style="background: #27ae60;" title="Vert"></button>
+            <button type="button" class="theme-color-btn" data-color="#9b59b6" style="background: #9b59b6;" title="Violet"></button>
+            <button type="button" class="theme-color-btn" data-color="#f39c12" style="background: #f39c12;" title="Orange"></button>
+            <button type="button" class="theme-color-btn" data-color="#e91e63" style="background: #e91e63;" title="Rose"></button>
+            <button type="button" class="theme-color-btn" data-color="#00bcd4" style="background: #00bcd4;" title="Cyan"></button>
+            <button type="button" class="theme-color-btn" data-color="#795548" style="background: #795548;" title="Marron"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Conversion d'unités (Feature 28) -->
+  <div id="modal-conversion" class="modal-overlay">
+    <div class="modal modal-conversion">
+      <div class="modal-header">
+        <h3>⚖️ Conversion d'unités</h3>
+        <button type="button" id="btn-close-modal-conversion" class="btn-close-modal" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="conversion-input">
+          <input type="number" id="conversion-valeur" placeholder="Valeur" min="0" step="any">
+          <select id="conversion-unite-source">
+            <option value="">Unité source</option>
+            <optgroup label="Masse">
+              <option value="g">Grammes (g)</option>
+              <option value="kg">Kilogrammes (kg)</option>
+              <option value="oz">Onces (oz)</option>
+              <option value="lb">Livres (lb)</option>
+            </optgroup>
+            <optgroup label="Volume">
+              <option value="ml">Millilitres (ml)</option>
+              <option value="cl">Centilitres (cl)</option>
+              <option value="l">Litres (l)</option>
+              <option value="tsp">Cuillères à café</option>
+              <option value="tbsp">Cuillères à soupe</option>
+              <option value="cup">Tasses</option>
+            </optgroup>
+            <optgroup label="Température">
+              <option value="c">Celsius (°C)</option>
+              <option value="f">Fahrenheit (°F)</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="conversion-arrow">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+          </svg>
+        </div>
+        <div class="conversion-output">
+          <span id="conversion-resultat" class="conversion-resultat">-</span>
+          <select id="conversion-unite-cible">
+            <option value="">Unité cible</option>
+            <optgroup label="Masse">
+              <option value="g">Grammes (g)</option>
+              <option value="kg">Kilogrammes (kg)</option>
+              <option value="oz">Onces (oz)</option>
+              <option value="lb">Livres (lb)</option>
+            </optgroup>
+            <optgroup label="Volume">
+              <option value="ml">Millilitres (ml)</option>
+              <option value="cl">Centilitres (cl)</option>
+              <option value="l">Litres (l)</option>
+              <option value="tsp">Cuillères à café</option>
+              <option value="tbsp">Cuillères à soupe</option>
+              <option value="cup">Tasses</option>
+            </optgroup>
+            <optgroup label="Température">
+              <option value="c">Celsius (°C)</option>
+              <option value="f">Fahrenheit (°F)</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="conversion-equivalences">
+          <h4>Équivalences courantes</h4>
+          <ul>
+            <li>1 tasse = 250 ml</li>
+            <li>1 cuillère à soupe = 15 ml</li>
+            <li>1 cuillère à café = 5 ml</li>
+            <li>1 once = 28.35 g</li>
+            <li>1 livre = 453.6 g</li>
+          </ul>
         </div>
       </div>
     </div>

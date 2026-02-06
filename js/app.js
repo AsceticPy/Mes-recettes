@@ -10,6 +10,7 @@ let recettes = [];
 let ingredientsBase = [];
 let unitesBase = [];
 let originesBase = [];
+let tagsBase = [];
 let planning = {};
 let favoris = new Set();
 let historiqueCourses = [];
@@ -50,7 +51,29 @@ const state = {
   historiqueFiltre: { statut: '', dateDebut: '', dateFin: '' },
   // Mode réalisation dans la vue détail
   modeRealisation: false, // true = étapes visibles avec checkboxes, false = consultation
-  sessionRealisationId: null // ID de la session en cours dans historique_recettes
+  sessionRealisationId: null, // ID de la session en cours dans historique_recettes
+  // Feature 3: Ce soir je cuisine avec...
+  ceSoirIngredients: new Set(),
+  // Feature 5, 6, 7: Statistiques
+  statsCalendrierMois: new Date(),
+  // Feature 8: Planning mensuel
+  vuePlanning: 'semaine', // 'semaine' ou 'mois'
+  planningMoisActuel: new Date(),
+  // Feature 25: Thèmes
+  theme: { mode: 'light', accent: '#e74c3c' },
+  // Feature 26: Vue liste/grille
+  vueRecettes: 'grille', // 'grille' ou 'liste'
+  // Feature 16: Notes
+  notesRecetteId: null,
+  // Tags et difficulté
+  tagsSelectionnes: new Set(),
+  editTagsSelectionnes: new Set(),
+  filtreTagsSelectionnes: new Set(),
+  tagsPanelOpen: false,
+  // Dashboard
+  dashboardData: null,
+  // Notifications
+  notificationSettings: null
 };
 
 // === Éléments du DOM ===
@@ -274,6 +297,103 @@ function initElements() {
   elements.btnReprendreDetail = document.getElementById('btn-reprendre-detail');
   elements.btnArreterRealisation = document.getElementById('btn-arreter-realisation');
   elements.etapesSection = document.getElementById('etapes-section');
+
+  // Feature 3: Ce soir je cuisine avec...
+  elements.btnCeSoir = document.getElementById('btn-ce-soir');
+  elements.modalCeSoir = document.getElementById('modal-ce-soir');
+  elements.btnCloseModalCeSoir = document.getElementById('btn-close-modal-ce-soir');
+  elements.ceSoirRecherche = document.getElementById('ce-soir-recherche');
+  elements.ceSoirIngredients = document.getElementById('ce-soir-ingredients');
+  elements.ceSoirCount = document.getElementById('ce-soir-count');
+  elements.btnCeSoirClear = document.getElementById('btn-ce-soir-clear');
+  elements.btnCeSoirChercher = document.getElementById('btn-ce-soir-chercher');
+  elements.ceSoirResultats = document.getElementById('ce-soir-resultats');
+  elements.ceSoirListe = document.getElementById('ce-soir-liste');
+
+  // Feature 5, 6, 7: Statistiques
+  elements.pageStatistiques = document.getElementById('page-statistiques');
+  elements.badgeProgression = document.getElementById('badge-progression');
+  elements.statsTotalRecettes = document.getElementById('stats-total-recettes');
+  elements.statsTempsTotal = document.getElementById('stats-temps-total');
+  elements.statsCeMois = document.getElementById('stats-ce-mois');
+  elements.statsFavoris = document.getElementById('stats-favoris');
+  elements.statsTopRecettes = document.getElementById('stats-top-recettes');
+  elements.statsParType = document.getElementById('stats-par-type');
+  elements.statsParOrigine = document.getElementById('stats-par-origine');
+  elements.calendrierMoisTitre = document.getElementById('calendrier-mois-titre');
+  elements.btnCalendrierMoisPrec = document.getElementById('btn-calendrier-mois-prec');
+  elements.btnCalendrierMoisSuiv = document.getElementById('btn-calendrier-mois-suiv');
+  elements.calendrierRealisations = document.getElementById('calendrier-realisations');
+  elements.progressionBadgeFill = document.getElementById('progression-badge-fill');
+
+  // Feature 8: Planning mensuel
+  elements.btnVueSemaine = document.getElementById('btn-vue-semaine');
+  elements.btnVueMois = document.getElementById('btn-vue-mois');
+  elements.planningMensuel = document.getElementById('planning-mensuel');
+  elements.planningMensuelGrille = document.getElementById('planning-mensuel-grille');
+
+  // Feature 10: Tags détail
+  elements.detailTags = document.getElementById('detail-tags');
+
+  // Filtres difficulté et tags
+  elements.filtreDifficulte = document.getElementById('filtre-difficulte');
+  elements.btnToggleTags = document.getElementById('btn-toggle-tags');
+  elements.tagsFilterPanel = document.getElementById('tags-filter-panel');
+  elements.tagsFilterChips = document.getElementById('tags-filter-chips');
+  elements.tagsFilterSearch = document.getElementById('tags-filter-search');
+  elements.tagsFilterCount = document.getElementById('tags-filter-count');
+  elements.btnClearTags = document.getElementById('btn-clear-tags');
+
+  // Dashboard
+  elements.pageDashboard = document.getElementById('page-dashboard');
+  elements.dashboardContainer = document.getElementById('dashboard-container');
+  elements.suggestionContenu = document.getElementById('suggestion-contenu');
+  elements.planningJourContenu = document.getElementById('planning-jour-contenu');
+  elements.recentesContenu = document.getElementById('recentes-contenu');
+  elements.favorisDashboardContenu = document.getElementById('favoris-dashboard-contenu');
+  elements.btnRefreshSuggestion = document.getElementById('btn-refresh-suggestion');
+
+  // Notifications
+  elements.pageNotifications = document.getElementById('page-notifications');
+  elements.notifTimer = document.getElementById('notif-timer');
+  elements.notifRappelRepas = document.getElementById('notif-rappel-repas');
+  elements.notifHeureRappel = document.getElementById('notif-heure-rappel');
+  elements.notifPermissionStatus = document.getElementById('notif-permission-status');
+  elements.btnDemanderNotif = document.getElementById('btn-demander-notif');
+  elements.btnSauverNotifications = document.getElementById('btn-sauver-notifications');
+
+  // Équilibre nutritionnel
+  elements.equilibreNutritionnel = document.getElementById('equilibre-nutritionnel');
+  elements.btnToggleEquilibre = document.getElementById('btn-toggle-equilibre');
+  elements.equilibreContenu = document.getElementById('equilibre-contenu');
+  elements.equilibreBarres = document.getElementById('equilibre-barres');
+  elements.equilibreAlertes = document.getElementById('equilibre-alertes');
+
+  // Feature 16: Notes
+  elements.btnNotesRecette = document.getElementById('btn-notes-recette');
+  elements.modalNotes = document.getElementById('modal-notes');
+  elements.btnCloseModalNotes = document.getElementById('btn-close-modal-notes');
+  elements.notesHistorique = document.getElementById('notes-historique');
+  elements.inputNouvelleNote = document.getElementById('input-nouvelle-note');
+  elements.btnAjouterNote = document.getElementById('btn-ajouter-note');
+
+  // Feature 25: Thèmes
+  elements.btnTheme = document.getElementById('btn-theme');
+  elements.modalThemes = document.getElementById('modal-themes');
+  elements.btnCloseModalThemes = document.getElementById('btn-close-modal-themes');
+
+  // Feature 26: Vue liste/grille
+  elements.btnVueGrille = document.getElementById('btn-vue-grille');
+  elements.btnVueListe = document.getElementById('btn-vue-liste');
+
+  // Feature 28: Conversion
+  elements.btnConversion = document.getElementById('btn-conversion');
+  elements.modalConversion = document.getElementById('modal-conversion');
+  elements.btnCloseModalConversion = document.getElementById('btn-close-modal-conversion');
+  elements.conversionValeur = document.getElementById('conversion-valeur');
+  elements.conversionUniteSource = document.getElementById('conversion-unite-source');
+  elements.conversionUniteCible = document.getElementById('conversion-unite-cible');
+  elements.conversionResultat = document.getElementById('conversion-resultat');
 }
 
 // === Fonctions API ===
@@ -368,6 +488,19 @@ async function chargerOrigines() {
   } catch (error) {
     console.error('Erreur chargement origines:', error);
     originesBase = [];
+    return [];
+  }
+}
+
+async function chargerTags() {
+  try {
+    const response = await fetch(`${API_URL}/api/tags`);
+    if (!response.ok) throw new Error('Erreur chargement tags');
+    tagsBase = await response.json();
+    return tagsBase;
+  } catch (error) {
+    console.error('Erreur chargement tags:', error);
+    tagsBase = [];
     return [];
   }
 }
@@ -548,6 +681,7 @@ function navigateToPage(pageName, garderPresélectionsCourses = false) {
 
   // Afficher la page correspondante
   const pageTitles = {
+    dashboard: 'Accueil',
     recettes: 'Mes Recettes',
     ingredients: 'Ingrédients',
     ajout: 'Nouvelle Recette',
@@ -558,12 +692,18 @@ function navigateToPage(pageName, garderPresélectionsCourses = false) {
     'admin-ingredients': 'Gestion Ingrédients',
     'admin-unites': 'Gestion Unités',
     'historique-recettes': 'Historique',
-    'recette-en-cours': 'Recette en cours'
+    'recette-en-cours': 'Recette en cours',
+    'statistiques': 'Statistiques',
+    'notifications': 'Notifications'
   };
 
   elements.pageTitle.textContent = pageTitles[pageName] || 'Mes Recettes';
 
   switch (pageName) {
+    case 'dashboard':
+      elements.pageDashboard.classList.add('active');
+      chargerDashboard();
+      break;
     case 'recettes':
       elements.pageRecettes.classList.add('active');
       afficherRecettes();
@@ -605,6 +745,14 @@ function navigateToPage(pageName, garderPresélectionsCourses = false) {
       break;
     case 'recette-en-cours':
       elements.pageRecetteEnCours.classList.add('active');
+      break;
+    case 'statistiques':
+      elements.pageStatistiques.classList.add('active');
+      afficherPageStatistiques();
+      break;
+    case 'notifications':
+      elements.pageNotifications.classList.add('active');
+      chargerPageNotifications();
       break;
   }
 
@@ -672,6 +820,12 @@ function afficherRecettes(recettesFiltered = recettes, matchInfo = null) {
       </div>
     ` : '';
 
+    // Tags spéciaux (Feature 10)
+    const tagsHtml = genererTagsCarteRecette(recette);
+
+    // Difficulté
+    const difficulteHtml = recette.niveauDifficulte ? `<span class="difficulte-badge difficulte-${recette.niveauDifficulte.toLowerCase()}">${getDifficulteLabel(recette.niveauDifficulte)}</span>` : '';
+
     return `
       <article class="recette-card" data-id="${recette.id}" tabindex="0" role="button" aria-label="Voir la recette ${recette.nom}">
         <button class="recette-card-favoris ${isFavori ? 'active' : ''}" data-id="${recette.id}" aria-label="${isFavori ? 'Retirer des favoris' : 'Ajouter aux favoris'}">
@@ -685,6 +839,7 @@ function afficherRecettes(recettesFiltered = recettes, matchInfo = null) {
           ${origineHtml}
           ${matchHtml}
           ${compteurHtml}
+          ${tagsHtml}
           <div class="recette-card-meta">
             <span>
               <svg viewBox="0 0 24 24" width="16" height="16">
@@ -699,6 +854,7 @@ function afficherRecettes(recettesFiltered = recettes, matchInfo = null) {
               ${recette.personnes} pers.
             </span>
             <span class="type-badge">${getTypeLabel(recette.type)}</span>
+            ${difficulteHtml}
           </div>
         </div>
       </article>
@@ -792,6 +948,8 @@ function filtrerRecettes() {
   const tempsFiltre = elements.filtreTemps.value;
   const origineFiltre = state.filtreOrigine;
   const ingredientsSelectionnes = state.ingredientsSelectionnes;
+  const difficulteFiltre = elements.filtreDifficulte ? elements.filtreDifficulte.value : '';
+  const tagsFiltre = Array.from(state.filtreTagsSelectionnes);
 
   const matchInfo = new Map();
 
@@ -821,6 +979,19 @@ function filtrerRecettes() {
       matchTemps = tempsTotal >= 60;
     }
 
+    // Filtre par difficulté
+    let matchDifficulte = true;
+    if (difficulteFiltre) {
+      matchDifficulte = recette.niveauDifficulte === difficulteFiltre;
+    }
+
+    // Filtre par tags
+    let matchTags = true;
+    if (tagsFiltre.length > 0) {
+      const recetteTags = (recette.tags || []).map(t => t.id);
+      matchTags = tagsFiltre.every(tagId => recetteTags.includes(tagId));
+    }
+
     let matchIngredients = true;
     if (ingredientsSelectionnes.size > 0) {
       const ingredientsRecette = recette.ingredients.map(ing => normaliserIngredient(ing.nom));
@@ -839,7 +1010,7 @@ function filtrerRecettes() {
       matchIngredients = ingredientsMatchés === ingredientsSelectionnes.size;
     }
 
-    return matchNom && matchType && matchTemps && matchOrigine && matchIngredients;
+    return matchNom && matchType && matchTemps && matchOrigine && matchIngredients && matchDifficulte && matchTags;
   });
 
   // Trier par nombre total d'ingrédients si filtre par ingrédients actif
@@ -870,6 +1041,9 @@ function filtrerRecettes() {
           const tempsA = (a.tempsPreparation || 0) + (a.tempsCuisson || 0);
           const tempsB = (b.tempsPreparation || 0) + (b.tempsCuisson || 0);
           return tempsA - tempsB; // Croissant : les plus rapides en premier
+        case 'difficulte':
+          const niveaux = { 'Facile': 1, 'Moyen': 2, 'Difficile': 3 };
+          return (niveaux[a.niveauDifficulte] || 0) - (niveaux[b.niveauDifficulte] || 0);
         default:
           return 0;
       }
@@ -904,6 +1078,8 @@ async function afficherDetailRecette(id) {
 
   afficherIngredients();
   afficherEtapes();
+  afficherTagsRecette(recette);
+  afficherDifficulteDetail(recette);
 
   // Mode consultation par défaut : masquer les étapes
   basculerModeConsultation();
@@ -1694,6 +1870,10 @@ function initialiserPlanning() {
 function afficherPagePlanning() {
   initialiserPlanning();
   afficherCalendrier();
+  // Charger l'équilibre nutritionnel si la section est visible
+  if (elements.equilibreContenu && !elements.equilibreContenu.classList.contains('hidden')) {
+    chargerEquilibreNutritionnel();
+  }
 }
 
 function afficherCalendrier() {
@@ -1889,7 +2069,12 @@ async function ajouterRepasPlanifie(date, repas, recetteId) {
   }
   planning[date][repas] = { recetteId };
 
-  await sauvegarderPlanning();
+  try {
+    await sauvegarderPlanning();
+  } catch (error) {
+    console.error('Erreur sauvegarde planning:', error);
+    alert('Erreur lors de la sauvegarde du planning');
+  }
   fermerModalSelectRecette();
   afficherCalendrier();
 }
@@ -1897,7 +2082,12 @@ async function ajouterRepasPlanifie(date, repas, recetteId) {
 async function supprimerRepas(date, repas) {
   if (planning[date]) {
     planning[date][repas] = null;
-    await sauvegarderPlanning();
+    try {
+      await sauvegarderPlanning();
+    } catch (error) {
+      console.error('Erreur suppression repas:', error);
+      alert('Erreur lors de la suppression du repas');
+    }
     afficherCalendrier();
   }
 }
@@ -2291,6 +2481,7 @@ function initialiserFormulaire() {
   afficherOriginesTags();
   ajouterLigneEtape();
   ajouterLigneEtape();
+  remplirTagsFormulaire('tags-recette-select');
 }
 
 function ajouterIngredientAuFormulaire() {
@@ -2440,6 +2631,10 @@ async function soumettreRecette(e) {
       imageName = uploadResult.filename;
     }
 
+    // Récupérer difficulté et tags
+    const niveauDifficulte = document.getElementById('input-difficulte').value || null;
+    const tagIds = getSelectedTagIds('tags-recette-select');
+
     // Créer la recette
     const id = slugify(nom);
     const nouvelleRecette = {
@@ -2452,7 +2647,9 @@ async function soumettreRecette(e) {
       image: imageName,
       origines: state.originesRecette,
       ingredients: state.ingredientsRecette,
-      etapes
+      etapes,
+      niveauDifficulte,
+      tags: tagIds
     };
 
     // Sauvegarder
@@ -3111,6 +3308,16 @@ function ouvrirModalEditRecette(recetteId) {
   remplirEditSelectCategoriesUnites();
   afficherEditIngredientsRecette();
 
+  // Difficulté
+  const editDifficulte = document.getElementById('edit-difficulte');
+  if (editDifficulte) {
+    editDifficulte.value = recette.niveauDifficulte || '';
+  }
+
+  // Tags
+  const recetteTagIds = new Set((recette.tags || []).map(t => t.id));
+  remplirTagsFormulaire('edit-tags-recette-select', recetteTagIds);
+
   // Étapes
   const etapesInputs = document.getElementById('edit-etapes-inputs');
   etapesInputs.innerHTML = '';
@@ -3355,6 +3562,10 @@ async function sauvegarderEditRecette(e) {
     return;
   }
 
+  // Récupérer difficulté et tags
+  const niveauDifficulte = document.getElementById('edit-difficulte').value || null;
+  const tagIds = getSelectedTagIds('edit-tags-recette-select');
+
   const recetteData = {
     nom,
     type,
@@ -3363,7 +3574,9 @@ async function sauvegarderEditRecette(e) {
     tempsCuisson,
     ingredients: adminState.editIngredients,
     etapes,
-    origines: adminState.editOrigines
+    origines: adminState.editOrigines,
+    niveauDifficulte,
+    tags: tagIds
   };
 
   // Gérer la photo
@@ -4768,6 +4981,1368 @@ function getCompteurRealisations(recetteId) {
   return compteursRealisations[recetteId] || 0;
 }
 
+// ========================================
+// FEATURE 3: CE SOIR JE CUISINE AVEC...
+// ========================================
+
+function ouvrirModalCeSoir() {
+  elements.modalCeSoir.classList.add('active');
+  state.ceSoirIngredients.clear();
+  afficherIngredientsCeSoir();
+  elements.ceSoirResultats.classList.add('hidden');
+  mettreAJourCompteurCeSoir();
+}
+
+function fermerModalCeSoir() {
+  elements.modalCeSoir.classList.remove('active');
+}
+
+function afficherIngredientsCeSoir(filtre = '') {
+  const filtreNormalise = filtre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  let html = '';
+
+  ingredientsBase.forEach(categorie => {
+    categorie.items.forEach(ing => {
+      const nomNormalise = ing.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      if (filtreNormalise && !nomNormalise.includes(filtreNormalise)) return;
+
+      const isSelected = state.ceSoirIngredients.has(ing);
+      html += `<span class="ce-soir-ingredient ${isSelected ? 'selected' : ''}" onclick="toggleIngredientCeSoir('${ing.replace(/'/g, "\\'")}')">${ing}</span>`;
+    });
+  });
+
+  elements.ceSoirIngredients.innerHTML = html || '<p style="padding: 1rem; color: var(--color-text-light);">Aucun ingrédient trouvé</p>';
+}
+
+function toggleIngredientCeSoir(nom) {
+  if (state.ceSoirIngredients.has(nom)) {
+    state.ceSoirIngredients.delete(nom);
+  } else {
+    state.ceSoirIngredients.add(nom);
+  }
+  afficherIngredientsCeSoir(elements.ceSoirRecherche.value);
+  mettreAJourCompteurCeSoir();
+}
+
+function mettreAJourCompteurCeSoir() {
+  elements.ceSoirCount.textContent = `${state.ceSoirIngredients.size} ingrédient(s) sélectionné(s)`;
+}
+
+function clearIngredientsCeSoir() {
+  state.ceSoirIngredients.clear();
+  afficherIngredientsCeSoir(elements.ceSoirRecherche.value);
+  mettreAJourCompteurCeSoir();
+  elements.ceSoirResultats.classList.add('hidden');
+}
+
+function chercherRecettesCeSoir() {
+  if (state.ceSoirIngredients.size === 0) {
+    alert('Veuillez sélectionner au moins un ingrédient');
+    return;
+  }
+
+  const ingredientsDisponibles = Array.from(state.ceSoirIngredients).map(i =>
+    i.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  );
+
+  const resultats = recettes.map(recette => {
+    const ingredientsRecette = recette.ingredients.map(i =>
+      i.nom.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    );
+
+    let matchCount = 0;
+    ingredientsRecette.forEach(ing => {
+      if (ingredientsDisponibles.some(disp => ing.includes(disp) || disp.includes(ing))) {
+        matchCount++;
+      }
+    });
+
+    const matchPercent = ingredientsRecette.length > 0 ? (matchCount / ingredientsRecette.length) * 100 : 0;
+
+    return { recette, matchCount, matchPercent, totalIngredients: ingredientsRecette.length };
+  }).filter(r => r.matchCount > 0)
+    .sort((a, b) => b.matchPercent - a.matchPercent || b.matchCount - a.matchCount)
+    .slice(0, 10);
+
+  if (resultats.length === 0) {
+    elements.ceSoirListe.innerHTML = '<p style="padding: 1rem; text-align: center; color: var(--color-text-light);">Aucune recette correspondante</p>';
+  } else {
+    elements.ceSoirListe.innerHTML = resultats.map(r => {
+      const imageUrl = getImageUrl(r.recette.image);
+      return `
+        <div class="ce-soir-recette" onclick="fermerModalCeSoir(); afficherDetailRecette('${r.recette.id}');">
+          <img src="${imageUrl}" alt="${r.recette.nom}" class="ce-soir-recette-img" onerror="this.src='${DEFAULT_IMAGE}'">
+          <div class="ce-soir-recette-info">
+            <div class="ce-soir-recette-nom">${r.recette.nom}</div>
+            <div class="ce-soir-recette-match">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              ${r.matchCount}/${r.totalIngredients} ingrédients (${Math.round(r.matchPercent)}%)
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  elements.ceSoirResultats.classList.remove('hidden');
+}
+
+// ========================================
+// FEATURE 5, 6, 7: STATISTIQUES
+// ========================================
+
+const BADGES = [
+  { nom: 'Chef débutant', emoji: '👨‍🍳', seuil: 0 },
+  { nom: 'Chef amateur', emoji: '👨‍🍳', seuil: 10 },
+  { nom: 'Chef confirmé', emoji: '🧑‍🍳', seuil: 25 },
+  { nom: 'Chef expérimenté', emoji: '👩‍🍳', seuil: 50 },
+  { nom: 'Chef étoilé', emoji: '⭐', seuil: 100 },
+  { nom: 'Chef légendaire', emoji: '🏆', seuil: 200 }
+];
+
+async function chargerStatistiques() {
+  try {
+    const response = await fetch(`${API_URL}/api/statistiques`);
+    if (!response.ok) {
+      if (response.status === 503) return null;
+      throw new Error('Erreur chargement statistiques');
+    }
+    return await response.json();
+  } catch (error) {
+    console.warn('Statistiques non disponibles:', error);
+    return null;
+  }
+}
+
+async function afficherPageStatistiques() {
+  const stats = await chargerStatistiques();
+
+  if (!stats) {
+    // Mode dégradé sans PostgreSQL
+    elements.statsTotalRecettes.textContent = '0';
+    elements.statsTempsTotal.textContent = '0h';
+    elements.statsCeMois.textContent = '0';
+    elements.statsFavoris.textContent = favoris.size;
+    elements.statsTopRecettes.innerHTML = '<p style="text-align: center; color: var(--color-text-light);">Statistiques non disponibles (PostgreSQL requis)</p>';
+    return;
+  }
+
+  // Résumé
+  elements.statsTotalRecettes.textContent = stats.totalRealisations || 0;
+  const heures = Math.floor((stats.tempsTotal || 0) / 60);
+  const minutes = (stats.tempsTotal || 0) % 60;
+  elements.statsTempsTotal.textContent = heures > 0 ? `${heures}h${minutes > 0 ? minutes : ''}` : `${minutes}min`;
+  elements.statsCeMois.textContent = stats.ceMois || 0;
+  elements.statsFavoris.textContent = stats.favorisRealises || 0;
+
+  // Badge de progression (Feature 7)
+  const totalRecettes = stats.totalRealisations || 0;
+  const badgeActuel = BADGES.reduce((acc, b) => totalRecettes >= b.seuil ? b : acc, BADGES[0]);
+  const badgeSuivant = BADGES.find(b => b.seuil > totalRecettes) || BADGES[BADGES.length - 1];
+
+  elements.badgeProgression.innerHTML = `
+    <div class="badge-icon">${badgeActuel.emoji}</div>
+    <div class="badge-info">
+      <span class="badge-titre">${badgeActuel.nom}</span>
+      <span class="badge-details">${totalRecettes} recettes réalisées</span>
+    </div>
+  `;
+
+  // Progression vers prochain badge
+  const progressionContainer = document.getElementById('progression-badge');
+  if (progressionContainer && badgeSuivant.seuil > badgeActuel.seuil) {
+    const progress = ((totalRecettes - badgeActuel.seuil) / (badgeSuivant.seuil - badgeActuel.seuil)) * 100;
+    progressionContainer.innerHTML = `
+      <div class="progression-badge-info">
+        <span class="badge-actuel">${badgeActuel.nom}</span>
+        <span class="badge-suivant">→ ${badgeSuivant.nom} (${badgeSuivant.seuil} recettes)</span>
+      </div>
+      <div class="progression-bar-large">
+        <div class="progression-fill" style="width: ${Math.min(progress, 100)}%"></div>
+      </div>
+      <span class="progression-label">${totalRecettes} / ${badgeSuivant.seuil} recettes</span>
+    `;
+  }
+
+  // Top 10 recettes
+  if (stats.topRecettes && stats.topRecettes.length > 0) {
+    elements.statsTopRecettes.innerHTML = stats.topRecettes.map((item, index) => {
+      const recette = recettes.find(r => r.id === item.recetteId);
+      if (!recette) return '';
+      const imageUrl = getImageUrl(recette.image);
+      return `
+        <div class="stats-top-item" onclick="afficherDetailRecette(${recette.id})">
+          <span class="stats-top-rank">${index + 1}</span>
+          <img src="${imageUrl}" alt="${recette.nom}" class="stats-top-img" onerror="this.src='${DEFAULT_IMAGE}'">
+          <div class="stats-top-info">
+            <div class="stats-top-nom">${recette.nom}</div>
+            <div class="stats-top-count">${item.count} fois réalisée</div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  } else {
+    elements.statsTopRecettes.innerHTML = '<p style="text-align: center; color: var(--color-text-light);">Aucune recette réalisée pour le moment</p>';
+  }
+
+  // Stats par type
+  afficherStatsParType(stats.parType || []);
+
+  // Stats par origine
+  afficherStatsParOrigine(stats.parOrigine || []);
+
+  // Calendrier des réalisations (Feature 6)
+  afficherCalendrierRealisations(stats.realisationsParJour || []);
+}
+
+function afficherStatsParType(data) {
+  const colors = { entree: '#3498db', plat: '#e74c3c', dessert: '#f39c12' };
+  const labels = { entree: 'Entrées', plat: 'Plats', dessert: 'Desserts' };
+  const total = data.reduce((sum, d) => sum + d.count, 0);
+
+  if (total === 0) {
+    elements.statsParType.innerHTML = '<p style="text-align: center; color: var(--color-text-light);">Aucune donnée</p>';
+    return;
+  }
+
+  elements.statsParType.innerHTML = data.map(d => {
+    const percent = Math.round((d.count / total) * 100);
+    return `
+      <div class="stats-donut-item">
+        <span class="stats-donut-color" style="background: ${colors[d.type] || '#999'}"></span>
+        <span class="stats-donut-label">${labels[d.type] || d.type}</span>
+        <div class="stats-donut-bar">
+          <div class="stats-donut-fill" style="width: ${percent}%; background: ${colors[d.type] || '#999'}"></div>
+        </div>
+        <span class="stats-donut-value">${d.count}</span>
+      </div>
+    `;
+  }).join('');
+}
+
+function afficherStatsParOrigine(data) {
+  const colors = ['#e74c3c', '#3498db', '#27ae60', '#9b59b6', '#f39c12', '#1abc9c'];
+  const total = data.reduce((sum, d) => sum + d.count, 0);
+
+  if (total === 0) {
+    elements.statsParOrigine.innerHTML = '<p style="text-align: center; color: var(--color-text-light);">Aucune donnée</p>';
+    return;
+  }
+
+  elements.statsParOrigine.innerHTML = data.slice(0, 6).map((d, i) => {
+    const percent = Math.round((d.count / total) * 100);
+    return `
+      <div class="stats-donut-item">
+        <span class="stats-donut-color" style="background: ${colors[i % colors.length]}"></span>
+        <span class="stats-donut-label">${d.origine || 'Non spécifié'}</span>
+        <div class="stats-donut-bar">
+          <div class="stats-donut-fill" style="width: ${percent}%; background: ${colors[i % colors.length]}"></div>
+        </div>
+        <span class="stats-donut-value">${d.count}</span>
+      </div>
+    `;
+  }).join('');
+}
+
+// Feature 6: Calendrier des réalisations
+function afficherCalendrierRealisations(realisations) {
+  const mois = state.statsCalendrierMois;
+  const annee = mois.getFullYear();
+  const moisIndex = mois.getMonth();
+
+  const premierJour = new Date(annee, moisIndex, 1);
+  const dernierJour = new Date(annee, moisIndex + 1, 0);
+
+  const joursSemaine = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
+  const moisNoms = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+    'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+
+  elements.calendrierMoisTitre.textContent = `${moisNoms[moisIndex]} ${annee}`;
+
+  // Créer une map des réalisations par jour
+  const realisationsMap = {};
+  realisations.forEach(r => {
+    const date = r.date.split('T')[0];
+    realisationsMap[date] = (realisationsMap[date] || 0) + r.count;
+  });
+
+  let html = joursSemaine.map(j => `<span class="calendrier-jour-header">${j}</span>`).join('');
+
+  // Trouver le premier lundi à afficher
+  let jourDebut = new Date(premierJour);
+  const premierJourSemaine = (premierJour.getDay() + 6) % 7; // 0 = lundi
+  jourDebut.setDate(jourDebut.getDate() - premierJourSemaine);
+
+  const aujourdhui = new Date().toISOString().split('T')[0];
+
+  for (let i = 0; i < 42; i++) {
+    const dateStr = jourDebut.toISOString().split('T')[0];
+    const estAutreMois = jourDebut.getMonth() !== moisIndex;
+    const estAujourdhui = dateStr === aujourdhui;
+    const count = realisationsMap[dateStr] || 0;
+
+    let classes = 'calendrier-jour';
+    if (estAutreMois) classes += ' autre-mois';
+    if (estAujourdhui) classes += ' today';
+    if (count > 0) classes += ' has-realisation';
+
+    html += `
+      <div class="${classes}" data-date="${dateStr}" title="${count > 0 ? count + ' recette(s) réalisée(s)' : ''}">
+        ${jourDebut.getDate()}
+        ${count > 0 ? `<span class="calendrier-jour-count">${count}</span>` : ''}
+      </div>
+    `;
+
+    jourDebut.setDate(jourDebut.getDate() + 1);
+  }
+
+  elements.calendrierRealisations.innerHTML = html;
+}
+
+function calendrierMoisPrecedent() {
+  state.statsCalendrierMois.setMonth(state.statsCalendrierMois.getMonth() - 1);
+  afficherPageStatistiques();
+}
+
+function calendrierMoisSuivant() {
+  state.statsCalendrierMois.setMonth(state.statsCalendrierMois.getMonth() + 1);
+  afficherPageStatistiques();
+}
+
+// ========================================
+// FEATURE 8: PLANNING MENSUEL
+// ========================================
+
+function toggleVuePlanning(vue) {
+  state.vuePlanning = vue;
+
+  elements.btnVueSemaine.classList.toggle('active', vue === 'semaine');
+  elements.btnVueMois.classList.toggle('active', vue === 'mois');
+
+  if (elements.planningCalendrier) {
+    elements.planningCalendrier.classList.toggle('hidden', vue === 'mois');
+  }
+  elements.planningMensuel.classList.toggle('hidden', vue === 'semaine');
+
+  if (vue === 'mois') {
+    afficherPlanningMensuel();
+  } else {
+    afficherPlanning();
+  }
+}
+
+function afficherPlanningMensuel() {
+  const mois = state.planningMoisActuel;
+  const annee = mois.getFullYear();
+  const moisIndex = mois.getMonth();
+
+  const moisNoms = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+    'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+
+  elements.planningPeriode.textContent = `${moisNoms[moisIndex]} ${annee}`;
+
+  const premierJour = new Date(annee, moisIndex, 1);
+  const dernierJour = new Date(annee, moisIndex + 1, 0);
+
+  let jourDebut = new Date(premierJour);
+  const premierJourSemaine = (premierJour.getDay() + 6) % 7;
+  jourDebut.setDate(jourDebut.getDate() - premierJourSemaine);
+
+  const aujourdhui = new Date().toISOString().split('T')[0];
+  let html = '';
+
+  for (let i = 0; i < 42; i++) {
+    const dateStr = jourDebut.toISOString().split('T')[0];
+    const estAutreMois = jourDebut.getMonth() !== moisIndex;
+    const estAujourdhui = dateStr === aujourdhui;
+    const planningJour = planning[dateStr] || {};
+
+    let classes = 'planning-mensuel-jour';
+    if (estAutreMois) classes += ' autre-mois';
+    if (estAujourdhui) classes += ' today';
+
+    const recettesHtml = [];
+    if (planningJour.midi) {
+      const midiId = planningJour.midi.recetteId || planningJour.midi;
+      const recette = recettes.find(r => r.id === midiId);
+      if (recette) {
+        recettesHtml.push(`<div class="planning-mensuel-recette midi" title="${recette.nom}">${recette.nom}</div>`);
+      }
+    }
+    if (planningJour.soir) {
+      const soirId = planningJour.soir.recetteId || planningJour.soir;
+      const recette = recettes.find(r => r.id === soirId);
+      if (recette) {
+        recettesHtml.push(`<div class="planning-mensuel-recette soir" title="${recette.nom}">${recette.nom}</div>`);
+      }
+    }
+
+    html += `
+      <div class="${classes}" onclick="ouvrirJourPlanning('${dateStr}')">
+        <div class="planning-mensuel-numero">${jourDebut.getDate()}</div>
+        <div class="planning-mensuel-recettes">${recettesHtml.join('')}</div>
+      </div>
+    `;
+
+    jourDebut.setDate(jourDebut.getDate() + 1);
+  }
+
+  elements.planningMensuelGrille.innerHTML = html;
+}
+
+function ouvrirJourPlanning(dateStr) {
+  // Si on est en vue mois, passer en vue semaine sur cette date
+  const date = new Date(dateStr);
+  const lundi = new Date(date);
+  lundi.setDate(date.getDate() - ((date.getDay() + 6) % 7));
+  state.semaineActuelle = lundi;
+  toggleVuePlanning('semaine');
+}
+
+// ========================================
+// FEATURE 10: TAGS DYNAMIQUES ET DIFFICULTÉ
+// ========================================
+
+const TAG_ICONS = {
+  'Végétarien': '🥬', 'Vegan': '🌱', 'Sans gluten': '🌾', 'Sans lactose': '🥛',
+  'Sans oeufs': '🥚', 'Sans fruits à coque': '🥜', 'Thermomix': '🤖',
+  'Protéiné': '💪', 'Léger': '🥗', 'Riche en fibres': '🌾', 'Comfort food': '😋',
+  'Batch cooking': '📦', 'Rapide': '⚡', 'Économique': '💰', 'Fête': '🎉',
+  'Pique-nique': '🧺', 'Bébé': '👶', 'Enfant': '👧', 'Été': '☀️',
+  'Hiver': '❄️', 'Automne': '🍂', 'Printemps': '🌸'
+};
+
+const TAG_CATEGORIES_COLORS = {
+  'Régimes alimentaires': '#27ae60',
+  'Allergènes': '#e67e22',
+  'Nutritionnel': '#3498db',
+  'Autre': '#9b59b6'
+};
+
+function getTagIcon(tagNom) {
+  return TAG_ICONS[tagNom] || '🏷️';
+}
+
+function getTagCategoryColor(categorie) {
+  return TAG_CATEGORIES_COLORS[categorie] || '#95a5a6';
+}
+
+function getDifficulteLabel(niveau) {
+  const labels = { 'Facile': '🟢 Facile', 'Moyen': '🟠 Moyen', 'Difficile': '🔴 Difficile' };
+  return labels[niveau] || niveau;
+}
+
+function afficherDifficulteDetail(recette) {
+  const container = document.getElementById('detail-difficulte');
+  if (!container) return;
+  if (recette.niveauDifficulte) {
+    container.innerHTML = `<span class="difficulte-badge difficulte-${recette.niveauDifficulte.toLowerCase()}">${getDifficulteLabel(recette.niveauDifficulte)}</span>`;
+    container.classList.remove('hidden');
+  } else {
+    container.innerHTML = '';
+    container.classList.add('hidden');
+  }
+}
+
+function afficherTagsRecette(recette) {
+  if (!elements.detailTags) return;
+
+  const tags = recette.tags || [];
+  if (tags.length === 0) {
+    elements.detailTags.innerHTML = '';
+    return;
+  }
+
+  elements.detailTags.innerHTML = tags.map(tag =>
+    `<span class="recette-tag" style="--tag-color: ${getTagCategoryColor(tag.categorie)}">${getTagIcon(tag.nom)} ${tag.nom}</span>`
+  ).join('');
+}
+
+function genererTagsCarteRecette(recette) {
+  const tags = recette.tags || [];
+  if (tags.length === 0) return '';
+
+  return `<div class="recette-card-tags">${tags.slice(0, 4).map(tag =>
+    `<span class="recette-tag" style="--tag-color: ${getTagCategoryColor(tag.categorie)}" title="${tag.nom}">${getTagIcon(tag.nom)}</span>`
+  ).join('')}${tags.length > 4 ? `<span class="recette-tag tag-more">+${tags.length - 4}</span>` : ''}</div>`;
+}
+
+// Afficher les tags comme des chips cliquables dans le panneau de filtre
+function afficherTagsFiltreChips(filtre = '') {
+  if (!elements.tagsFilterChips) return;
+  const filtreNormalise = filtre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+
+  const tagsFiltres = filtre
+    ? tagsBase.filter(tag => tag.nom.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(filtreNormalise))
+    : tagsBase;
+
+  elements.tagsFilterChips.innerHTML = tagsFiltres.map(tag => {
+    const isSelected = state.filtreTagsSelectionnes.has(tag.id);
+    return `
+      <span class="ingredient-tag ${isSelected ? 'selected' : ''}" data-tag-id="${tag.id}">
+        ${getTagIcon(tag.nom)} ${tag.nom}
+      </span>
+    `;
+  }).join('');
+
+  elements.tagsFilterChips.querySelectorAll('.ingredient-tag').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const tagId = parseInt(chip.dataset.tagId);
+      if (state.filtreTagsSelectionnes.has(tagId)) {
+        state.filtreTagsSelectionnes.delete(tagId);
+        chip.classList.remove('selected');
+      } else {
+        state.filtreTagsSelectionnes.add(tagId);
+        chip.classList.add('selected');
+      }
+      mettreAJourCompteurTagsFiltre();
+      filtrerRecettes();
+    });
+  });
+}
+
+function mettreAJourCompteurTagsFiltre() {
+  if (!elements.tagsFilterCount) return;
+  const count = state.filtreTagsSelectionnes.size;
+  elements.tagsFilterCount.textContent = `${count} tag${count > 1 ? 's' : ''} sélectionné${count > 1 ? 's' : ''}`;
+}
+
+// Initialiser le panneau de filtre tags (appelé une fois au démarrage)
+function remplirFiltreTags() {
+  afficherTagsFiltreChips();
+}
+
+// Remplir les tags dans les formulaires d'ajout/édition
+function remplirTagsFormulaire(containerId, selectedTagIds = new Set()) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const grouped = {};
+  tagsBase.forEach(tag => {
+    if (!grouped[tag.categorie]) grouped[tag.categorie] = [];
+    grouped[tag.categorie].push(tag);
+  });
+
+  let html = '';
+  Object.keys(grouped).forEach(cat => {
+    html += `<div class="tags-categorie"><h4 style="color: ${getTagCategoryColor(cat)}">${cat}</h4><div class="tags-liste">`;
+    grouped[cat].forEach(tag => {
+      const checked = selectedTagIds.has(tag.id) ? 'selected' : '';
+      html += `<span class="tag-selectable ${checked}" data-tag-id="${tag.id}" style="--tag-color: ${getTagCategoryColor(cat)}">${getTagIcon(tag.nom)} ${tag.nom}</span>`;
+    });
+    html += `</div></div>`;
+  });
+  container.innerHTML = html;
+
+  // Event listeners pour toggle
+  container.querySelectorAll('.tag-selectable').forEach(el => {
+    el.addEventListener('click', () => {
+      el.classList.toggle('selected');
+    });
+  });
+}
+
+function getSelectedTagIds(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return [];
+  return Array.from(container.querySelectorAll('.tag-selectable.selected')).map(el => parseInt(el.dataset.tagId));
+}
+
+// ========================================
+// FEATURE 16: NOTES PERSONNELLES
+// ========================================
+
+function ouvrirModalNotes(recetteId) {
+  state.notesRecetteId = recetteId;
+  elements.modalNotes.classList.add('active');
+  elements.inputNouvelleNote.value = '';
+  chargerNotesRecette(recetteId);
+}
+
+function fermerModalNotes() {
+  elements.modalNotes.classList.remove('active');
+  state.notesRecetteId = null;
+}
+
+async function chargerNotesRecette(recetteId) {
+  try {
+    const response = await fetch(`${API_URL}/api/notes-recette/${recetteId}`);
+    if (!response.ok) {
+      if (response.status === 503) {
+        elements.notesHistorique.innerHTML = '<p class="notes-empty">Notes non disponibles (PostgreSQL requis)</p>';
+        return;
+      }
+      throw new Error('Erreur chargement notes');
+    }
+
+    const notes = await response.json();
+    afficherNotesRecette(notes);
+  } catch (error) {
+    console.error('Erreur chargement notes:', error);
+    elements.notesHistorique.innerHTML = '<p class="notes-empty">Erreur lors du chargement des notes</p>';
+  }
+}
+
+function afficherNotesRecette(notes) {
+  if (!notes || notes.length === 0) {
+    elements.notesHistorique.innerHTML = '<p class="notes-empty">Aucune note pour cette recette</p>';
+    return;
+  }
+
+  elements.notesHistorique.innerHTML = notes.map(note => {
+    const date = new Date(note.dateCreation);
+    return `
+      <div class="note-item" data-id="${note.id}">
+        <div class="note-item-header">
+          <span class="note-item-date">${date.toLocaleDateString('fr-FR')} à ${date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}</span>
+          <button class="note-item-delete" onclick="supprimerNote(${note.id})" title="Supprimer">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+              <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="note-item-content">${note.contenu}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+async function ajouterNote() {
+  const contenu = elements.inputNouvelleNote.value.trim();
+  if (!contenu) {
+    alert('Veuillez entrer une note');
+    return;
+  }
+
+  try {
+    const response = await fetch(`${API_URL}/api/notes-recette`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        recetteId: state.notesRecetteId,
+        contenu: contenu
+      })
+    });
+
+    if (!response.ok) {
+      if (response.status === 503) {
+        alert('Cette fonctionnalité nécessite PostgreSQL');
+        return;
+      }
+      throw new Error('Erreur ajout note');
+    }
+
+    elements.inputNouvelleNote.value = '';
+    chargerNotesRecette(state.notesRecetteId);
+  } catch (error) {
+    console.error('Erreur ajout note:', error);
+    alert('Erreur lors de l\'ajout de la note');
+  }
+}
+
+async function supprimerNote(noteId) {
+  if (!confirm('Supprimer cette note ?')) return;
+
+  try {
+    const response = await fetch(`${API_URL}/api/notes-recette/${noteId}`, {
+      method: 'DELETE'
+    });
+
+    if (!response.ok) throw new Error('Erreur suppression note');
+
+    chargerNotesRecette(state.notesRecetteId);
+  } catch (error) {
+    console.error('Erreur suppression note:', error);
+    alert('Erreur lors de la suppression de la note');
+  }
+}
+
+// ========================================
+// FEATURE 25: THÈMES PERSONNALISABLES
+// ========================================
+
+function ouvrirModalThemes() {
+  elements.modalThemes.classList.add('active');
+  chargerThemeActuel();
+}
+
+function fermerModalThemes() {
+  elements.modalThemes.classList.remove('active');
+}
+
+function chargerThemeActuel() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    state.theme = JSON.parse(savedTheme);
+  }
+
+  // Mettre à jour les boutons de mode
+  document.querySelectorAll('.theme-mode-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.mode === state.theme.mode);
+  });
+
+  // Mettre à jour les boutons de couleur
+  document.querySelectorAll('.theme-color-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.color === state.theme.accent);
+  });
+
+  appliquerTheme();
+}
+
+function changerModeTheme(mode) {
+  state.theme.mode = mode;
+  sauvegarderTheme();
+  appliquerTheme();
+
+  document.querySelectorAll('.theme-mode-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.mode === mode);
+  });
+}
+
+function changerCouleurAccent(couleur) {
+  state.theme.accent = couleur;
+  sauvegarderTheme();
+  appliquerTheme();
+
+  document.querySelectorAll('.theme-color-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.color === couleur);
+  });
+}
+
+function sauvegarderTheme() {
+  localStorage.setItem('theme', JSON.stringify(state.theme));
+}
+
+function appliquerTheme() {
+  // Appliquer la couleur d'accent
+  document.documentElement.style.setProperty('--color-primary', state.theme.accent);
+
+  // Calculer couleur plus foncée pour hover
+  const darkerColor = ajusterLuminosite(state.theme.accent, -20);
+  document.documentElement.style.setProperty('--color-primary-dark', darkerColor);
+
+  // Mode clair/sombre
+  if (state.theme.mode === 'dark') {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+}
+
+function ajusterLuminosite(hex, percent) {
+  const num = parseInt(hex.replace('#', ''), 16);
+  const r = Math.min(255, Math.max(0, (num >> 16) + percent));
+  const g = Math.min(255, Math.max(0, ((num >> 8) & 0x00FF) + percent));
+  const b = Math.min(255, Math.max(0, (num & 0x0000FF) + percent));
+  return '#' + (0x1000000 + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
+// ========================================
+// FEATURE 26: VUE LISTE/GRILLE
+// ========================================
+
+function toggleVueRecettes(vue) {
+  state.vueRecettes = vue;
+  localStorage.setItem('vueRecettes', vue);
+
+  elements.btnVueGrille.classList.toggle('active', vue === 'grille');
+  elements.btnVueListe.classList.toggle('active', vue === 'liste');
+
+  elements.recettesGrid.classList.toggle('vue-liste', vue === 'liste');
+}
+
+// ========================================
+// FEATURE 28: CONVERSION D'UNITÉS
+// ========================================
+
+const CONVERSIONS = {
+  // Masse
+  g: { base: 'g', factor: 1 },
+  kg: { base: 'g', factor: 1000 },
+  oz: { base: 'g', factor: 28.3495 },
+  lb: { base: 'g', factor: 453.592 },
+  // Volume
+  ml: { base: 'ml', factor: 1 },
+  cl: { base: 'ml', factor: 10 },
+  l: { base: 'ml', factor: 1000 },
+  tsp: { base: 'ml', factor: 5 },
+  tbsp: { base: 'ml', factor: 15 },
+  cup: { base: 'ml', factor: 250 },
+  // Température
+  c: { base: 'c', factor: 1 },
+  f: { base: 'f', factor: 1 }
+};
+
+function ouvrirModalConversion() {
+  elements.modalConversion.classList.add('active');
+  elements.conversionValeur.value = '';
+  elements.conversionResultat.textContent = '-';
+}
+
+function fermerModalConversion() {
+  elements.modalConversion.classList.remove('active');
+}
+
+function effectuerConversion() {
+  const valeur = parseFloat(elements.conversionValeur.value);
+  const source = elements.conversionUniteSource.value;
+  const cible = elements.conversionUniteCible.value;
+
+  if (isNaN(valeur) || !source || !cible) {
+    elements.conversionResultat.textContent = '-';
+    return;
+  }
+
+  // Température - cas spécial
+  if ((source === 'c' || source === 'f') && (cible === 'c' || cible === 'f')) {
+    let resultat;
+    if (source === 'c' && cible === 'f') {
+      resultat = (valeur * 9/5) + 32;
+    } else if (source === 'f' && cible === 'c') {
+      resultat = (valeur - 32) * 5/9;
+    } else {
+      resultat = valeur;
+    }
+    elements.conversionResultat.textContent = `${resultat.toFixed(1)} ${cible === 'c' ? '°C' : '°F'}`;
+    return;
+  }
+
+  // Vérifier que les unités sont compatibles
+  const sourceInfo = CONVERSIONS[source];
+  const cibleInfo = CONVERSIONS[cible];
+
+  if (!sourceInfo || !cibleInfo || sourceInfo.base !== cibleInfo.base) {
+    elements.conversionResultat.textContent = 'Incompatible';
+    return;
+  }
+
+  // Convertir vers la base puis vers l'unité cible
+  const valeurBase = valeur * sourceInfo.factor;
+  const resultat = valeurBase / cibleInfo.factor;
+
+  elements.conversionResultat.textContent = `${resultat.toFixed(2)} ${cible}`;
+}
+
+// ========================================
+// INITIALISATION DES NOUVELLES FEATURES
+// ========================================
+
+// ========================================
+// DASHBOARD
+// ========================================
+
+async function chargerDashboard() {
+  try {
+    const [dashboardRes, suggestionRes] = await Promise.all([
+      fetch(`${API_URL}/api/dashboard/data`),
+      fetch(`${API_URL}/api/suggestion`)
+    ]);
+
+    if (dashboardRes.ok) {
+      const data = await dashboardRes.json();
+      afficherDashboardRecentes(data.recentes || []);
+      afficherDashboardFavoris(data.favoris || []);
+      afficherDashboardPlanningJour(data.planningJour || {});
+    }
+
+    if (suggestionRes.ok) {
+      const suggestion = await suggestionRes.json();
+      afficherSuggestion(suggestion);
+    }
+  } catch (error) {
+    console.error('Erreur chargement dashboard:', error);
+  }
+}
+
+function afficherSuggestion(suggestion) {
+  if (!elements.suggestionContenu) return;
+  if (!suggestion || !suggestion.id) {
+    elements.suggestionContenu.innerHTML = '<p class="widget-empty">Aucune suggestion disponible. Ajoutez des recettes !</p>';
+    return;
+  }
+
+  const imageUrl = getImageUrl(suggestion.image);
+  const difficulteHtml = suggestion.niveauDifficulte ? `<span class="difficulte-badge difficulte-${suggestion.niveauDifficulte.toLowerCase()}">${getDifficulteLabel(suggestion.niveauDifficulte)}</span>` : '';
+
+  elements.suggestionContenu.innerHTML = `
+    <div class="suggestion-card" data-id="${suggestion.id}">
+      <img src="${imageUrl}" alt="${suggestion.nom}" onerror="this.src='${DEFAULT_IMAGE}'">
+      <div class="suggestion-info">
+        <h4>${suggestion.nom}</h4>
+        <div class="suggestion-meta">
+          <span>${formatTemps((suggestion.tempsPreparation || 0) + (suggestion.tempsCuisson || 0))}</span>
+          <span>${suggestion.personnes || 4} pers.</span>
+          ${difficulteHtml}
+        </div>
+        ${suggestion.raison ? `<p class="suggestion-raison">${suggestion.raison}</p>` : ''}
+      </div>
+    </div>
+  `;
+
+  elements.suggestionContenu.querySelector('.suggestion-card')?.addEventListener('click', () => {
+    afficherDetailRecette(suggestion.id);
+  });
+}
+
+function afficherDashboardRecentes(recettesList) {
+  if (!elements.recentesContenu) return;
+  if (recettesList.length === 0) {
+    elements.recentesContenu.innerHTML = '<p class="widget-empty">Aucune recette récente</p>';
+    return;
+  }
+
+  elements.recentesContenu.innerHTML = `<div class="widget-recettes-list">${recettesList.slice(0, 5).map(r => `
+    <div class="widget-recette-item" data-id="${r.id}">
+      <img src="${getImageUrl(r.image)}" alt="${r.nom}" onerror="this.src='${DEFAULT_IMAGE}'">
+      <span>${r.nom}</span>
+    </div>
+  `).join('')}</div>`;
+
+  elements.recentesContenu.querySelectorAll('.widget-recette-item').forEach(el => {
+    el.addEventListener('click', () => afficherDetailRecette(el.dataset.id));
+  });
+}
+
+function afficherDashboardFavoris(favorisList) {
+  if (!elements.favorisDashboardContenu) return;
+  if (favorisList.length === 0) {
+    elements.favorisDashboardContenu.innerHTML = '<p class="widget-empty">Aucun favori</p>';
+    return;
+  }
+
+  elements.favorisDashboardContenu.innerHTML = `<div class="widget-recettes-list">${favorisList.slice(0, 5).map(r => `
+    <div class="widget-recette-item" data-id="${r.id}">
+      <img src="${getImageUrl(r.image)}" alt="${r.nom}" onerror="this.src='${DEFAULT_IMAGE}'">
+      <span>${r.nom}</span>
+    </div>
+  `).join('')}</div>`;
+
+  elements.favorisDashboardContenu.querySelectorAll('.widget-recette-item').forEach(el => {
+    el.addEventListener('click', () => afficherDetailRecette(el.dataset.id));
+  });
+}
+
+function afficherDashboardPlanningJour(planningJour) {
+  if (!elements.planningJourContenu) return;
+  const midi = planningJour.midi;
+  const soir = planningJour.soir;
+
+  if (!midi && !soir) {
+    elements.planningJourContenu.innerHTML = '<p class="widget-empty">Rien de prévu aujourd\'hui</p>';
+    return;
+  }
+
+  let html = '';
+  if (midi) {
+    const recette = recettes.find(r => r.id === midi);
+    if (recette) {
+      html += `<div class="planning-jour-repas"><span class="repas-label-small">Midi</span><div class="widget-recette-item" data-id="${recette.id}"><img src="${getImageUrl(recette.image)}" alt="${recette.nom}" onerror="this.src='${DEFAULT_IMAGE}'"><span>${recette.nom}</span></div></div>`;
+    }
+  }
+  if (soir) {
+    const recette = recettes.find(r => r.id === soir);
+    if (recette) {
+      html += `<div class="planning-jour-repas"><span class="repas-label-small">Soir</span><div class="widget-recette-item" data-id="${recette.id}"><img src="${getImageUrl(recette.image)}" alt="${recette.nom}" onerror="this.src='${DEFAULT_IMAGE}'"><span>${recette.nom}</span></div></div>`;
+    }
+  }
+
+  elements.planningJourContenu.innerHTML = html;
+  elements.planningJourContenu.querySelectorAll('.widget-recette-item').forEach(el => {
+    el.addEventListener('click', () => afficherDetailRecette(el.dataset.id));
+  });
+}
+
+// ========================================
+// NOTIFICATIONS
+// ========================================
+
+async function chargerPageNotifications() {
+  // Vérifier le statut des permissions
+  updateNotifPermissionStatus();
+
+  try {
+    const response = await fetch(`${API_URL}/api/notification-settings`);
+    if (response.ok) {
+      const settings = await response.json();
+      state.notificationSettings = settings;
+
+      if (elements.notifTimer) elements.notifTimer.checked = settings.timerEnabled !== false;
+      if (elements.notifRappelRepas) elements.notifRappelRepas.checked = settings.rappelRepasEnabled === true;
+      if (elements.notifHeureRappel) elements.notifHeureRappel.value = settings.rappelHeure || '18:00';
+
+      // Jours actifs
+      const jours = settings.rappelJours || [1, 2, 3, 4, 5];
+      document.querySelectorAll('#rappel-jours-options .jour-checkbox input').forEach(cb => {
+        cb.checked = jours.includes(parseInt(cb.value));
+      });
+    }
+  } catch (error) {
+    console.error('Erreur chargement notifications:', error);
+  }
+}
+
+function updateNotifPermissionStatus() {
+  if (!elements.notifPermissionStatus) return;
+  if (!('Notification' in window)) {
+    elements.notifPermissionStatus.textContent = 'Statut : Les notifications ne sont pas supportées par ce navigateur';
+    elements.btnDemanderNotif.classList.add('hidden');
+    return;
+  }
+
+  const permission = Notification.permission;
+  if (permission === 'granted') {
+    elements.notifPermissionStatus.textContent = 'Statut : Notifications autorisées';
+    elements.btnDemanderNotif.classList.add('hidden');
+  } else if (permission === 'denied') {
+    elements.notifPermissionStatus.textContent = 'Statut : Notifications bloquées. Modifiez les paramètres de votre navigateur.';
+    elements.btnDemanderNotif.classList.add('hidden');
+  } else {
+    elements.notifPermissionStatus.textContent = 'Statut : Permission non accordée';
+    elements.btnDemanderNotif.classList.remove('hidden');
+  }
+}
+
+async function demanderPermissionNotification() {
+  if (!('Notification' in window)) return;
+  const permission = await Notification.requestPermission();
+  updateNotifPermissionStatus();
+  if (permission === 'granted') {
+    new Notification('Cuisine PWA', { body: 'Les notifications sont activées !' });
+  }
+}
+
+async function sauverNotificationSettings() {
+  const settings = {
+    timerEnabled: elements.notifTimer ? elements.notifTimer.checked : true,
+    rappelRepasEnabled: elements.notifRappelRepas ? elements.notifRappelRepas.checked : false,
+    rappelHeure: elements.notifHeureRappel ? elements.notifHeureRappel.value : '18:00',
+    rappelJours: Array.from(document.querySelectorAll('#rappel-jours-options .jour-checkbox input:checked')).map(cb => parseInt(cb.value))
+  };
+
+  try {
+    const response = await fetch(`${API_URL}/api/notification-settings`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(settings)
+    });
+    if (response.ok) {
+      state.notificationSettings = settings;
+      alert('Paramètres de notifications enregistrés !');
+      planifierRappelRepas();
+    }
+  } catch (error) {
+    console.error('Erreur sauvegarde notifications:', error);
+    alert('Erreur lors de la sauvegarde');
+  }
+}
+
+let rappelRepasTimeout = null;
+
+function planifierRappelRepas() {
+  if (rappelRepasTimeout) clearTimeout(rappelRepasTimeout);
+  if (!state.notificationSettings || !state.notificationSettings.rappelRepasEnabled) return;
+  if (Notification.permission !== 'granted') return;
+
+  const now = new Date();
+  const jourSemaine = now.getDay(); // 0=Dim, 1=Lun...
+  const joursActifs = state.notificationSettings.rappelJours || [1, 2, 3, 4, 5];
+
+  if (!joursActifs.includes(jourSemaine)) return;
+
+  const [heures, minutes] = (state.notificationSettings.rappelHeure || '18:00').split(':').map(Number);
+  const rappelTime = new Date(now);
+  rappelTime.setHours(heures, minutes, 0, 0);
+
+  const delai = rappelTime.getTime() - now.getTime();
+  if (delai > 0) {
+    rappelRepasTimeout = setTimeout(() => {
+      new Notification('Cuisine PWA', {
+        body: 'Qu\'est-ce qu\'on mange ce soir ? Consultez votre planning !',
+        icon: 'images/icon-192.png'
+      });
+    }, delai);
+  }
+}
+
+// ========================================
+// ÉQUILIBRE NUTRITIONNEL
+// ========================================
+
+async function chargerEquilibreNutritionnel() {
+  if (!elements.equilibreBarres || !elements.equilibreAlertes) return;
+
+  const lundi = state.semaineActuelle;
+  if (!lundi) return;
+
+  const dimanche = new Date(lundi);
+  dimanche.setDate(dimanche.getDate() + 6);
+
+  const dateDebut = formatDateKey(lundi);
+  const dateFin = formatDateKey(dimanche);
+
+  try {
+    const response = await fetch(`${API_URL}/api/equilibre-nutritionnel?dateDebut=${dateDebut}&dateFin=${dateFin}`);
+    if (!response.ok) return;
+
+    const data = await response.json();
+    afficherEquilibreBarres(data);
+    afficherEquilibreAlertes(data);
+  } catch (error) {
+    console.error('Erreur chargement équilibre:', error);
+  }
+}
+
+function afficherEquilibreBarres(data) {
+  if (!elements.equilibreBarres) return;
+
+  const categories = data.categories || {};
+  const total = Object.values(categories).reduce((a, b) => a + b, 0) || 1;
+
+  const colors = {
+    'Régimes alimentaires': '#27ae60',
+    'Allergènes': '#e67e22',
+    'Nutritionnel': '#3498db',
+    'Autre': '#9b59b6'
+  };
+
+  let html = '<div class="equilibre-resume">';
+  html += `<p><strong>${data.totalRepas || 0}</strong> repas planifiés cette semaine</p>`;
+  html += '</div>';
+
+  if (data.tags && data.tags.length > 0) {
+    html += '<div class="equilibre-tags-repartition">';
+    data.tags.forEach(tag => {
+      const pourcent = Math.round((tag.count / total) * 100);
+      html += `
+        <div class="equilibre-tag-bar">
+          <span class="equilibre-tag-label">${getTagIcon(tag.nom)} ${tag.nom}</span>
+          <div class="equilibre-bar-track">
+            <div class="equilibre-bar-fill" style="width: ${pourcent}%; background: ${colors[tag.categorie] || '#95a5a6'}"></div>
+          </div>
+          <span class="equilibre-tag-count">${tag.count}</span>
+        </div>
+      `;
+    });
+    html += '</div>';
+  } else {
+    html += '<p class="widget-empty">Aucune donnée nutritionnelle pour cette semaine</p>';
+  }
+
+  elements.equilibreBarres.innerHTML = html;
+}
+
+function afficherEquilibreAlertes(data) {
+  if (!elements.equilibreAlertes) return;
+
+  const alertes = [];
+  const totalRepas = data.totalRepas || 0;
+
+  if (totalRepas === 0) {
+    elements.equilibreAlertes.innerHTML = '';
+    return;
+  }
+
+  // Vérifier la variété
+  const tagsByCategorie = {};
+  (data.tags || []).forEach(t => {
+    if (!tagsByCategorie[t.categorie]) tagsByCategorie[t.categorie] = 0;
+    tagsByCategorie[t.categorie] += t.count;
+  });
+
+  if (totalRepas >= 7 && !tagsByCategorie['Régimes alimentaires']) {
+    alertes.push({ type: 'info', message: 'Pensez à varier avec des repas végétariens ou vegan cette semaine.' });
+  }
+
+  if (totalRepas < 10) {
+    alertes.push({ type: 'warning', message: `Seulement ${totalRepas} repas planifiés. Complétez votre planning pour un meilleur équilibre.` });
+  }
+
+  if (alertes.length === 0) {
+    alertes.push({ type: 'success', message: 'Bon équilibre nutritionnel cette semaine !' });
+  }
+
+  elements.equilibreAlertes.innerHTML = alertes.map(a =>
+    `<div class="equilibre-alerte alerte-${a.type}">${a.message}</div>`
+  ).join('');
+}
+
+function initialiserNouvellesFeaturesEvenements() {
+  // Feature 3: Ce soir je cuisine avec...
+  if (elements.btnCeSoir) {
+    elements.btnCeSoir.addEventListener('click', ouvrirModalCeSoir);
+  }
+  if (elements.btnCloseModalCeSoir) {
+    elements.btnCloseModalCeSoir.addEventListener('click', fermerModalCeSoir);
+  }
+  if (elements.ceSoirRecherche) {
+    elements.ceSoirRecherche.addEventListener('input', (e) => afficherIngredientsCeSoir(e.target.value));
+  }
+  if (elements.btnCeSoirClear) {
+    elements.btnCeSoirClear.addEventListener('click', clearIngredientsCeSoir);
+  }
+  if (elements.btnCeSoirChercher) {
+    elements.btnCeSoirChercher.addEventListener('click', chercherRecettesCeSoir);
+  }
+  if (elements.modalCeSoir) {
+    elements.modalCeSoir.addEventListener('click', (e) => {
+      if (e.target === elements.modalCeSoir) fermerModalCeSoir();
+    });
+  }
+
+  // Feature 5, 6, 7: Statistiques
+  if (elements.btnCalendrierMoisPrec) {
+    elements.btnCalendrierMoisPrec.addEventListener('click', calendrierMoisPrecedent);
+  }
+  if (elements.btnCalendrierMoisSuiv) {
+    elements.btnCalendrierMoisSuiv.addEventListener('click', calendrierMoisSuivant);
+  }
+
+  // Feature 8: Planning mensuel
+  if (elements.btnVueSemaine) {
+    elements.btnVueSemaine.addEventListener('click', () => toggleVuePlanning('semaine'));
+  }
+  if (elements.btnVueMois) {
+    elements.btnVueMois.addEventListener('click', () => toggleVuePlanning('mois'));
+  }
+
+  // Feature 16: Notes
+  if (elements.btnNotesRecette) {
+    elements.btnNotesRecette.addEventListener('click', () => {
+      if (state.recetteActuelle) ouvrirModalNotes(state.recetteActuelle.id);
+    });
+  }
+  if (elements.btnCloseModalNotes) {
+    elements.btnCloseModalNotes.addEventListener('click', fermerModalNotes);
+  }
+  if (elements.btnAjouterNote) {
+    elements.btnAjouterNote.addEventListener('click', ajouterNote);
+  }
+  if (elements.modalNotes) {
+    elements.modalNotes.addEventListener('click', (e) => {
+      if (e.target === elements.modalNotes) fermerModalNotes();
+    });
+  }
+
+  // Feature 25: Thèmes
+  if (elements.btnTheme) {
+    elements.btnTheme.addEventListener('click', ouvrirModalThemes);
+  }
+  if (elements.btnCloseModalThemes) {
+    elements.btnCloseModalThemes.addEventListener('click', fermerModalThemes);
+  }
+  if (elements.modalThemes) {
+    elements.modalThemes.addEventListener('click', (e) => {
+      if (e.target === elements.modalThemes) fermerModalThemes();
+    });
+  }
+  document.querySelectorAll('.theme-mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => changerModeTheme(btn.dataset.mode));
+  });
+  document.querySelectorAll('.theme-color-btn').forEach(btn => {
+    btn.addEventListener('click', () => changerCouleurAccent(btn.dataset.color));
+  });
+
+  // Feature 26: Vue liste/grille
+  if (elements.btnVueGrille) {
+    elements.btnVueGrille.addEventListener('click', () => toggleVueRecettes('grille'));
+  }
+  if (elements.btnVueListe) {
+    elements.btnVueListe.addEventListener('click', () => toggleVueRecettes('liste'));
+  }
+
+  // Feature 28: Conversion
+  if (elements.btnConversion) {
+    elements.btnConversion.addEventListener('click', ouvrirModalConversion);
+  }
+  if (elements.btnCloseModalConversion) {
+    elements.btnCloseModalConversion.addEventListener('click', fermerModalConversion);
+  }
+  if (elements.modalConversion) {
+    elements.modalConversion.addEventListener('click', (e) => {
+      if (e.target === elements.modalConversion) fermerModalConversion();
+    });
+  }
+  if (elements.conversionValeur) {
+    elements.conversionValeur.addEventListener('input', effectuerConversion);
+  }
+  if (elements.conversionUniteSource) {
+    elements.conversionUniteSource.addEventListener('change', effectuerConversion);
+  }
+  if (elements.conversionUniteCible) {
+    elements.conversionUniteCible.addEventListener('change', effectuerConversion);
+  }
+
+  // Dashboard
+  if (elements.btnRefreshSuggestion) {
+    elements.btnRefreshSuggestion.addEventListener('click', async () => {
+      elements.suggestionContenu.innerHTML = '<p class="widget-loading">Chargement...</p>';
+      try {
+        const res = await fetch(`${API_URL}/api/suggestion`);
+        if (res.ok) afficherSuggestion(await res.json());
+      } catch (e) { console.error(e); }
+    });
+  }
+
+  // Filtres difficulté et tags
+  if (elements.filtreDifficulte) {
+    elements.filtreDifficulte.addEventListener('change', filtrerRecettes);
+  }
+
+  // Toggle panneau tags
+  if (elements.btnToggleTags) {
+    elements.btnToggleTags.addEventListener('click', () => {
+      state.tagsPanelOpen = !state.tagsPanelOpen;
+      elements.tagsFilterPanel.classList.toggle('hidden', !state.tagsPanelOpen);
+      elements.btnToggleTags.classList.toggle('active', state.tagsPanelOpen);
+    });
+  }
+
+  // Recherche tags
+  if (elements.tagsFilterSearch) {
+    elements.tagsFilterSearch.addEventListener('input', (e) => {
+      afficherTagsFiltreChips(e.target.value);
+    });
+  }
+
+  // Effacer sélection tags
+  if (elements.btnClearTags) {
+    elements.btnClearTags.addEventListener('click', () => {
+      state.filtreTagsSelectionnes.clear();
+      afficherTagsFiltreChips(elements.tagsFilterSearch ? elements.tagsFilterSearch.value : '');
+      mettreAJourCompteurTagsFiltre();
+      filtrerRecettes();
+    });
+  }
+
+  // Notifications
+  if (elements.btnDemanderNotif) {
+    elements.btnDemanderNotif.addEventListener('click', demanderPermissionNotification);
+  }
+  if (elements.btnSauverNotifications) {
+    elements.btnSauverNotifications.addEventListener('click', sauverNotificationSettings);
+  }
+
+  // Équilibre nutritionnel toggle
+  if (elements.btnToggleEquilibre) {
+    elements.btnToggleEquilibre.addEventListener('click', () => {
+      elements.equilibreContenu.classList.toggle('hidden');
+      elements.btnToggleEquilibre.classList.toggle('active');
+      if (!elements.equilibreContenu.classList.contains('hidden')) {
+        chargerEquilibreNutritionnel();
+      }
+    });
+  }
+
+  // Charger les préférences sauvegardées
+  const savedVue = localStorage.getItem('vueRecettes');
+  if (savedVue) {
+    toggleVueRecettes(savedVue);
+  }
+
+  // Appliquer le thème sauvegardé
+  chargerThemeActuel();
+}
+
 // === Initialisation de l'application ===
 
 async function init() {
@@ -4777,6 +6352,7 @@ async function init() {
     chargerIngredients(),
     chargerUnites(),
     chargerOrigines(),
+    chargerTags(),
     chargerPlanning(),
     chargerFavoris(),
     chargerHistoriqueCourses(),
@@ -4784,9 +6360,14 @@ async function init() {
     verifierRecetteEnCours()
   ]);
   remplirFiltreOrigines();
-  afficherRecettes();
+  remplirFiltreTags();
   afficherTagsIngredients();
   initialiserEvenements();
+  initialiserNouvellesFeaturesEvenements();
+  // Charger le dashboard (page d'accueil par défaut)
+  navigateToPage('dashboard');
+  // Planifier le rappel repas
+  planifierRappelRepas();
 }
 
 // Démarrer l'application
